@@ -1,0 +1,3898 @@
+{
+	"assetPath": "/Game/Project_File/BP/UBP/UBP_用户界面",
+	"blueprintPath": "/Game/Project_File/BP/UBP/UBP_用户界面.UBP_用户界面",
+	"packageName": "/Game/Project_File/BP/UBP/UBP_用户界面",
+	"isLevelScript": false,
+	"blueprintClass": "WidgetBlueprint",
+	"parentClass": "/Script/Old_Man_Jiang.ProjectUserWidgetBase",
+	"variables": [
+		{
+			"name": "Color",
+			"typeSpec": "struct:/Script/CoreUObject.LinearColor",
+			"pinCategory": "struct",
+			"guid": "789836424E620F1054FBF09D7FB7F677",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		}
+	],
+	"functions": [
+		{
+			"name": "ChangeColor",
+			"kind": "function",
+			"graphSelector": "ChangeColor"
+		},
+		{
+			"name": "点击缩放",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "BF38A91C41A3AD76A053EAAF39F013ED"
+		},
+		{
+			"name": "Construct",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "4AF723B24886283BDEDB7AA4F201414F"
+		}
+	],
+	"components": [],
+	"graphs": [
+		{
+			"name": "ChangeColor",
+			"selector": "ChangeColor",
+			"kind": "function",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/UBP/UBP_用户界面.UBP_用户界面:ChangeColor",
+			"nodeCount": 9,
+			"nodes": [
+				{
+					"id": "61EB384F4C7CD7FC3CEC96BAC4651894",
+					"class": "K2Node_FunctionEntry",
+					"title": "ChangeColor",
+					"posX": 0,
+					"posY": 431,
+					"comment": "",
+					"pins": [
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2B4F17FC451A3D3EFD8762BB99732653",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "图片颜色",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "self"
+								},
+								{
+									"nodeId": "CE590FBF4C195F38098F9CBDB0FD36C3",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_Color_SpecifiedColor",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "Brush_OutlineSettings_Color_SpecifiedColor"
+								},
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Normal_TintColor_SpecifiedColor"
+								},
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Hovered_TintColor_SpecifiedColor"
+								},
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Pressed_TintColor_SpecifiedColor"
+								},
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_TintColor_SpecifiedColor"
+								}
+							]
+						},
+						{
+							"name": "按钮颜色",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "self"
+								},
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "折线图颜色",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "self"
+								},
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "self"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "CE590FBF4C195F38098F9CBDB0FD36C3",
+					"class": "K2Node_VariableGet",
+					"title": "Get",
+					"posX": 832,
+					"posY": 487,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Brush",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_TintColor",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "Brush_TintColor"
+								}
+							]
+						},
+						{
+							"name": "Brush_DrawAs",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "Brush_DrawAs"
+								}
+							]
+						},
+						{
+							"name": "Brush_Tiling",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "Brush_Tiling"
+								}
+							]
+						},
+						{
+							"name": "Brush_Mirroring",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "Brush_Mirroring"
+								}
+							]
+						},
+						{
+							"name": "Brush_ImageSize",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "Brush_ImageSize"
+								}
+							]
+						},
+						{
+							"name": "Brush_Margin",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "Brush_Margin"
+								}
+							]
+						},
+						{
+							"name": "Brush_ResourceObject",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "Brush_ResourceObject"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_OutlineSettings_CornerRadii",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "Brush_OutlineSettings_CornerRadii"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_Color",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_OutlineSettings_Color_SpecifiedColor",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_OutlineSettings_Color_ColorUseRule",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "Brush_OutlineSettings_Color_ColorUseRule"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_Width",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "Brush_OutlineSettings_Width"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_RoundingType",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "Brush_OutlineSettings_RoundingType"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_bUseBrushTransparency",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "Brush_OutlineSettings_bUseBrushTransparency"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "61EB384F4C7CD7FC3CEC96BAC4651894",
+									"pin": "图片颜色"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "479760A34F486322E921439620E14A60",
+					"class": "K2Node_VariableSet",
+					"title": "Set",
+					"posX": 1440,
+					"posY": 448,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2B4F17FC451A3D3EFD8762BB99732653",
+									"pin": "then_0"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_TintColor",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Specified)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CE590FBF4C195F38098F9CBDB0FD36C3",
+									"pin": "Brush_TintColor"
+								}
+							]
+						},
+						{
+							"name": "Brush_DrawAs",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "Image",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CE590FBF4C195F38098F9CBDB0FD36C3",
+									"pin": "Brush_DrawAs"
+								}
+							]
+						},
+						{
+							"name": "Brush_Tiling",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NoTile",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CE590FBF4C195F38098F9CBDB0FD36C3",
+									"pin": "Brush_Tiling"
+								}
+							]
+						},
+						{
+							"name": "Brush_Mirroring",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NoMirror",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CE590FBF4C195F38098F9CBDB0FD36C3",
+									"pin": "Brush_Mirroring"
+								}
+							]
+						},
+						{
+							"name": "Brush_ImageSize",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(X=32.000000,Y=32.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CE590FBF4C195F38098F9CBDB0FD36C3",
+									"pin": "Brush_ImageSize"
+								}
+							]
+						},
+						{
+							"name": "Brush_Margin",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CE590FBF4C195F38098F9CBDB0FD36C3",
+									"pin": "Brush_Margin"
+								}
+							]
+						},
+						{
+							"name": "Brush_ResourceObject",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CE590FBF4C195F38098F9CBDB0FD36C3",
+									"pin": "Brush_ResourceObject"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(CornerRadii=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),Color=(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ColorUseRule=UseColor_Specified),Width=0.000000,RoundingType=HalfHeightRadius,bUseBrushTransparency=False)",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_OutlineSettings_CornerRadii",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CE590FBF4C195F38098F9CBDB0FD36C3",
+									"pin": "Brush_OutlineSettings_CornerRadii"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_Color",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ColorUseRule=UseColor_Specified)",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_OutlineSettings_Color_SpecifiedColor",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "61EB384F4C7CD7FC3CEC96BAC4651894",
+									"pin": "Brush_OutlineSettings_Color_SpecifiedColor"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_Color_ColorUseRule",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "UseColor_Specified",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CE590FBF4C195F38098F9CBDB0FD36C3",
+									"pin": "Brush_OutlineSettings_Color_ColorUseRule"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_Width",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CE590FBF4C195F38098F9CBDB0FD36C3",
+									"pin": "Brush_OutlineSettings_Width"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_RoundingType",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "HalfHeightRadius",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CE590FBF4C195F38098F9CBDB0FD36C3",
+									"pin": "Brush_OutlineSettings_RoundingType"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_bUseBrushTransparency",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "False",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CE590FBF4C195F38098F9CBDB0FD36C3",
+									"pin": "Brush_OutlineSettings_bUseBrushTransparency"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "61EB384F4C7CD7FC3CEC96BAC4651894",
+									"pin": "图片颜色"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+					"class": "K2Node_VariableSet",
+					"title": "Set",
+					"posX": 1440,
+					"posY": 960,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2B4F17FC451A3D3EFD8762BB99732653",
+									"pin": "then_1"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Normal",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Specified),DrawAs=Image,Tiling=NoTile,Mirroring=NoMirror,ImageType=NoImage,ImageSize=(X=32.000000,Y=32.000000),Margin=(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000),ResourceObject=None,OutlineSettings=(CornerRadii=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),Color=(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ColorUseRule=UseColor_Specified),Width=0.000000,RoundingType=HalfHeightRadius,bUseBrushTransparency=False),UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=False),bIsDynamicallyLoaded=False,ResourceName=\"\")",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Normal_TintColor",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Specified)",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Normal_TintColor_SpecifiedColor",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "61EB384F4C7CD7FC3CEC96BAC4651894",
+									"pin": "Brush_OutlineSettings_Color_SpecifiedColor"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_TintColor_ColorUseRule",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "UseColor_Specified",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Normal_TintColor_ColorUseRule"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_DrawAs",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "Image",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Normal_DrawAs"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_Tiling",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NoTile",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Normal_Tiling"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_Mirroring",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NoMirror",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Normal_Mirroring"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_ImageSize",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(X=32.000000,Y=32.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Normal_ImageSize"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_Margin",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Normal_Margin"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_ResourceObject",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Normal_ResourceObject"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_OutlineSettings",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(CornerRadii=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),Color=(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ColorUseRule=UseColor_Specified),Width=0.000000,RoundingType=HalfHeightRadius,bUseBrushTransparency=False)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Normal_OutlineSettings"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Specified),DrawAs=Image,Tiling=NoTile,Mirroring=NoMirror,ImageType=NoImage,ImageSize=(X=32.000000,Y=32.000000),Margin=(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000),ResourceObject=None,OutlineSettings=(CornerRadii=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),Color=(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ColorUseRule=UseColor_Specified),Width=0.000000,RoundingType=HalfHeightRadius,bUseBrushTransparency=False),UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=False),bIsDynamicallyLoaded=False,ResourceName=\"\")",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Hovered_TintColor",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Specified)",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Hovered_TintColor_SpecifiedColor",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "61EB384F4C7CD7FC3CEC96BAC4651894",
+									"pin": "Brush_OutlineSettings_Color_SpecifiedColor"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_TintColor_ColorUseRule",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "UseColor_Specified",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Hovered_TintColor_ColorUseRule"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_DrawAs",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "Image",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Hovered_DrawAs"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_Tiling",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NoTile",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Hovered_Tiling"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_Mirroring",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NoMirror",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Hovered_Mirroring"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_ImageSize",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(X=32.000000,Y=32.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Hovered_ImageSize"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_Margin",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Hovered_Margin"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_ResourceObject",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Hovered_ResourceObject"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_OutlineSettings",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(CornerRadii=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),Color=(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ColorUseRule=UseColor_Specified),Width=0.000000,RoundingType=HalfHeightRadius,bUseBrushTransparency=False)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Hovered_OutlineSettings"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Specified),DrawAs=Image,Tiling=NoTile,Mirroring=NoMirror,ImageType=NoImage,ImageSize=(X=32.000000,Y=32.000000),Margin=(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000),ResourceObject=None,OutlineSettings=(CornerRadii=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),Color=(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ColorUseRule=UseColor_Specified),Width=0.000000,RoundingType=HalfHeightRadius,bUseBrushTransparency=False),UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=False),bIsDynamicallyLoaded=False,ResourceName=\"\")",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Pressed_TintColor",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Specified)",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Pressed_TintColor_SpecifiedColor",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "61EB384F4C7CD7FC3CEC96BAC4651894",
+									"pin": "Brush_OutlineSettings_Color_SpecifiedColor"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_TintColor_ColorUseRule",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "UseColor_Specified",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Pressed_TintColor_ColorUseRule"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_DrawAs",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "Image",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Pressed_DrawAs"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_Tiling",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NoTile",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Pressed_Tiling"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_Mirroring",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NoMirror",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Pressed_Mirroring"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_ImageSize",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(X=32.000000,Y=32.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Pressed_ImageSize"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_Margin",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Pressed_Margin"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_ResourceObject",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Pressed_ResourceObject"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_OutlineSettings",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(CornerRadii=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),Color=(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ColorUseRule=UseColor_Specified),Width=0.000000,RoundingType=HalfHeightRadius,bUseBrushTransparency=False)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Pressed_OutlineSettings"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Disabled",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Specified),DrawAs=NoDrawType,Tiling=NoTile,Mirroring=NoMirror,ImageType=NoImage,ImageSize=(X=0.000000,Y=0.000000),Margin=(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000),ResourceObject=None,OutlineSettings=(CornerRadii=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),Color=(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ColorUseRule=UseColor_Specified),Width=0.000000,RoundingType=HalfHeightRadius,bUseBrushTransparency=False),UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=False),bIsDynamicallyLoaded=False,ResourceName=\"\")",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_Disabled"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_NormalForeground",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(SpecifiedColor=(R=1.000000,G=0.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Foreground)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_NormalForeground"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_HoveredForeground",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(SpecifiedColor=(R=1.000000,G=0.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Foreground)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_HoveredForeground"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_PressedForeground",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(SpecifiedColor=(R=1.000000,G=0.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Foreground)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_PressedForeground"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_DisabledForeground",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(SpecifiedColor=(R=1.000000,G=0.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Foreground)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_DisabledForeground"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_NormalPadding",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_NormalPadding"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_PressedPadding",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_PressedPadding"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_PressedSlateSound",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(ResourceObject=None)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_PressedSlateSound"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_ClickedSlateSound",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(ResourceObject=None)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_ClickedSlateSound"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_HoveredSlateSound",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(ResourceObject=None)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+									"pin": "WidgetStyle_HoveredSlateSound"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "61EB384F4C7CD7FC3CEC96BAC4651894",
+									"pin": "按钮颜色"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "9BE866FF436DA18FEA0EFFB2B94A2FAC",
+					"class": "K2Node_VariableGet",
+					"title": "Get",
+					"posX": 832,
+					"posY": 999,
+					"comment": "",
+					"pins": [
+						{
+							"name": "WidgetStyle",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Normal",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Normal_TintColor",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Normal_TintColor_SpecifiedColor",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Normal_TintColor_ColorUseRule",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Normal_TintColor_ColorUseRule"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_DrawAs",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Normal_DrawAs"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_Tiling",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Normal_Tiling"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_Mirroring",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Normal_Mirroring"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_ImageSize",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Normal_ImageSize"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_Margin",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Normal_Margin"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_ResourceObject",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Normal_ResourceObject"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Normal_OutlineSettings",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Normal_OutlineSettings"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Hovered_TintColor",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Hovered_TintColor_SpecifiedColor",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Hovered_TintColor_ColorUseRule",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Hovered_TintColor_ColorUseRule"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_DrawAs",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Hovered_DrawAs"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_Tiling",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Hovered_Tiling"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_Mirroring",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Hovered_Mirroring"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_ImageSize",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Hovered_ImageSize"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_Margin",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Hovered_Margin"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_ResourceObject",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Hovered_ResourceObject"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Hovered_OutlineSettings",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Hovered_OutlineSettings"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Pressed_TintColor",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Pressed_TintColor_SpecifiedColor",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WidgetStyle_Pressed_TintColor_ColorUseRule",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Pressed_TintColor_ColorUseRule"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_DrawAs",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Pressed_DrawAs"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_Tiling",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Pressed_Tiling"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_Mirroring",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Pressed_Mirroring"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_ImageSize",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Pressed_ImageSize"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_Margin",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Pressed_Margin"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_ResourceObject",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Pressed_ResourceObject"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Pressed_OutlineSettings",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Pressed_OutlineSettings"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_Disabled",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_Disabled"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_NormalForeground",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_NormalForeground"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_HoveredForeground",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_HoveredForeground"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_PressedForeground",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_PressedForeground"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_DisabledForeground",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_DisabledForeground"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_NormalPadding",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_NormalPadding"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_PressedPadding",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_PressedPadding"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_PressedSlateSound",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_PressedSlateSound"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_ClickedSlateSound",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_ClickedSlateSound"
+								}
+							]
+						},
+						{
+							"name": "WidgetStyle_HoveredSlateSound",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "WidgetStyle_HoveredSlateSound"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "61EB384F4C7CD7FC3CEC96BAC4651894",
+									"pin": "按钮颜色"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "2B4F17FC451A3D3EFD8762BB99732653",
+					"class": "K2Node_ExecutionSequence",
+					"title": "Sequence",
+					"posX": 400,
+					"posY": 431,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "61EB384F4C7CD7FC3CEC96BAC4651894",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then_0",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "479760A34F486322E921439620E14A60",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "then_1",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB038CDB478AF6A17BCA7B9B23BBFEA0",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "then_2",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5A2F81754C09EB3B81FBB6A786158812",
+									"pin": "InputPin"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "5B1AC3224CA0985F171D42AEF5143819",
+					"class": "K2Node_VariableGet",
+					"title": "Get",
+					"posX": 832,
+					"posY": 2247,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Brush",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_TintColor",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_TintColor_SpecifiedColor",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_TintColor_ColorUseRule",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_TintColor_ColorUseRule"
+								}
+							]
+						},
+						{
+							"name": "Brush_DrawAs",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_DrawAs"
+								}
+							]
+						},
+						{
+							"name": "Brush_Tiling",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_Tiling"
+								}
+							]
+						},
+						{
+							"name": "Brush_Mirroring",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_Mirroring"
+								}
+							]
+						},
+						{
+							"name": "Brush_ImageSize",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_ImageSize"
+								}
+							]
+						},
+						{
+							"name": "Brush_Margin",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_Margin"
+								}
+							]
+						},
+						{
+							"name": "Brush_ResourceObject",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_ResourceObject"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_OutlineSettings_CornerRadii",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_OutlineSettings_CornerRadii"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_Color",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_OutlineSettings_Color_SpecifiedColor",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_OutlineSettings_Color_SpecifiedColor"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_Color_ColorUseRule",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_OutlineSettings_Color_ColorUseRule"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_Width",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_OutlineSettings_Width"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_RoundingType",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_OutlineSettings_RoundingType"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_bUseBrushTransparency",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "Brush_OutlineSettings_bUseBrushTransparency"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "61EB384F4C7CD7FC3CEC96BAC4651894",
+									"pin": "折线图颜色"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+					"class": "K2Node_VariableSet",
+					"title": "Set",
+					"posX": 1440,
+					"posY": 2208,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5A2F81754C09EB3B81FBB6A786158812",
+									"pin": "OutputPin"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_TintColor",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Specified)",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_TintColor_SpecifiedColor",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "61EB384F4C7CD7FC3CEC96BAC4651894",
+									"pin": "Brush_OutlineSettings_Color_SpecifiedColor"
+								}
+							]
+						},
+						{
+							"name": "Brush_TintColor_ColorUseRule",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "UseColor_Specified",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "Brush_TintColor_ColorUseRule"
+								}
+							]
+						},
+						{
+							"name": "Brush_DrawAs",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "Image",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "Brush_DrawAs"
+								}
+							]
+						},
+						{
+							"name": "Brush_Tiling",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NoTile",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "Brush_Tiling"
+								}
+							]
+						},
+						{
+							"name": "Brush_Mirroring",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NoMirror",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "Brush_Mirroring"
+								}
+							]
+						},
+						{
+							"name": "Brush_ImageSize",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(X=32.000000,Y=32.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "Brush_ImageSize"
+								}
+							]
+						},
+						{
+							"name": "Brush_Margin",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "Brush_Margin"
+								}
+							]
+						},
+						{
+							"name": "Brush_ResourceObject",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "Brush_ResourceObject"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(CornerRadii=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),Color=(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ColorUseRule=UseColor_Specified),Width=0.000000,RoundingType=HalfHeightRadius,bUseBrushTransparency=False)",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_OutlineSettings_CornerRadii",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "Brush_OutlineSettings_CornerRadii"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_Color",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ColorUseRule=UseColor_Specified)",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Brush_OutlineSettings_Color_SpecifiedColor",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "Brush_OutlineSettings_Color_SpecifiedColor"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_Color_ColorUseRule",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "UseColor_Specified",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "Brush_OutlineSettings_Color_ColorUseRule"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_Width",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "Brush_OutlineSettings_Width"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_RoundingType",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "HalfHeightRadius",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "Brush_OutlineSettings_RoundingType"
+								}
+							]
+						},
+						{
+							"name": "Brush_OutlineSettings_bUseBrushTransparency",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "False",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5B1AC3224CA0985F171D42AEF5143819",
+									"pin": "Brush_OutlineSettings_bUseBrushTransparency"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "61EB384F4C7CD7FC3CEC96BAC4651894",
+									"pin": "折线图颜色"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "5A2F81754C09EB3B81FBB6A786158812",
+					"class": "K2Node_Knot",
+					"title": "Reroute Node",
+					"posX": 832,
+					"posY": 2225,
+					"comment": "",
+					"pins": [
+						{
+							"name": "InputPin",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2B4F17FC451A3D3EFD8762BB99732653",
+									"pin": "then_2"
+								}
+							]
+						},
+						{
+							"name": "OutputPin",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F480444ECBD6ADC83ED9A9E2DB3D97",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EventGraph",
+			"selector": "EventGraph",
+			"kind": "event_graph",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/UBP/UBP_用户界面.UBP_用户界面:EventGraph",
+			"nodeCount": 30,
+			"nodes": [
+				{
+					"id": "A891C7A74DA1CD563AA8DDB6B767642E",
+					"class": "K2Node_VariableGet",
+					"title": "Get 缩放动画",
+					"posX": -48,
+					"posY": -7,
+					"comment": "",
+					"pins": [
+						{
+							"name": "缩放动画",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "32219B364DB0D8B54DCF6FAEDA0159DB",
+									"pin": "InAnimation"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "32219B364DB0D8B54DCF6FAEDA0159DB",
+					"class": "K2Node_CallFunction",
+					"title": "Play Animation\nTarget is User Widget",
+					"posX": 352,
+					"posY": -112,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "0F70AD704A3A0754FA39C4A7E85991E7",
+									"pin": "A"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "InAnimation",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A891C7A74DA1CD563AA8DDB6B767642E",
+									"pin": "缩放动画"
+								}
+							]
+						},
+						{
+							"name": "StartAtTime",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.000000",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NumLoopsToPlay",
+							"type": "int",
+							"direction": "Input",
+							"defaultValue": "1",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "PlayMode",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "Forward",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "PlaybackSpeed",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "1.000000",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "bRestoreState",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ReturnValue",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "0F70AD704A3A0754FA39C4A7E85991E7",
+					"class": "K2Node_MacroInstance",
+					"title": "Flip Flop",
+					"posX": 144,
+					"posY": 96,
+					"comment": "",
+					"pins": [
+						{
+							"name": "None",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "BF38A91C41A3AD76A053EAAF39F013ED",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "A",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "32219B364DB0D8B54DCF6FAEDA0159DB",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "B",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5E8105B147B19BAD6A33B088CC084E9D",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "IsA",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "F67C69A44498AF2BCF10758136763F4E",
+					"class": "K2Node_VariableGet",
+					"title": "Get 缩放动画",
+					"posX": -48,
+					"posY": 345,
+					"comment": "",
+					"pins": [
+						{
+							"name": "缩放动画",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5E8105B147B19BAD6A33B088CC084E9D",
+									"pin": "InAnimation"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "5E8105B147B19BAD6A33B088CC084E9D",
+					"class": "K2Node_CallFunction",
+					"title": "Play Animation\nTarget is User Widget",
+					"posX": 352,
+					"posY": 240,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "0F70AD704A3A0754FA39C4A7E85991E7",
+									"pin": "B"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "InAnimation",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F67C69A44498AF2BCF10758136763F4E",
+									"pin": "缩放动画"
+								}
+							]
+						},
+						{
+							"name": "StartAtTime",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.000000",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NumLoopsToPlay",
+							"type": "int",
+							"direction": "Input",
+							"defaultValue": "1",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "PlayMode",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "Reverse",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "PlaybackSpeed",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "1.000000",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "bRestoreState",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ReturnValue",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "BF38A91C41A3AD76A053EAAF39F013ED",
+					"class": "K2Node_Event",
+					"title": "Event 点击缩放\nFrom BPI 用户界面",
+					"posX": -48,
+					"posY": 81,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "0F70AD704A3A0754FA39C4A7E85991E7",
+									"pin": "None"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "4AF723B24886283BDEDB7AA4F201414F",
+					"class": "K2Node_Event",
+					"title": "Event Construct",
+					"posX": -48,
+					"posY": 656,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2496DE774585B8707F1CB2A53D1C4AA0",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "27AD16DC4DA6A16FF4BDDF835E397972",
+					"class": "K2Node_VariableGet",
+					"title": "Get UBP_时间框",
+					"posX": -48,
+					"posY": 741,
+					"comment": "",
+					"pins": [
+						{
+							"name": "UBP_时间框",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2496DE774585B8707F1CB2A53D1C4AA0",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "2496DE774585B8707F1CB2A53D1C4AA0",
+					"class": "K2Node_VariableSet",
+					"title": "Set UBP_用户界面",
+					"posX": 144,
+					"posY": 672,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "4AF723B24886283BDEDB7AA4F201414F",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5A12F16C455E73A5F59F92ABE310AE40",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "UBP_用户界面",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "89C9B46E4C44A4E7CE1245BA35FD5FF2",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "27AD16DC4DA6A16FF4BDDF835E397972",
+									"pin": "UBP_时间框"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "89C9B46E4C44A4E7CE1245BA35FD5FF2",
+					"class": "K2Node_Self",
+					"title": "Self-Reference",
+					"posX": -48,
+					"posY": 784,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2496DE774585B8707F1CB2A53D1C4AA0",
+									"pin": "UBP_用户界面"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "AD3B86A243FA0ACD3D9CC9B7C4B579D2",
+					"class": "K2Node_VariableGet",
+					"title": "Get UBP_缩放",
+					"posX": -48,
+					"posY": 816,
+					"comment": "",
+					"pins": [
+						{
+							"name": "UBP_缩放",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5A12F16C455E73A5F59F92ABE310AE40",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "5A12F16C455E73A5F59F92ABE310AE40",
+					"class": "K2Node_VariableSet",
+					"title": "Set UIReceiver",
+					"posX": 352,
+					"posY": 672,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2496DE774585B8707F1CB2A53D1C4AA0",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D84400C641E570EC7FFF08B646B51E3B",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "UIReceiver",
+							"type": "interface",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9034D8244B4211C31452A38085D94E5D",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "interface",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "AD3B86A243FA0ACD3D9CC9B7C4B579D2",
+									"pin": "UBP_缩放"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "9034D8244B4211C31452A38085D94E5D",
+					"class": "K2Node_Self",
+					"title": "Self-Reference",
+					"posX": -48,
+					"posY": 856,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5A12F16C455E73A5F59F92ABE310AE40",
+									"pin": "UIReceiver"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "1943EDF34163B93369A1F88BEC6A8CB8",
+					"class": "K2Node_CallFunction",
+					"title": "Get Game State",
+					"posX": 352,
+					"posY": 816,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__GameplayStatics",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WorldContextObject",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ReturnValue",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D84400C641E570EC7FFF08B646B51E3B",
+									"pin": "Object"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "D84400C641E570EC7FFF08B646B51E3B",
+					"class": "K2Node_DynamicCast",
+					"title": "Cast To BGS_State",
+					"posX": 544,
+					"posY": 656,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5A12F16C455E73A5F59F92ABE310AE40",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "230A1F8D4EC89E243AC95BA5F75C9E22",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "CastFailed",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Object",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "1943EDF34163B93369A1F88BEC6A8CB8",
+									"pin": "ReturnValue"
+								}
+							]
+						},
+						{
+							"name": "AsBGS State",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "230A1F8D4EC89E243AC95BA5F75C9E22",
+									"pin": "BGS_GameState"
+								},
+								{
+									"nodeId": "11D9B93C4B758FA036BC74AFB5D8C90E",
+									"pin": "BGS_GameState"
+								}
+							]
+						},
+						{
+							"name": "bSuccess",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "3C0DF820436725B023BF3780EA7A9440",
+					"class": "K2Node_VariableGet",
+					"title": "Get UBP_右侧栏",
+					"posX": -48,
+					"posY": 911,
+					"comment": "",
+					"pins": [
+						{
+							"name": "UBP_右侧栏",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5A795DEE40CE938091CFAEA0B42A9155",
+									"pin": "InputPin"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "37FA0870477A2B42574637A55FA472D9",
+					"class": "K2Node_VariableGet",
+					"title": "Get UBP_空间说明",
+					"posX": 544,
+					"posY": 832,
+					"comment": "",
+					"pins": [
+						{
+							"name": "UBP_空间说明",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "230A1F8D4EC89E243AC95BA5F75C9E22",
+									"pin": "self"
+								},
+								{
+									"nodeId": "04D17AB247856D5921503085A5655BE7",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5A795DEE40CE938091CFAEA0B42A9155",
+									"pin": "OutputPin"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "230A1F8D4EC89E243AC95BA5F75C9E22",
+					"class": "K2Node_VariableSet",
+					"title": "Set BGS_GameState",
+					"posX": 784,
+					"posY": 672,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D84400C641E570EC7FFF08B646B51E3B",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "11D9B93C4B758FA036BC74AFB5D8C90E",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "BGS_GameState",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D84400C641E570EC7FFF08B646B51E3B",
+									"pin": "AsBGS State"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "37FA0870477A2B42574637A55FA472D9",
+									"pin": "UBP_空间说明"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "019C852E44B50B3FC816F28A5FBDADA7",
+					"class": "K2Node_VariableGet",
+					"title": "Get UBP_娱乐内容使用统计",
+					"posX": 544,
+					"posY": 912,
+					"comment": "",
+					"pins": [
+						{
+							"name": "UBP_娱乐内容使用统计",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "11D9B93C4B758FA036BC74AFB5D8C90E",
+									"pin": "self"
+								},
+								{
+									"nodeId": "F39D68C949802CC93DA26A92D14B58AA",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5A795DEE40CE938091CFAEA0B42A9155",
+									"pin": "OutputPin"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "11D9B93C4B758FA036BC74AFB5D8C90E",
+					"class": "K2Node_VariableSet",
+					"title": "Set BGS_GameState",
+					"posX": 992,
+					"posY": 672,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "230A1F8D4EC89E243AC95BA5F75C9E22",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "04D17AB247856D5921503085A5655BE7",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "BGS_GameState",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D84400C641E570EC7FFF08B646B51E3B",
+									"pin": "AsBGS State"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "019C852E44B50B3FC816F28A5FBDADA7",
+									"pin": "UBP_娱乐内容使用统计"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "3689EAB74ECFA1FFD42CFE963E9273B1",
+					"class": "K2Node_CallFunction",
+					"title": "Delay",
+					"posX": 1712,
+					"posY": 656,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F39D68C949802CC93DA26A92D14B58AA",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CFF6826040C43A458035218024087950",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__KismetSystemLibrary",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WorldContextObject",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Duration",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.15",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "LatentInfo",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(Linkage=-1,UUID=-1,ExecutionFunction=\"\",CallbackTarget=None)",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "CFF6826040C43A458035218024087950",
+					"class": "K2Node_CallFunction",
+					"title": "Get All Widgets Of Class",
+					"posX": 1984,
+					"posY": 656,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3689EAB74ECFA1FFD42CFE963E9273B1",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F85A73B6448FBF7CBF19C489C71BC024",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/UMG.Default__WidgetBlueprintLibrary",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WorldContextObject",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "FoundWidgets",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5C026A9643E9D11E1CD3F2BF0397F834",
+									"pin": "Array"
+								},
+								{
+									"nodeId": "79B5287640E98BE93021418C0F58B40C",
+									"pin": "TargetArray"
+								}
+							]
+						},
+						{
+							"name": "WidgetClass",
+							"type": "class",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Old_Man_Jiang.ElderDebugControlWidget",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "TopLevelOnly",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "5C026A9643E9D11E1CD3F2BF0397F834",
+					"class": "K2Node_GetArrayItem",
+					"title": "GET",
+					"posX": 2336,
+					"posY": 709,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Array",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CFF6826040C43A458035218024087950",
+									"pin": "FoundWidgets"
+								}
+							]
+						},
+						{
+							"name": "Dimension 1",
+							"type": "int",
+							"direction": "Input",
+							"defaultValue": "0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Output",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "74581083476DB42BC8B3249B71381D02",
+									"pin": "self"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "44B60A3B46FBCD61351FBF9E22B793BB",
+					"class": "K2Node_CallFunction",
+					"title": "integer > integer",
+					"posX": 2568,
+					"posY": 696,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__KismetMathLibrary",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "A",
+							"type": "int",
+							"direction": "Input",
+							"defaultValue": "0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "79B5287640E98BE93021418C0F58B40C",
+									"pin": "ReturnValue"
+								}
+							]
+						},
+						{
+							"name": "B",
+							"type": "int",
+							"direction": "Input",
+							"defaultValue": "0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ReturnValue",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F85A73B6448FBF7CBF19C489C71BC024",
+									"pin": "Condition"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "F85A73B6448FBF7CBF19C489C71BC024",
+					"class": "K2Node_IfThenElse",
+					"title": "Branch",
+					"posX": 2744,
+					"posY": 656,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CFF6826040C43A458035218024087950",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "Condition",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "44B60A3B46FBCD61351FBF9E22B793BB",
+									"pin": "ReturnValue"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "74581083476DB42BC8B3249B71381D02",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "else",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "74581083476DB42BC8B3249B71381D02",
+					"class": "K2Node_CallFunction",
+					"title": "Set Visibility\nTarget is Widget",
+					"posX": 2960,
+					"posY": 641,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F85A73B6448FBF7CBF19C489C71BC024",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5C026A9643E9D11E1CD3F2BF0397F834",
+									"pin": "Output"
+								}
+							]
+						},
+						{
+							"name": "InVisibility",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "Collapsed",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "79B5287640E98BE93021418C0F58B40C",
+					"class": "K2Node_CallArrayFunction",
+					"title": "Length",
+					"posX": 2336,
+					"posY": 800,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__KismetArrayLibrary",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "TargetArray",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CFF6826040C43A458035218024087950",
+									"pin": "FoundWidgets"
+								}
+							]
+						},
+						{
+							"name": "ReturnValue",
+							"type": "int",
+							"direction": "Output",
+							"defaultValue": "0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "44B60A3B46FBCD61351FBF9E22B793BB",
+									"pin": "A"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "04D17AB247856D5921503085A5655BE7",
+					"class": "K2Node_CallFunction",
+					"title": "Refresh Selection from Owner\nTarget is UBP 天气选择",
+					"posX": 1200,
+					"posY": 641,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "11D9B93C4B758FA036BC74AFB5D8C90E",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F39D68C949802CC93DA26A92D14B58AA",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "37FA0870477A2B42574637A55FA472D9",
+									"pin": "UBP_空间说明"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "F39D68C949802CC93DA26A92D14B58AA",
+					"class": "K2Node_CallFunction",
+					"title": "Refresh Selection from Owner\nTarget is UBP 时间选择",
+					"posX": 1456,
+					"posY": 641,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "04D17AB247856D5921503085A5655BE7",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3689EAB74ECFA1FFD42CFE963E9273B1",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "019C852E44B50B3FC816F28A5FBDADA7",
+									"pin": "UBP_娱乐内容使用统计"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "5A795DEE40CE938091CFAEA0B42A9155",
+					"class": "K2Node_Knot",
+					"title": "Reroute Node",
+					"posX": 352,
+					"posY": 921,
+					"comment": "",
+					"pins": [
+						{
+							"name": "InputPin",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3C0DF820436725B023BF3780EA7A9440",
+									"pin": "UBP_右侧栏"
+								}
+							]
+						},
+						{
+							"name": "OutputPin",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "019C852E44B50B3FC816F28A5FBDADA7",
+									"pin": "self"
+								},
+								{
+									"nodeId": "37FA0870477A2B42574637A55FA472D9",
+									"pin": "self"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

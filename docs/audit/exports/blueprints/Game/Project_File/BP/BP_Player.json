@@ -1,0 +1,381 @@
+{
+	"assetPath": "/Game/Project_File/BP/BP_Player",
+	"blueprintPath": "/Game/Project_File/BP/BP_Player.BP_Player",
+	"packageName": "/Game/Project_File/BP/BP_Player",
+	"isLevelScript": false,
+	"blueprintClass": "Blueprint",
+	"parentClass": "/Game/Project_File/BP/BP_Character_Base.BP_Character_Base_C",
+	"variables": [],
+	"functions": [
+		{
+			"name": "UserConstructionScript",
+			"kind": "override",
+			"graphSelector": "UserConstructionScript"
+		},
+		{
+			"name": "ReceiveBeginPlay",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "75998450463141B96F3D94A39CD93E89"
+		},
+		{
+			"name": "ReceiveActorBeginOverlap",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "CFC338D742BF0A0A9597C69ED2115606"
+		},
+		{
+			"name": "ReceiveTick",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "BD6708B6453020A2C153999340AB4D05"
+		}
+	],
+	"components": [],
+	"graphs": [
+		{
+			"name": "UserConstructionScript",
+			"selector": "UserConstructionScript",
+			"kind": "function",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/BP_Player.BP_Player:UserConstructionScript",
+			"nodeCount": 2,
+			"nodes": [
+				{
+					"id": "F6EAE77F44A60DB472249D868DC16CB6",
+					"class": "K2Node_FunctionEntry",
+					"title": "Construction Script",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "B67596EB480545FE696375B96ACF81E4",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "B67596EB480545FE696375B96ACF81E4",
+					"class": "K2Node_CallParentFunction",
+					"title": "Parent: Construction Script",
+					"posX": 200,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F6EAE77F44A60DB472249D868DC16CB6",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EventGraph",
+			"selector": "EventGraph",
+			"kind": "event_graph",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/BP_Player.BP_Player:EventGraph",
+			"nodeCount": 6,
+			"nodes": [
+				{
+					"id": "75998450463141B96F3D94A39CD93E89",
+					"class": "K2Node_Event",
+					"title": "Event BeginPlay",
+					"posX": 0,
+					"posY": 0,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "08B51D36479E75A0AAA4CEB68E890077",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "08B51D36479E75A0AAA4CEB68E890077",
+					"class": "K2Node_CallParentFunction",
+					"title": "Parent: BeginPlay",
+					"posX": 288,
+					"posY": 0,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "75998450463141B96F3D94A39CD93E89",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "CFC338D742BF0A0A9597C69ED2115606",
+					"class": "K2Node_Event",
+					"title": "Event ActorBeginOverlap",
+					"posX": 0,
+					"posY": 208,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "35E0E3C14667A24D5459859CDC7C779A",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "OtherActor",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "35E0E3C14667A24D5459859CDC7C779A",
+									"pin": "OtherActor"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "35E0E3C14667A24D5459859CDC7C779A",
+					"class": "K2Node_CallParentFunction",
+					"title": "Parent: ActorBeginOverlap",
+					"posX": 288,
+					"posY": 208,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CFC338D742BF0A0A9597C69ED2115606",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "OtherActor",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CFC338D742BF0A0A9597C69ED2115606",
+									"pin": "OtherActor"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "BD6708B6453020A2C153999340AB4D05",
+					"class": "K2Node_Event",
+					"title": "Event Tick",
+					"posX": 0,
+					"posY": 416,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "7875417C4D937E95C0F2159D295A3DBA",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "DeltaSeconds",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "7875417C4D937E95C0F2159D295A3DBA",
+									"pin": "DeltaSeconds"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "7875417C4D937E95C0F2159D295A3DBA",
+					"class": "K2Node_CallParentFunction",
+					"title": "Parent: Tick",
+					"posX": 288,
+					"posY": 416,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "BD6708B6453020A2C153999340AB4D05",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "DeltaSeconds",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "BD6708B6453020A2C153999340AB4D05",
+									"pin": "DeltaSeconds"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

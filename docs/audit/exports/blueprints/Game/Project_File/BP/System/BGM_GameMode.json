@@ -1,0 +1,135 @@
+{
+	"assetPath": "/Game/Project_File/BP/System/BGM_GameMode",
+	"blueprintPath": "/Game/Project_File/BP/System/BGM_GameMode.BGM_GameMode",
+	"packageName": "/Game/Project_File/BP/System/BGM_GameMode",
+	"isLevelScript": false,
+	"blueprintClass": "Blueprint",
+	"parentClass": "/Script/Engine.GameModeBase",
+	"variables": [],
+	"functions": [
+		{
+			"name": "UserConstructionScript",
+			"kind": "override",
+			"graphSelector": "UserConstructionScript"
+		},
+		{
+			"name": "ReceiveBeginPlay",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "734F024648ED16426004989367735029"
+		},
+		{
+			"name": "ReceiveTick",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "926577474F3022186DE89BA325D2129A"
+		}
+	],
+	"components": [
+		{
+			"name": "DefaultSceneRoot",
+			"class": "SceneComponent",
+			"parent": ""
+		}
+	],
+	"graphs": [
+		{
+			"name": "UserConstructionScript",
+			"selector": "UserConstructionScript",
+			"kind": "function",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/System/BGM_GameMode.BGM_GameMode:UserConstructionScript",
+			"nodeCount": 1,
+			"nodes": [
+				{
+					"id": "47704C194090531D52B10A8848C810D5",
+					"class": "K2Node_FunctionEntry",
+					"title": "Construction Script",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EventGraph",
+			"selector": "EventGraph",
+			"kind": "event_graph",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/System/BGM_GameMode.BGM_GameMode:EventGraph",
+			"nodeCount": 2,
+			"nodes": [
+				{
+					"id": "734F024648ED16426004989367735029",
+					"class": "K2Node_Event",
+					"title": "Event BeginPlay",
+					"posX": 0,
+					"posY": 0,
+					"comment": "This node is disabled and will not be called.\r\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "926577474F3022186DE89BA325D2129A",
+					"class": "K2Node_Event",
+					"title": "Event Tick",
+					"posX": 0,
+					"posY": 208,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "DeltaSeconds",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

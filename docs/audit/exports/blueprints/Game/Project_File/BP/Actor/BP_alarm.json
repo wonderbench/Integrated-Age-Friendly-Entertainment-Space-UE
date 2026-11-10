@@ -1,0 +1,1753 @@
+{
+	"assetPath": "/Game/Project_File/BP/Actor/BP_alarm",
+	"blueprintPath": "/Game/Project_File/BP/Actor/BP_alarm.BP_alarm",
+	"packageName": "/Game/Project_File/BP/Actor/BP_alarm",
+	"isLevelScript": false,
+	"blueprintClass": "Blueprint",
+	"parentClass": "/Game/Project_File/BP/Actor/BP_ActorBase.BP_ActorBase_C",
+	"variables": [
+		{
+			"name": "bAlarmActive",
+			"typeSpec": "bool",
+			"pinCategory": "bool",
+			"guid": "B1E5170E47B38863C16F46A84AE7B46E",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		},
+		{
+			"name": "AlarmRotationTimerHandle",
+			"typeSpec": "struct:/Script/Engine.TimerHandle",
+			"pinCategory": "struct",
+			"guid": "A321759C42594CB495BC6AAA2F8BFC74",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		}
+	],
+	"functions": [
+		{
+			"name": "UserConstructionScript",
+			"kind": "override",
+			"graphSelector": "UserConstructionScript"
+		},
+		{
+			"name": "Light_Begin",
+			"kind": "custom_event",
+			"graphSelector": "EventGraph",
+			"nodeId": "3C2C0D774E4173C259461E8BE24A5E6B"
+		},
+		{
+			"name": "CustomEvent",
+			"kind": "custom_event",
+			"graphSelector": "EventGraph",
+			"nodeId": "292A8BC64B9EA48CEB56C3A3A5F13D44"
+		},
+		{
+			"name": "Light_Stop",
+			"kind": "custom_event",
+			"graphSelector": "EventGraph",
+			"nodeId": "91E423924FE701E2440E3D9B748AD685"
+		},
+		{
+			"name": "Light_Toggle",
+			"kind": "custom_event",
+			"graphSelector": "EventGraph",
+			"nodeId": "CF1B607A4835EB4C3A3F94B1CD76BDAD"
+		}
+	],
+	"components": [
+		{
+			"name": "Cylinder",
+			"class": "StaticMeshComponent",
+			"parent": "DefaultSceneRoot"
+		},
+		{
+			"name": "SpotLight1",
+			"class": "SpotLightComponent",
+			"parent": "Cylinder"
+		},
+		{
+			"name": "SpotLight",
+			"class": "SpotLightComponent",
+			"parent": "Cylinder"
+		}
+	],
+	"graphs": [
+		{
+			"name": "UserConstructionScript",
+			"selector": "UserConstructionScript",
+			"kind": "function",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/Actor/BP_alarm.BP_alarm:UserConstructionScript",
+			"nodeCount": 2,
+			"nodes": [
+				{
+					"id": "F7D0FA05454E5A8DEAAEA986748C4F69",
+					"class": "K2Node_FunctionEntry",
+					"title": "Construction Script",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "96C585034016128634DC06A377E17B81",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "96C585034016128634DC06A377E17B81",
+					"class": "K2Node_CallParentFunction",
+					"title": "Parent: Construction Script",
+					"posX": 200,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F7D0FA05454E5A8DEAAEA986748C4F69",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EventGraph",
+			"selector": "EventGraph",
+			"kind": "event_graph",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/Actor/BP_alarm.BP_alarm:EventGraph",
+			"nodeCount": 31,
+			"nodes": [
+				{
+					"id": "D8BEB6494695CA7EE57C239B82F324C5",
+					"class": "K2Node_VariableGet",
+					"title": "Get SpotLight1",
+					"posX": 144,
+					"posY": 550,
+					"comment": "",
+					"pins": [
+						{
+							"name": "SpotLight1",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "8EA154CF43414AA7B2E2D3978F7CD087",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "563402F04411C7DA4C1BC19ECD9683A5",
+					"class": "K2Node_VariableGet",
+					"title": "Get SpotLight",
+					"posX": 896,
+					"posY": 480,
+					"comment": "",
+					"pins": [
+						{
+							"name": "SpotLight",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "8EA154CF43414AA7B2E2D3978F7CD087",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "25022D91465B518B24F08AA8F75459BA",
+					"class": "K2Node_Timeline",
+					"title": "Timeline",
+					"posX": 608,
+					"posY": 416,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Play",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "PlayFromStart",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "142C0095440C3DD5F36C6C9B1C1A084A",
+									"pin": "then_0"
+								}
+							]
+						},
+						{
+							"name": "Stop",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "20CAA4A2471752D02009B2AE5A26330D",
+									"pin": "then_0"
+								}
+							]
+						},
+						{
+							"name": "Reverse",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ReverseFromEnd",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Update",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "8EA154CF43414AA7B2E2D3978F7CD087",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "Finished",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "SetNewTime",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NewTime",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Direction",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NewTrack_0",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "8EA154CF43414AA7B2E2D3978F7CD087",
+									"pin": "NewIntensity"
+								},
+								{
+									"nodeId": "7C27A49A45413704EA394DA890C374DB",
+									"pin": "ParameterValue"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "8EA154CF43414AA7B2E2D3978F7CD087",
+					"class": "K2Node_CallFunction",
+					"title": "Set Intensity\nTarget is Light Component",
+					"posX": 1101,
+					"posY": 400,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "25022D91465B518B24F08AA8F75459BA",
+									"pin": "Update"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "7C27A49A45413704EA394DA890C374DB",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D8BEB6494695CA7EE57C239B82F324C5",
+									"pin": "SpotLight1"
+								},
+								{
+									"nodeId": "563402F04411C7DA4C1BC19ECD9683A5",
+									"pin": "SpotLight"
+								}
+							]
+						},
+						{
+							"name": "NewIntensity",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "25022D91465B518B24F08AA8F75459BA",
+									"pin": "NewTrack_0"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "3C2C0D774E4173C259461E8BE24A5E6B",
+					"class": "K2Node_CustomEvent",
+					"title": "Light_Begin\nCustom Event",
+					"posX": -400,
+					"posY": 401,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "182B8566498C53DEFC6DC4A60B259237",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "142C0095440C3DD5F36C6C9B1C1A084A",
+					"class": "K2Node_ExecutionSequence",
+					"title": "Sequence",
+					"posX": 416,
+					"posY": 448,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CEDFC42C4E960A65DB68FC8BBA7EEA84",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then_0",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "25022D91465B518B24F08AA8F75459BA",
+									"pin": "PlayFromStart"
+								}
+							]
+						},
+						{
+							"name": "then_1",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "00132FAB46542E7644972696082E8CB9",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "00132FAB46542E7644972696082E8CB9",
+					"class": "K2Node_CallFunction",
+					"title": "Set Timer by Event",
+					"posX": 608,
+					"posY": 761,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "142C0095440C3DD5F36C6C9B1C1A084A",
+									"pin": "then_1"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "4087C4BF425BF310621F6F97E453C89E",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__KismetSystemLibrary",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Delegate",
+							"type": "delegate",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "292A8BC64B9EA48CEB56C3A3A5F13D44",
+									"pin": "OutputDelegate"
+								}
+							]
+						},
+						{
+							"name": "Time",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.010000",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "bLooping",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "bMaxOncePerFrame",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "InitialStartDelay",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.000000",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "InitialStartDelayVariance",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.000000",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ReturnValue",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "4087C4BF425BF310621F6F97E453C89E",
+									"pin": "AlarmRotationTimerHandle"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "292A8BC64B9EA48CEB56C3A3A5F13D44",
+					"class": "K2Node_CustomEvent",
+					"title": "CustomEvent\nCustom Event",
+					"posX": 416,
+					"posY": 816,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "00132FAB46542E7644972696082E8CB9",
+									"pin": "Delegate"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F2E798104F2CF8264D2C9588F03A6D86",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "64EF663348A3985CF1A2FFBAF3E72534",
+					"class": "K2Node_VariableGet",
+					"title": "Get Cylinder",
+					"posX": 416,
+					"posY": 1062,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Cylinder",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F2E798104F2CF8264D2C9588F03A6D86",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "F2E798104F2CF8264D2C9588F03A6D86",
+					"class": "K2Node_CallFunction",
+					"title": "Add Local Rotation\nTarget is Scene Component",
+					"posX": 608,
+					"posY": 992,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "292A8BC64B9EA48CEB56C3A3A5F13D44",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "64EF663348A3985CF1A2FFBAF3E72534",
+									"pin": "Cylinder"
+								}
+							]
+						},
+						{
+							"name": "DeltaRotation",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "0, 0, 0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "DeltaRotation_Roll",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "DeltaRotation_Pitch",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "DeltaRotation_Yaw",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.6",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "bSweep",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "SweepHitResult",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "bTeleport",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "A75E342449CBBE2DF23AD3971DBA707F",
+					"class": "K2Node_VariableGet",
+					"title": "Get bAlarmActive",
+					"posX": -400,
+					"posY": 471,
+					"comment": "",
+					"pins": [
+						{
+							"name": "bAlarmActive",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "182B8566498C53DEFC6DC4A60B259237",
+									"pin": "Condition"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "182B8566498C53DEFC6DC4A60B259237",
+					"class": "K2Node_IfThenElse",
+					"title": "Branch",
+					"posX": -160,
+					"posY": 416,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3C2C0D774E4173C259461E8BE24A5E6B",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "Condition",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A75E342449CBBE2DF23AD3971DBA707F",
+									"pin": "bAlarmActive"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "else",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CEDFC42C4E960A65DB68FC8BBA7EEA84",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "CEDFC42C4E960A65DB68FC8BBA7EEA84",
+					"class": "K2Node_VariableSet",
+					"title": "Set bAlarmActive",
+					"posX": 144,
+					"posY": 464,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "182B8566498C53DEFC6DC4A60B259237",
+									"pin": "else"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "142C0095440C3DD5F36C6C9B1C1A084A",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "bAlarmActive",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Output_Get",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "91E423924FE701E2440E3D9B748AD685",
+					"class": "K2Node_CustomEvent",
+					"title": "Light_Stop\nCustom Event",
+					"posX": -400,
+					"posY": -528,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "20CAA4A2471752D02009B2AE5A26330D",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "4087C4BF425BF310621F6F97E453C89E",
+					"class": "K2Node_VariableSet",
+					"title": "Set AlarmRotationTimerHandle",
+					"posX": 1101,
+					"posY": 777,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "00132FAB46542E7644972696082E8CB9",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "AlarmRotationTimerHandle",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "00132FAB46542E7644972696082E8CB9",
+									"pin": "ReturnValue"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "781C7BDC4B0278DC738999A7C3ACA86C",
+					"class": "K2Node_VariableGet",
+					"title": "Get AlarmRotationTimerHandle",
+					"posX": -160,
+					"posY": -368,
+					"comment": "",
+					"pins": [
+						{
+							"name": "AlarmRotationTimerHandle",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C7E6B8594D5C3F73CA61A09F330690CA",
+									"pin": "Handle"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "20CAA4A2471752D02009B2AE5A26330D",
+					"class": "K2Node_ExecutionSequence",
+					"title": "Sequence",
+					"posX": -160,
+					"posY": -513,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "91E423924FE701E2440E3D9B748AD685",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then_0",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "25022D91465B518B24F08AA8F75459BA",
+									"pin": "Stop"
+								}
+							]
+						},
+						{
+							"name": "then_1",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C7E6B8594D5C3F73CA61A09F330690CA",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "C7E6B8594D5C3F73CA61A09F330690CA",
+					"class": "K2Node_CallFunction",
+					"title": "Clear and Invalidate Timer by Handle",
+					"posX": 144,
+					"posY": -481,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "20CAA4A2471752D02009B2AE5A26330D",
+									"pin": "then_1"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "6D477F8F4D289A95C26E1ABC9B4CB8B9",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__KismetSystemLibrary",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WorldContextObject",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Handle",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "781C7BDC4B0278DC738999A7C3ACA86C",
+									"pin": "AlarmRotationTimerHandle"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "6D477F8F4D289A95C26E1ABC9B4CB8B9",
+					"class": "K2Node_CallFunction",
+					"title": "Set Intensity\nTarget is Light Component",
+					"posX": 512,
+					"posY": -497,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C7E6B8594D5C3F73CA61A09F330690CA",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "8370104041AD2867C8F035B07304C0EA",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "7A56AF6D49E5BB7676A4B5AC484B69EB",
+									"pin": "SpotLight"
+								}
+							]
+						},
+						{
+							"name": "NewIntensity",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "8370104041AD2867C8F035B07304C0EA",
+					"class": "K2Node_CallFunction",
+					"title": "Set Intensity\nTarget is Light Component",
+					"posX": 928,
+					"posY": -496,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "6D477F8F4D289A95C26E1ABC9B4CB8B9",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "B49CFBF047EFF2C334AD9F8E5A633B39",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "6EBB69134DCE14CAB64EBE8D660AE8A1",
+									"pin": "SpotLight1"
+								}
+							]
+						},
+						{
+							"name": "NewIntensity",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "B49CFBF047EFF2C334AD9F8E5A633B39",
+					"class": "K2Node_VariableSet",
+					"title": "Set bAlarmActive",
+					"posX": 1165,
+					"posY": -465,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "8370104041AD2867C8F035B07304C0EA",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5F8C6DAE491166C5970554A25BC5C280",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "bAlarmActive",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Output_Get",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "CF1B607A4835EB4C3A3F94B1CD76BDAD",
+					"class": "K2Node_CustomEvent",
+					"title": "Light_Toggle\nCustom Event",
+					"posX": -400,
+					"posY": -111,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A91443CA4A0008C0C94FDF994FE427E6",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "86DA113041EE8F57832D2194652ACE03",
+					"class": "K2Node_VariableGet",
+					"title": "Get bAlarmActive",
+					"posX": -400,
+					"posY": -41,
+					"comment": "",
+					"pins": [
+						{
+							"name": "bAlarmActive",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A91443CA4A0008C0C94FDF994FE427E6",
+									"pin": "Condition"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "A91443CA4A0008C0C94FDF994FE427E6",
+					"class": "K2Node_IfThenElse",
+					"title": "Branch",
+					"posX": -160,
+					"posY": -96,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CF1B607A4835EB4C3A3F94B1CD76BDAD",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "Condition",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "86DA113041EE8F57832D2194652ACE03",
+									"pin": "bAlarmActive"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3F96C5DD4A40D7D9043B8CB9DCF13699",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "else",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A90DC82E406EEE4D2B649285B93CBD82",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "A90DC82E406EEE4D2B649285B93CBD82",
+					"class": "K2Node_CallFunction",
+					"title": "Light Begin\nTarget is BP Alarm",
+					"posX": 144,
+					"posY": -79,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A91443CA4A0008C0C94FDF994FE427E6",
+									"pin": "else"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "3F96C5DD4A40D7D9043B8CB9DCF13699",
+					"class": "K2Node_CallFunction",
+					"title": "Light Stop\nTarget is BP Alarm",
+					"posX": 512,
+					"posY": -112,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A91443CA4A0008C0C94FDF994FE427E6",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "7C27A49A45413704EA394DA890C374DB",
+					"class": "K2Node_CallFunction",
+					"title": "Set Scalar Parameter Value on Materials\nTarget is Mesh Component",
+					"posX": 1376,
+					"posY": 400,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "8EA154CF43414AA7B2E2D3978F7CD087",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E23B864345490CE86074E180CCFA19A2",
+									"pin": "Cylinder"
+								}
+							]
+						},
+						{
+							"name": "ParameterName",
+							"type": "name",
+							"direction": "Input",
+							"defaultValue": "AlarmIntensity",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ParameterValue",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "25022D91465B518B24F08AA8F75459BA",
+									"pin": "NewTrack_0"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "5F8C6DAE491166C5970554A25BC5C280",
+					"class": "K2Node_CallFunction",
+					"title": "Set Scalar Parameter Value on Materials\nTarget is Mesh Component",
+					"posX": 1440,
+					"posY": -496,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "B49CFBF047EFF2C334AD9F8E5A633B39",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E23B864345490CE86074E180CCFA19A2",
+									"pin": "Cylinder"
+								}
+							]
+						},
+						{
+							"name": "ParameterName",
+							"type": "name",
+							"direction": "Input",
+							"defaultValue": "AlarmIntensity",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ParameterValue",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "E23B864345490CE86074E180CCFA19A2",
+					"class": "K2Node_VariableGet",
+					"title": "Get Cylinder",
+					"posX": 896,
+					"posY": -86,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Cylinder",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "7C27A49A45413704EA394DA890C374DB",
+									"pin": "self"
+								},
+								{
+									"nodeId": "5F8C6DAE491166C5970554A25BC5C280",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "7A56AF6D49E5BB7676A4B5AC484B69EB",
+					"class": "K2Node_VariableGet",
+					"title": "Get SpotLight",
+					"posX": 512,
+					"posY": -337,
+					"comment": "",
+					"pins": [
+						{
+							"name": "SpotLight",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "6D477F8F4D289A95C26E1ABC9B4CB8B9",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "6EBB69134DCE14CAB64EBE8D660AE8A1",
+					"class": "K2Node_VariableGet",
+					"title": "Get SpotLight1",
+					"posX": 896,
+					"posY": -326,
+					"comment": "",
+					"pins": [
+						{
+							"name": "SpotLight1",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "8370104041AD2867C8F035B07304C0EA",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,248 @@
+{
+  "map": "/Game/Project_File/Maps/L_LivingGrove_Social",
+  "default_game_mode": "/Game/Project_File/BP/System/BGM_GameMode.BGM_GameMode_C",
+  "loaded_actor_count": 1135,
+  "class_counts": {
+    "/Game/Project_File/BP/AI/BP_ElderSplinePath.BP_ElderSplinePath_C": 1,
+    "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C": 4,
+    "/Game/Project_File/BP/Actor/BP_WheelChair.BP_WheelChair_C": 1,
+    "/Game/Project_File/BP/BP_AI.BP_AI_C": 1,
+    "/Game/Project_File/BP/BP_Player.BP_Player_C": 1,
+    "/Game/Project_File/Props/GroveLantern/Blueprints/BP_LG_PathLantern.BP_LG_PathLantern_C": 24,
+    "/Game/UltraDynamicSky/Blueprints/Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C": 1,
+    "/Game/UltraDynamicSky/Blueprints/Ultra_Dynamic_Weather.Ultra_Dynamic_Weather_C": 1,
+    "/Script/Engine.Actor": 2,
+    "/Script/Engine.CameraActor": 17,
+    "/Script/Engine.DirectionalLight": 1,
+    "/Script/Engine.ExponentialHeightFog": 1,
+    "/Script/Engine.PostProcessVolume": 1,
+    "/Script/Engine.RectLight": 40,
+    "/Script/Engine.SkyAtmosphere": 1,
+    "/Script/Engine.SkyLight": 1,
+    "/Script/Engine.StaticMeshActor": 1002,
+    "/Script/Engine.TextRenderActor": 29,
+    "/Script/Engine.TriggerBox": 1,
+    "/Script/Foliage.InstancedFoliageActor": 1,
+    "/Script/LevelSequence.LevelSequenceActor": 1,
+    "/Script/NavigationSystem.NavMeshBoundsVolume": 1,
+    "/Script/NavigationSystem.RecastNavMesh": 1,
+    "/Script/UnrealEd.GroupActor": 1
+  },
+  "ceiling_tags": 8,
+  "selected_actors": [
+    {
+      "label": "RF_EntryVestibuleRoof",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.StaticMeshActor_787",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        -3850.0,
+        440.0
+      ]
+    },
+    {
+      "label": "RF_EntryVestibuleRoof",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.StaticMeshActor_792",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        3850.0,
+        440.0
+      ]
+    },
+    {
+      "label": "CR_PerimeterRoofBearing",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.StaticMeshActor_255",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -2460.0,
+        0.0,
+        1640.0
+      ]
+    },
+    {
+      "label": "CR_PerimeterRoofBearing",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.StaticMeshActor_256",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        2460.0,
+        0.0,
+        1640.0
+      ]
+    },
+    {
+      "label": "CR_PendantSupportBeam",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.StaticMeshActor_257",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        -1800.0,
+        1640.0
+      ]
+    },
+    {
+      "label": "CR_PendantSupportBeam",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.StaticMeshActor_258",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        0.0,
+        1640.0
+      ]
+    },
+    {
+      "label": "CR_PendantSupportBeam",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.StaticMeshActor_259",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        1800.0,
+        1640.0
+      ]
+    },
+    {
+      "label": "BG_RestoredBirdNest",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.StaticMeshActor_0",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        0.0,
+        950.0
+      ]
+    },
+    {
+      "label": "Runtime_ElderRoute",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.BP_ElderSplinePath_C_0",
+      "cls": "/Game/Project_File/BP/AI/BP_ElderSplinePath.BP_ElderSplinePath_C",
+      "tags": [],
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "Runtime_NavBounds",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.NavMeshBoundsVolume_0",
+      "cls": "/Script/NavigationSystem.NavMeshBoundsVolume",
+      "tags": [],
+      "xyz": [
+        0.0,
+        0.0,
+        350.0
+      ]
+    },
+    {
+      "label": "Runtime_Camera_1",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.BP_Camera_C_0",
+      "cls": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C",
+      "tags": [],
+      "xyz": [
+        -2250.0,
+        -3250.0,
+        1100.0
+      ]
+    },
+    {
+      "label": "Runtime_Camera_2",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.BP_Camera_C_1",
+      "cls": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C",
+      "tags": [],
+      "xyz": [
+        2250.0,
+        -3250.0,
+        1100.0
+      ]
+    },
+    {
+      "label": "Runtime_Camera_3",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.BP_Camera_C_2",
+      "cls": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C",
+      "tags": [],
+      "xyz": [
+        -2250.0,
+        3250.0,
+        1100.0
+      ]
+    },
+    {
+      "label": "Runtime_Camera_4",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.BP_Camera_C_3",
+      "cls": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C",
+      "tags": [],
+      "xyz": [
+        2250.0,
+        3250.0,
+        1100.0
+      ]
+    },
+    {
+      "label": "Runtime_NavigationData",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.RecastNavMesh_0",
+      "cls": "/Script/NavigationSystem.RecastNavMesh",
+      "tags": [],
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "Ultra_Dynamic_Sky",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.Ultra_Dynamic_Sky_C_0",
+      "cls": "/Game/UltraDynamicSky/Blueprints/Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C",
+      "tags": [],
+      "xyz": [
+        -560.690566,
+        53.328465,
+        1325.035074
+      ]
+    },
+    {
+      "label": "Ultra_Dynamic_Weather",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.Ultra_Dynamic_Weather_C_0",
+      "cls": "/Game/UltraDynamicSky/Blueprints/Ultra_Dynamic_Weather.Ultra_Dynamic_Weather_C",
+      "tags": [],
+      "xyz": [
+        -1023.482423,
+        23.775798,
+        1451.120211
+      ]
+    },
+    {
+      "label": "Runtime_Elder",
+      "path": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social:PersistentLevel.BP_AI_C_0",
+      "cls": "/Game/Project_File/BP/BP_AI.BP_AI_C",
+      "tags": [],
+      "xyz": [
+        0.0,
+        -3000.0,
+        93.0
+      ]
+    }
+  ]
+}

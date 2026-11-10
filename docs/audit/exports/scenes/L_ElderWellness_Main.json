@@ -1,0 +1,702 @@
+{
+  "map": "/Game/Project_File/Maps/L_ElderWellness_Main",
+  "default_game_mode": "/Game/Project_File/BP/System/BGM_GameMode.BGM_GameMode_C",
+  "loaded_actor_count": 1110,
+  "class_counts": {
+    "/Game/Project_File/BP/AI/BP_ElderSplinePath.BP_ElderSplinePath_C": 1,
+    "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C": 4,
+    "/Game/Project_File/BP/Actor/BP_WheelChair.BP_WheelChair_C": 1,
+    "/Game/Project_File/BP/Actor/BP_alarm.BP_alarm_C": 4,
+    "/Game/Project_File/BP/BP_AI.BP_AI_C": 1,
+    "/Game/Project_File/BP/BP_Player.BP_Player_C": 1,
+    "/Game/UltraDynamicSky/Blueprints/Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C": 1,
+    "/Game/UltraDynamicSky/Blueprints/Ultra_Dynamic_Weather.Ultra_Dynamic_Weather_C": 1,
+    "/Script/Engine.CameraActor": 8,
+    "/Script/Engine.PointLight": 2,
+    "/Script/Engine.PostProcessVolume": 1,
+    "/Script/Engine.RectLight": 26,
+    "/Script/Engine.SpotLight": 12,
+    "/Script/Engine.StaticMeshActor": 1043,
+    "/Script/Engine.TriggerBox": 1,
+    "/Script/NavigationSystem.NavMeshBoundsVolume": 1,
+    "/Script/NavigationSystem.RecastNavMesh": 1,
+    "/Script/UnrealEd.GroupActor": 1
+  },
+  "ceiling_tags": 40,
+  "selected_actors": [
+    {
+      "label": "EW_WindowHead",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_87",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -912.0,
+        0.0,
+        415.0
+      ]
+    },
+    {
+      "label": "EW_WindowHead",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_143",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        912.0,
+        0.0,
+        415.0
+      ]
+    },
+    {
+      "label": "EW_RoofBeam",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_213",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        -1000.0,
+        395.0
+      ]
+    },
+    {
+      "label": "EW_RoofBeam",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_218",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        -300.0,
+        395.0
+      ]
+    },
+    {
+      "label": "EW_RoofBeam",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_242",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        400.0,
+        395.0
+      ]
+    },
+    {
+      "label": "EW_RoofBeam",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_246",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        1100.0,
+        395.0
+      ]
+    },
+    {
+      "label": "EW_RoofWing",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_261",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -625.0,
+        0.0,
+        431.0
+      ]
+    },
+    {
+      "label": "EW_RoofWing",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_264",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        625.0,
+        0.0,
+        431.0
+      ]
+    },
+    {
+      "label": "EW_RoofCenter",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_269",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        0.0,
+        490.0
+      ]
+    },
+    {
+      "label": "EW_Diffuser",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_619",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -520.0,
+        -850.0,
+        389.0
+      ]
+    },
+    {
+      "label": "EW_Diffuser",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_621",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        520.0,
+        -850.0,
+        389.0
+      ]
+    },
+    {
+      "label": "EW_Diffuser",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_623",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -520.0,
+        -150.0,
+        389.0
+      ]
+    },
+    {
+      "label": "EW_Diffuser",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_624",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        520.0,
+        -150.0,
+        389.0
+      ]
+    },
+    {
+      "label": "EW_Diffuser",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_625",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -520.0,
+        550.0,
+        389.0
+      ]
+    },
+    {
+      "label": "EW_Diffuser",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_626",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        520.0,
+        550.0,
+        389.0
+      ]
+    },
+    {
+      "label": "EW_Diffuser",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_627",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -520.0,
+        1050.0,
+        389.0
+      ]
+    },
+    {
+      "label": "EW_Diffuser",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_628",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        520.0,
+        1050.0,
+        389.0
+      ]
+    },
+    {
+      "label": "EW_Clerestory",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_646",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -350.0,
+        0.0,
+        460.0
+      ]
+    },
+    {
+      "label": "EW_Clerestory",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_647",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        350.0,
+        0.0,
+        460.0
+      ]
+    },
+    {
+      "label": "EW_RoofEndClosure",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_648",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        -1210.0,
+        451.0
+      ]
+    },
+    {
+      "label": "EW_RoofEndClosure",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_649",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        1210.0,
+        451.0
+      ]
+    },
+    {
+      "label": "EW_Pendant",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_6",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        -620.0,
+        352.0
+      ]
+    },
+    {
+      "label": "EW_Pendant",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_7",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        105.0,
+        352.0
+      ]
+    },
+    {
+      "label": "EW_Pendant",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_8",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        900.0,
+        352.0
+      ]
+    },
+    {
+      "label": "EW_AV_CoveLip",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_26",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -332.0,
+        0.0,
+        466.0
+      ]
+    },
+    {
+      "label": "EW_AV_CoveOpal",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_27",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -332.0,
+        0.0,
+        471.0
+      ]
+    },
+    {
+      "label": "EW_AV_CoveLip",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_28",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        332.0,
+        0.0,
+        466.0
+      ]
+    },
+    {
+      "label": "EW_AV_CoveOpal",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_29",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        332.0,
+        0.0,
+        471.0
+      ]
+    },
+    {
+      "label": "EW_AV_Downlight",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_30",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -590.0,
+        -950.0,
+        420.0
+      ]
+    },
+    {
+      "label": "EW_AV_Downlight",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_31",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -590.0,
+        -580.0,
+        420.0
+      ]
+    },
+    {
+      "label": "EW_AV_Downlight",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_34",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -590.0,
+        -210.0,
+        420.0
+      ]
+    },
+    {
+      "label": "EW_AV_Downlight",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_35",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -590.0,
+        160.0,
+        420.0
+      ]
+    },
+    {
+      "label": "EW_AV_Downlight",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_36",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -590.0,
+        530.0,
+        420.0
+      ]
+    },
+    {
+      "label": "EW_AV_Downlight",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_37",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -590.0,
+        900.0,
+        420.0
+      ]
+    },
+    {
+      "label": "EW_AV_Downlight",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_38",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        590.0,
+        -950.0,
+        420.0
+      ]
+    },
+    {
+      "label": "EW_AV_Downlight",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_39",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        590.0,
+        -580.0,
+        420.0
+      ]
+    },
+    {
+      "label": "EW_AV_Downlight",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_40",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        590.0,
+        -210.0,
+        420.0
+      ]
+    },
+    {
+      "label": "EW_AV_Downlight",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_41",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        590.0,
+        160.0,
+        420.0
+      ]
+    },
+    {
+      "label": "EW_AV_Downlight",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_42",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        590.0,
+        530.0,
+        420.0
+      ]
+    },
+    {
+      "label": "EW_AV_Downlight",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.StaticMeshActor_43",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        590.0,
+        900.0,
+        420.0
+      ]
+    },
+    {
+      "label": "Runtime_ElderRoute",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.BP_ElderSplinePath_C_0",
+      "cls": "/Game/Project_File/BP/AI/BP_ElderSplinePath.BP_ElderSplinePath_C",
+      "tags": [],
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "Runtime_NavBounds",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.NavMeshBoundsVolume_0",
+      "cls": "/Script/NavigationSystem.NavMeshBoundsVolume",
+      "tags": [],
+      "xyz": [
+        0.0,
+        0.0,
+        180.0
+      ]
+    },
+    {
+      "label": "Runtime_NavigationData",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.RecastNavMesh_0",
+      "cls": "/Script/NavigationSystem.RecastNavMesh",
+      "tags": [],
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "Runtime_Camera_4",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.BP_Camera_C_3",
+      "cls": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C",
+      "tags": [],
+      "xyz": [
+        820.0,
+        1100.0,
+        340.0
+      ]
+    },
+    {
+      "label": "Runtime_Camera_1",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.BP_Camera_C_0",
+      "cls": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C",
+      "tags": [],
+      "xyz": [
+        -820.0,
+        -1100.0,
+        340.0
+      ]
+    },
+    {
+      "label": "Runtime_Camera_2",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.BP_Camera_C_1",
+      "cls": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C",
+      "tags": [],
+      "xyz": [
+        820.0,
+        -1099.9999999999998,
+        340.0
+      ]
+    },
+    {
+      "label": "Runtime_Camera_3",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.BP_Camera_C_2",
+      "cls": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C",
+      "tags": [],
+      "xyz": [
+        -820.0,
+        1100.0,
+        340.0
+      ]
+    },
+    {
+      "label": "BP_alarm",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.BP_alarm_C_3",
+      "cls": "/Game/Project_File/BP/Actor/BP_alarm.BP_alarm_C",
+      "tags": [],
+      "xyz": [
+        601.737321489064,
+        399.2694004493443,
+        166.9282992934901
+      ]
+    },
+    {
+      "label": "BP_alarm2",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.BP_alarm_C_4",
+      "cls": "/Game/Project_File/BP/Actor/BP_alarm.BP_alarm_C",
+      "tags": [],
+      "xyz": [
+        601.737321,
+        -295.98005101407625,
+        166.928299
+      ]
+    },
+    {
+      "label": "BP_alarm3",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.BP_alarm_C_5",
+      "cls": "/Game/Project_File/BP/Actor/BP_alarm.BP_alarm_C",
+      "tags": [],
+      "xyz": [
+        -601.9029454184571,
+        -295.980051,
+        166.92829900000027
+      ]
+    },
+    {
+      "label": "BP_alarm4",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.BP_alarm_C_6",
+      "cls": "/Game/Project_File/BP/Actor/BP_alarm.BP_alarm_C",
+      "tags": [],
+      "xyz": [
+        -601.9029454184571,
+        399.2694,
+        166.92829900000027
+      ]
+    },
+    {
+      "label": "Ultra_Dynamic_Sky",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.Ultra_Dynamic_Sky_C_2",
+      "cls": "/Game/UltraDynamicSky/Blueprints/Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C",
+      "tags": [],
+      "xyz": [
+        -560.6905662499935,
+        53.32846519802399,
+        1325.0350739159896
+      ]
+    },
+    {
+      "label": "Ultra_Dynamic_Weather",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.Ultra_Dynamic_Weather_C_2",
+      "cls": "/Game/UltraDynamicSky/Blueprints/Ultra_Dynamic_Weather.Ultra_Dynamic_Weather_C",
+      "tags": [],
+      "xyz": [
+        -1023.4824234393369,
+        23.775798395044603,
+        1451.1202107825377
+      ]
+    },
+    {
+      "label": "Runtime_Elder",
+      "path": "/Game/Project_File/Maps/L_ElderWellness_Main.L_ElderWellness_Main:PersistentLevel.BP_AI_C_0",
+      "cls": "/Game/Project_File/BP/BP_AI.BP_AI_C",
+      "tags": [],
+      "xyz": [
+        0.0,
+        -949.9999999999999,
+        88.5
+      ]
+    }
+  ]
+}

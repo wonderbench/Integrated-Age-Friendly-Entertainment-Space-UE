@@ -1,0 +1,48 @@
+{
+  "original_editor_at_start": "No editor for this project detected before isolated launch",
+  "reader_start": {
+    "get_current_level": {
+      "success": true,
+      "levelName": "Entry",
+      "levelPath": "/Engine/Maps/Entry.Entry",
+      "mapPackagePath": "/Engine/Maps/Entry"
+    },
+    "list_dirty_packages": {
+      "success": true,
+      "contentCount": 0,
+      "mapCount": 0,
+      "content": [],
+      "maps": []
+    }
+  },
+  "reader_end": {
+    "get_current_level": {
+      "success": true,
+      "levelName": "L_LivingGrove_Social",
+      "levelPath": "/Game/Project_File/Maps/L_LivingGrove_Social.L_LivingGrove_Social",
+      "mapPackagePath": "/Game/Project_File/Maps/L_LivingGrove_Social"
+    },
+    "get_world_state": {
+      "success": true,
+      "editorWorldName": "L_LivingGrove_Social",
+      "editorWorldPackage": "/Game/Project_File/Maps/L_LivingGrove_Social",
+      "worldPackageDirty": false,
+      "persistentLevelPackage": "/Game/Project_File/Maps/L_LivingGrove_Social",
+      "playInEditor": false,
+      "simulateInEditor": false,
+      "mode": "editor",
+      "dirtyPackages": [],
+      "dirtyPackageCount": 0,
+      "dirtyContentCount": 0,
+      "dirtyMapCount": 0
+    },
+    "list_dirty_packages": {
+      "success": true,
+      "contentCount": 0,
+      "mapCount": 0,
+      "content": [],
+      "maps": []
+    }
+  },
+  "origin": "Isolated UE 5.8 project shell with original Content and Plugins mounted through junctions, copied descriptor/config/editor module; no saves, PIE, Blueprint compilation action, native build or packaging requested."
+}

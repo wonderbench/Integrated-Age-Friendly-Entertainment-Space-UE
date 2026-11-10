@@ -1,0 +1,25 @@
+# Unreal Engine generated files
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/Receipts/
+
+# IDE and local tooling
+.vs/
+.idea/
+*.sln
+*.suo
+*.VC.db
+*.VC.opendb
+*.user
+*.pdb
+*.log
+.env
+.env.*
+!.env.example
+
+# Local outputs and registration materials
+/output/
+软材料/
+软件著作权申请资料/

@@ -1,0 +1,1267 @@
+{
+	"assetPath": "/Game/Project_File/BP/Actor/BP_WheelChair",
+	"blueprintPath": "/Game/Project_File/BP/Actor/BP_WheelChair.BP_WheelChair",
+	"packageName": "/Game/Project_File/BP/Actor/BP_WheelChair",
+	"isLevelScript": false,
+	"blueprintClass": "Blueprint",
+	"parentClass": "/Game/Project_File/BP/Actor/BP_ActorBase.BP_ActorBase_C",
+	"variables": [],
+	"functions": [
+		{
+			"name": "UserConstructionScript",
+			"kind": "override",
+			"graphSelector": "UserConstructionScript"
+		},
+		{
+			"name": "ReceiveTick",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "034BFEBE43C9CE44A1B0FC8CDBE24589"
+		}
+	],
+	"components": [
+		{
+			"name": "WheelMotion",
+			"class": "WheelchairWheelMotionComponent",
+			"parent": ""
+		},
+		{
+			"name": "Body",
+			"class": "SceneComponent",
+			"parent": "DefaultSceneRoot"
+		},
+		{
+			"name": "Xingdongfuzhu04_07_5",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "Xingdongfuzhu04_07_4",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "Xingdongfuzhu04_07_2",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface3111",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface661",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface641",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface631",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface621",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface611",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface601",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface571",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface541",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface431",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface341",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface311",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface281",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface271",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface191",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface181",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface171",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface151",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface141",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface111",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface81",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface71",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface66",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface64",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface63",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface62",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface61",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface60",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface57",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface54",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface51",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface43",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface41",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface34",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface31",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface28",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface27",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface21",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface19",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface18",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface17",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface15",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface14",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface11",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface8",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface7",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface5",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface4",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface3",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "polySurface2",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pHelix11",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pHelix1",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder991",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder981",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder971",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder961",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder951",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder941",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder931",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder921",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder911",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder901",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder891",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder881",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder871",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder861",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder851",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder841",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder831",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder821",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder811",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder801",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder791",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder781",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder771",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder761",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder661",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder651",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder641",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder631",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder501",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder481",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder471",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder461",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder451",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder431",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder351",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder341",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder331",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder321",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder291",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder281",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder271",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder261",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder251",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder241",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder231",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder221",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder211",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder201",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder191",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder161",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder151",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder141",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder131",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder99",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder98",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder97",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder96",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder95",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder94",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder93",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder92",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder91",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder90",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder89",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder88",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder87",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder86",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder85",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder84",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder83",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder82",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder81",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder80",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder79",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder78",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder77",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder76",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder66",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder65",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder64",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder63",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder50",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder48",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder47",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder46",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder45",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder43",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder35",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder34",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder33",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder32",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder29",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder28",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder27",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder26",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder25",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder24",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder23",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder22",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder21",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder20",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder19",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder16",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder15",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder14",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder13",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder11",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCylinder1",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube521",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube511",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube501",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube471",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube461",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube411",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube401",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube391",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube371",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube361",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube351",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube191",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube181",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube171",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube161",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube151",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube141",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube131",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube111",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube101",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube91",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube81",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube52",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube51",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube50",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube47",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube46",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube41",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube40",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube39",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube37",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube36",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube35",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube19",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube18",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube17",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube16",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube15",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube14",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube13",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube11",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube10",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube9",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "pCube8",
+			"class": "StaticMeshComponent",
+			"parent": "Body"
+		},
+		{
+			"name": "R_LittleWheel",
+			"class": "SceneComponent",
+			"parent": "DefaultSceneRoot"
+		},
+		{
+			"name": "polySurface231",
+			"class": "StaticMeshComponent",
+			"parent": "R_LittleWheel"
+		},
+		{
+			"name": "polySurface221",
+			"class": "StaticMeshComponent",
+			"parent": "R_LittleWheel"
+		},
+		{
+			"name": "pCube25",
+			"class": "StaticMeshComponent",
+			"parent": "R_LittleWheel"
+		},
+		{
+			"name": "R_BigWheel",
+			"class": "SceneComponent",
+			"parent": "DefaultSceneRoot"
+		},
+		{
+			"name": "polySurface251",
+			"class": "StaticMeshComponent",
+			"parent": "R_BigWheel"
+		},
+		{
+			"name": "pCube341",
+			"class": "StaticMeshComponent",
+			"parent": "R_BigWheel"
+		},
+		{
+			"name": "polySurface261",
+			"class": "StaticMeshComponent",
+			"parent": "R_BigWheel"
+		},
+		{
+			"name": "L_BigWheel",
+			"class": "SceneComponent",
+			"parent": "DefaultSceneRoot"
+		},
+		{
+			"name": "polySurface252",
+			"class": "StaticMeshComponent",
+			"parent": "L_BigWheel"
+		},
+		{
+			"name": "pCube342",
+			"class": "StaticMeshComponent",
+			"parent": "L_BigWheel"
+		},
+		{
+			"name": "polySurface262",
+			"class": "StaticMeshComponent",
+			"parent": "L_BigWheel"
+		},
+		{
+			"name": "L_LittleWheel",
+			"class": "SceneComponent",
+			"parent": "DefaultSceneRoot"
+		},
+		{
+			"name": "pCube26",
+			"class": "StaticMeshComponent",
+			"parent": "L_LittleWheel"
+		},
+		{
+			"name": "polySurface232",
+			"class": "StaticMeshComponent",
+			"parent": "L_LittleWheel"
+		},
+		{
+			"name": "polySurface222",
+			"class": "StaticMeshComponent",
+			"parent": "L_LittleWheel"
+		}
+	],
+	"graphs": [
+		{
+			"name": "UserConstructionScript",
+			"selector": "UserConstructionScript",
+			"kind": "function",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/Actor/BP_WheelChair.BP_WheelChair:UserConstructionScript",
+			"nodeCount": 2,
+			"nodes": [
+				{
+					"id": "E5B0EE28488E0A96C6C0AFA769E07FA7",
+					"class": "K2Node_FunctionEntry",
+					"title": "Construction Script",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "253547F74760B4445F1B57964FA12F7C",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "253547F74760B4445F1B57964FA12F7C",
+					"class": "K2Node_CallParentFunction",
+					"title": "Parent: Construction Script",
+					"posX": 200,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E5B0EE28488E0A96C6C0AFA769E07FA7",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EventGraph",
+			"selector": "EventGraph",
+			"kind": "event_graph",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/Actor/BP_WheelChair.BP_WheelChair:EventGraph",
+			"nodeCount": 1,
+			"nodes": [
+				{
+					"id": "034BFEBE43C9CE44A1B0FC8CDBE24589",
+					"class": "K2Node_Event",
+					"title": "Event Tick",
+					"posX": -1200,
+					"posY": 624,
+					"comment": "Beethoven - Symphony No.9 - 4th movement - Ode to Joy",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "DeltaSeconds",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

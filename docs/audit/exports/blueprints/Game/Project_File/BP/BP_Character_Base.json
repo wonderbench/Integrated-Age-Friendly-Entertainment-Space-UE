@@ -1,0 +1,232 @@
+{
+	"assetPath": "/Game/Project_File/BP/BP_Character_Base",
+	"blueprintPath": "/Game/Project_File/BP/BP_Character_Base.BP_Character_Base",
+	"packageName": "/Game/Project_File/BP/BP_Character_Base",
+	"isLevelScript": false,
+	"blueprintClass": "Blueprint",
+	"parentClass": "/Script/Old_Man_Jiang.OrbitCameraCharacter",
+	"variables": [
+		{
+			"name": "Actor",
+			"typeSpec": "object:/Script/Engine.StaticMeshComponent",
+			"pinCategory": "object",
+			"guid": "DC0955FF448DA1FBCC9DD8911E81E871",
+			"category": "Default",
+			"instanceEditable": true,
+			"exposeOnSpawn": false,
+			"replicated": false
+		}
+	],
+	"functions": [
+		{
+			"name": "UserConstructionScript",
+			"kind": "override",
+			"graphSelector": "UserConstructionScript"
+		},
+		{
+			"name": "ReceiveBeginPlay",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "B101056642B506EEAF7A8BB8AB7C553C"
+		},
+		{
+			"name": "ReceiveActorBeginOverlap",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "B77D287D4D9EB9798A7468B0365785EA"
+		},
+		{
+			"name": "ReceiveTick",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "499045CB4B96C1B2CEFBAAA8CA22475A"
+		}
+	],
+	"components": [],
+	"graphs": [
+		{
+			"name": "UserConstructionScript",
+			"selector": "UserConstructionScript",
+			"kind": "function",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/BP_Character_Base.BP_Character_Base:UserConstructionScript",
+			"nodeCount": 1,
+			"nodes": [
+				{
+					"id": "26086402438253FD00CEAE90061274E2",
+					"class": "K2Node_FunctionEntry",
+					"title": "Construction Script",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EventGraph",
+			"selector": "EventGraph",
+			"kind": "event_graph",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/BP_Character_Base.BP_Character_Base:EventGraph",
+			"nodeCount": 4,
+			"nodes": [
+				{
+					"id": "B101056642B506EEAF7A8BB8AB7C553C",
+					"class": "K2Node_Event",
+					"title": "Event BeginPlay",
+					"posX": -64,
+					"posY": -96,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C59C76664FEC63F636F03C8A8CC89F64",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "B77D287D4D9EB9798A7468B0365785EA",
+					"class": "K2Node_Event",
+					"title": "Event ActorBeginOverlap",
+					"posX": -64,
+					"posY": 1,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "OtherActor",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "499045CB4B96C1B2CEFBAAA8CA22475A",
+					"class": "K2Node_Event",
+					"title": "Event Tick",
+					"posX": -64,
+					"posY": 113,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "DeltaSeconds",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "C59C76664FEC63F636F03C8A8CC89F64",
+					"class": "K2Node_CallFunction",
+					"title": "Set Orbit Pivot Location\nTarget is Orbit Camera Character",
+					"posX": 224,
+					"posY": -112,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "B101056642B506EEAF7A8BB8AB7C553C",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NewPivotLocation",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "-600.000000,304.000000,800.000000",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

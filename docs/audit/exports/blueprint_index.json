@@ -1,0 +1,265 @@
+[
+  {
+    "asset": "/Game/Project_File/BP/ABP_AI",
+    "parent": "/Script/Old_Man_Jiang.ElderAnimInstance",
+    "components": 0,
+    "variables": 6,
+    "functions": 3,
+    "graphs": 14,
+    "nodes": 60,
+    "pins": 145,
+    "linked_pin_entries": 104,
+    "graph_names": [
+      "AnimGraph",
+      "New State Machine",
+      "Move",
+      "ABS_Move",
+      "Idle_Stand",
+      "Walk_Fwd_Loop",
+      "Strafe_L45_Loop",
+      "Strafe_R45_Loop",
+      "StrafeL_Loop",
+      "StrafeR_Loop",
+      "Strafe_L135_Loop",
+      "Strafe_R135_Loop",
+      "Walk_Bwd_Loop",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/BP/ABP_AI.json"
+  },
+  {
+    "asset": "/Game/Project_File/BP/Actor/BP_alarm",
+    "parent": "/Game/Project_File/BP/Actor/BP_ActorBase.BP_ActorBase_C",
+    "components": 3,
+    "variables": 2,
+    "functions": 5,
+    "graphs": 2,
+    "nodes": 33,
+    "pins": 123,
+    "linked_pin_entries": 68,
+    "graph_names": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/BP/Actor/BP_alarm.json"
+  },
+  {
+    "asset": "/Game/Project_File/BP/Actor/BP_Camera",
+    "parent": "/Script/Old_Man_Jiang.MonitorCameraActor",
+    "components": 3,
+    "variables": 0,
+    "functions": 4,
+    "graphs": 2,
+    "nodes": 8,
+    "pins": 23,
+    "linked_pin_entries": 12,
+    "graph_names": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/BP/Actor/BP_Camera.json"
+  },
+  {
+    "asset": "/Game/Project_File/BP/Actor/BP_LightBase_Box",
+    "parent": "/Game/Project_File/BP/Actor/BP_LightBase.BP_LightBase_C",
+    "components": 1,
+    "variables": 2,
+    "functions": 6,
+    "graphs": 2,
+    "nodes": 40,
+    "pins": 129,
+    "linked_pin_entries": 86,
+    "graph_names": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/BP/Actor/BP_LightBase_Box.json"
+  },
+  {
+    "asset": "/Game/Project_File/BP/Actor/BP_WheelChair",
+    "parent": "/Game/Project_File/BP/Actor/BP_ActorBase.BP_ActorBase_C",
+    "components": 225,
+    "variables": 0,
+    "functions": 2,
+    "graphs": 2,
+    "nodes": 3,
+    "pins": 7,
+    "linked_pin_entries": 2,
+    "graph_names": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/BP/Actor/BP_WheelChair.json"
+  },
+  {
+    "asset": "/Game/Project_File/BP/AI/BP_ElderSplinePath",
+    "parent": "/Script/Old_Man_Jiang.ElderSplinePath",
+    "components": 0,
+    "variables": 0,
+    "functions": 4,
+    "graphs": 2,
+    "nodes": 4,
+    "pins": 9,
+    "linked_pin_entries": 0,
+    "graph_names": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/BP/AI/BP_ElderSplinePath.json"
+  },
+  {
+    "asset": "/Game/Project_File/BP/BP_AI",
+    "parent": "/Script/Old_Man_Jiang.ElderlyAICharacter",
+    "components": 0,
+    "variables": 0,
+    "functions": 4,
+    "graphs": 2,
+    "nodes": 9,
+    "pins": 26,
+    "linked_pin_entries": 12,
+    "graph_names": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/BP/BP_AI.json"
+  },
+  {
+    "asset": "/Game/Project_File/BP/BP_Character_Base",
+    "parent": "/Script/Old_Man_Jiang.OrbitCameraCharacter",
+    "components": 0,
+    "variables": 1,
+    "functions": 4,
+    "graphs": 2,
+    "nodes": 5,
+    "pins": 13,
+    "linked_pin_entries": 2,
+    "graph_names": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/BP/BP_Character_Base.json"
+  },
+  {
+    "asset": "/Game/Project_File/BP/BP_Controller",
+    "parent": "/Script/Old_Man_Jiang.OrbitCameraController",
+    "components": 0,
+    "variables": 2,
+    "functions": 3,
+    "graphs": 2,
+    "nodes": 14,
+    "pins": 56,
+    "linked_pin_entries": 32,
+    "graph_names": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/BP/BP_Controller.json"
+  },
+  {
+    "asset": "/Game/Project_File/BP/BP_Player",
+    "parent": "/Game/Project_File/BP/BP_Character_Base.BP_Character_Base_C",
+    "components": 0,
+    "variables": 0,
+    "functions": 4,
+    "graphs": 2,
+    "nodes": 8,
+    "pins": 23,
+    "linked_pin_entries": 12,
+    "graph_names": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/BP/BP_Player.json"
+  },
+  {
+    "asset": "/Game/Project_File/BP/BPI_Actor_Call",
+    "parent": "/Script/CoreUObject.Interface",
+    "components": 0,
+    "variables": 0,
+    "functions": 1,
+    "graphs": 1,
+    "nodes": 1,
+    "pins": 4,
+    "linked_pin_entries": 0,
+    "graph_names": [
+      "Light_Show"
+    ],
+    "file": "blueprints/Game/Project_File/BP/BPI_Actor_Call.json"
+  },
+  {
+    "asset": "/Game/Project_File/BP/System/BGM_GameMode",
+    "parent": "/Script/Engine.GameModeBase",
+    "components": 1,
+    "variables": 0,
+    "functions": 3,
+    "graphs": 2,
+    "nodes": 3,
+    "pins": 6,
+    "linked_pin_entries": 0,
+    "graph_names": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/BP/System/BGM_GameMode.json"
+  },
+  {
+    "asset": "/Game/Project_File/BP/System/BGS_State",
+    "parent": "/Script/Engine.GameStateBase",
+    "components": 1,
+    "variables": 4,
+    "functions": 5,
+    "graphs": 2,
+    "nodes": 34,
+    "pins": 130,
+    "linked_pin_entries": 72,
+    "graph_names": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/BP/System/BGS_State.json"
+  },
+  {
+    "asset": "/Game/Project_File/BP/UBP/UBP_用户界面",
+    "parent": "/Script/Old_Man_Jiang.ProjectUserWidgetBase",
+    "components": 0,
+    "variables": 1,
+    "functions": 3,
+    "graphs": 2,
+    "nodes": 39,
+    "pins": 294,
+    "linked_pin_entries": 220,
+    "graph_names": [
+      "ChangeColor",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/BP/UBP/UBP_用户界面.json"
+  },
+  {
+    "asset": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor",
+    "parent": "/Script/Old_Man_Jiang.ElderAnimInstance",
+    "components": 0,
+    "variables": 6,
+    "functions": 3,
+    "graphs": 14,
+    "nodes": 72,
+    "pins": 179,
+    "linked_pin_entries": 124,
+    "graph_names": [
+      "AnimGraph",
+      "New State Machine",
+      "Move",
+      "ABS_Move",
+      "Idle_Stand",
+      "Walk_Fwd_Loop",
+      "Strafe_L45_Loop",
+      "Strafe_R45_Loop",
+      "StrafeL_Loop",
+      "StrafeR_Loop",
+      "Strafe_L135_Loop",
+      "Strafe_R135_Loop",
+      "Walk_Bwd_Loop",
+      "EventGraph"
+    ],
+    "file": "blueprints/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.json"
+  }
+]

@@ -1,0 +1,71 @@
+{
+	"assetPath": "/Game/Project_File/BP/BPI_Actor_Call",
+	"blueprintPath": "/Game/Project_File/BP/BPI_Actor_Call.BPI_Actor_Call",
+	"packageName": "/Game/Project_File/BP/BPI_Actor_Call",
+	"isLevelScript": false,
+	"blueprintClass": "Blueprint",
+	"parentClass": "/Script/CoreUObject.Interface",
+	"variables": [],
+	"functions": [
+		{
+			"name": "Light_Show",
+			"kind": "function",
+			"graphSelector": "Light_Show"
+		}
+	],
+	"components": [],
+	"graphs": [
+		{
+			"name": "Light_Show",
+			"selector": "Light_Show",
+			"kind": "function",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/BPI_Actor_Call.BPI_Actor_Call:Light_Show",
+			"nodeCount": 1,
+			"nodes": [
+				{
+					"id": "D7638D524BE17722013DD8A8D0675EB0",
+					"class": "K2Node_FunctionEntry",
+					"title": "Light_Show",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "E_ Time",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "NewEnumerator3",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "E_Weather_Temp",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "NewEnumerator3",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "E_Weather",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "NewEnumerator8",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

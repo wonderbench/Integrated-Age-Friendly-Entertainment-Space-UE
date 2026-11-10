@@ -1,0 +1,1643 @@
+{
+  "map": "/Game/Project_File/Maps/Showcase",
+  "default_game_mode": "/Game/Project_File/BP/System/BGM_GameMode.BGM_GameMode_C",
+  "loaded_actor_count": 451,
+  "class_counts": {
+    "/Game/Project_File/BP/AI/BP_ElderSplinePath.BP_ElderSplinePath_C": 1,
+    "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C": 4,
+    "/Game/Project_File/BP/Actor/BP_LightBase_Box.BP_LightBase_Box_C": 47,
+    "/Game/Project_File/BP/Actor/BP_Toilet.BP_Toilet_C": 1,
+    "/Game/Project_File/BP/Actor/BP_WheelChair.BP_WheelChair_C": 2,
+    "/Game/Project_File/BP/Actor/BP_alarm.BP_alarm_C": 1,
+    "/Game/Project_File/BP/BP_AI.BP_AI_C": 1,
+    "/Game/UltraDynamicSky/Blueprints/Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C": 1,
+    "/Game/UltraDynamicSky/Blueprints/Ultra_Dynamic_Weather.Ultra_Dynamic_Weather_C": 1,
+    "/Script/Engine.PlayerStart": 1,
+    "/Script/Engine.PostProcessVolume": 1,
+    "/Script/Engine.RectLight": 1,
+    "/Script/Engine.StaticMeshActor": 383,
+    "/Script/Engine.TriggerBox": 1,
+    "/Script/NavigationSystem.NavMeshBoundsVolume": 1,
+    "/Script/NavigationSystem.RecastNavMesh": 1,
+    "/Script/UnrealEd.GroupActor": 3
+  },
+  "ceiling_tags": 115,
+  "selected_actors": [
+    {
+      "label": "Floor_400x436",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_104",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        0.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x437",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_105",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        -200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x438",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_106",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -200.0,
+        0.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x439",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_107",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -200.0,
+        -200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x442",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_110",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        200.0,
+        0.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x443",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_111",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        200.0,
+        -200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x444",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_112",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -400.0,
+        0.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x445",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_113",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -400.0,
+        -200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x449",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_117",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x451",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_119",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -200.0,
+        200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x455",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_123",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        200.0,
+        200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x457",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_125",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -400.0,
+        200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x460",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_128",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        -400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x462",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_130",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -200.0,
+        -400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x466",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_134",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        200.0,
+        -400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x468",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_136",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -400.0,
+        -400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x458",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_166",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        800.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x459",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_167",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        600.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x461",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_168",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -200.0,
+        800.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x463",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_169",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -200.0,
+        600.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x464",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_170",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        200.0,
+        800.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x465",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_171",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        200.0,
+        600.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x467",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_172",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -400.0,
+        800.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x469",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_173",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -400.0,
+        600.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x470",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_174",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        1000.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x471",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_175",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -200.0,
+        1000.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x478",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_176",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        200.0,
+        1000.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x479",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_177",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -400.0,
+        1000.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x480",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_178",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        0.0,
+        400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x481",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_179",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -200.0,
+        400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x482",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_180",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        200.0,
+        400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x483",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_181",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -400.0,
+        400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x522",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_326",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1000.0,
+        0.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x523",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_327",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1000.0,
+        -200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x524",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_328",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1200.0,
+        0.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x525",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_329",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1200.0,
+        -200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x526",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_330",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -800.0,
+        0.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x527",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_331",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -800.0,
+        -200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x528",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_332",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1400.0,
+        0.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x529",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_333",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1400.0,
+        -200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x530",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_334",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1000.0,
+        200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x531",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_335",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1200.0,
+        200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x532",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_336",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -800.0,
+        200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x533",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_337",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1400.0,
+        200.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x534",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_338",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1000.0,
+        -400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x535",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_339",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1200.0,
+        -400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x536",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_340",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -800.0,
+        -400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x537",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_341",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1400.0,
+        -400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x556",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_386",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1000.0,
+        800.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x557",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_387",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1000.0,
+        600.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x558",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_388",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1200.0,
+        800.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x559",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_389",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1200.0,
+        600.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x560",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_390",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -800.0,
+        800.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x561",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_391",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -800.0,
+        600.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x562",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_392",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1400.0,
+        800.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x563",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_393",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1400.0,
+        600.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x564",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_394",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1000.0,
+        1000.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x565",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_395",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1200.0,
+        1000.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x566",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_396",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -800.0,
+        1000.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x567",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_397",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1400.0,
+        1000.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x568",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_398",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1000.0,
+        400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x569",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_399",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1200.0,
+        400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x570",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_400",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -800.0,
+        400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x571",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_401",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1400.0,
+        400.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x496",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_475",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -600.0,
+        304.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x624",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_61",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -600.0,
+        112.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Floor_400x625",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_65",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -600.0,
+        496.0,
+        320.0
+      ]
+    },
+    {
+      "label": "SM_DownLight",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_14",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -300.0,
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight2",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_15",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -100.0,
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight3",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_18",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        100.0,
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight4",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_68",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        300.0,
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight5",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_70",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -300.0,
+        500.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight6",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_72",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -100.0,
+        500.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight7",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_93",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        100.0,
+        500.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight8",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_94",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        300.0,
+        500.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight9",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_96",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -300.0,
+        800.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight10",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_147",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -100.0,
+        800.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight11",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_148",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        100.0,
+        800.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight12",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_149",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        300.0,
+        800.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight13",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_150",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -300.0,
+        1100.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight14",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_151",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -100.0,
+        1100.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight15",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_152",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        100.0,
+        1100.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight16",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_153",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        300.0,
+        1100.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight17",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_154",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1300.0,
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight18",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_155",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1100.0,
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight19",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_156",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -900.0,
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight20",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_157",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -700.0,
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight21",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_158",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1300.0,
+        500.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight22",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_161",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1100.0,
+        500.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight23",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_162",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -900.0,
+        500.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight24",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_184",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -700.0,
+        500.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight25",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_185",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1300.0,
+        800.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight26",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_186",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1100.0,
+        800.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight27",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_187",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -900.0,
+        800.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight28",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_189",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -700.0,
+        800.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight29",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_191",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1300.0,
+        1100.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight30",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_193",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1100.0,
+        1100.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight31",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_195",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -900.0,
+        1100.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight32",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_196",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -700.0,
+        1100.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight41",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_248",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1300.0,
+        -300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight42",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_249",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1100.0,
+        -300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight43",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_250",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -900.0,
+        -300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight44",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_252",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -700.0,
+        -300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight45",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_253",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1300.0,
+        0.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight46",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_255",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -1100.0,
+        0.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight47",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_257",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -900.0,
+        0.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight48",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_258",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -700.0,
+        0.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight49",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_259",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -300.0,
+        -300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight50",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_262",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -100.0,
+        -300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight51",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_263",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        100.0,
+        -300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight52",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_265",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        300.0,
+        -300.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight53",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_266",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -300.0,
+        0.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight54",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_267",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        -100.0,
+        0.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight55",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_268",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        100.0,
+        0.0,
+        300.0
+      ]
+    },
+    {
+      "label": "SM_DownLight56",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.StaticMeshActor_346",
+      "cls": "/Script/Engine.StaticMeshActor",
+      "tags": [
+        "ElderControlCeiling"
+      ],
+      "xyz": [
+        300.0,
+        0.0,
+        300.0
+      ]
+    },
+    {
+      "label": "BP_Camera2",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.BP_Camera_C_0",
+      "cls": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C",
+      "tags": [],
+      "xyz": [
+        -1381.291287465314,
+        -374.66981312155957,
+        282.571163
+      ]
+    },
+    {
+      "label": "BP_Camera3",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.BP_Camera_C_1",
+      "cls": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C",
+      "tags": [],
+      "xyz": [
+        -1381.291287,
+        1172.5022451054688,
+        282.571163
+      ]
+    },
+    {
+      "label": "BP_Camera4",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.BP_Camera_C_2",
+      "cls": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C",
+      "tags": [],
+      "xyz": [
+        383.9169763075124,
+        1172.502245,
+        282.571163
+      ]
+    },
+    {
+      "label": "BP_Camera",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.BP_Camera_C_5",
+      "cls": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera_C",
+      "tags": [],
+      "xyz": [
+        368.298348038658,
+        -376.6452521317805,
+        282.5711631380786
+      ]
+    },
+    {
+      "label": "BP_ElderSplinePath",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.BP_ElderSplinePath_C_1",
+      "cls": "/Game/Project_File/BP/AI/BP_ElderSplinePath.BP_ElderSplinePath_C",
+      "tags": [],
+      "xyz": [
+        -1008.9403630252173,
+        256.30737982907687,
+        0.39999551307982983
+      ]
+    },
+    {
+      "label": "NavMeshBounds_ElderRoute",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.NavMeshBoundsVolume_0",
+      "cls": "/Script/NavigationSystem.NavMeshBoundsVolume",
+      "tags": [],
+      "xyz": [
+        -640.0,
+        530.0,
+        100.0
+      ]
+    },
+    {
+      "label": "RecastNavMesh-Default",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.RecastNavMesh-Default",
+      "cls": "/Script/NavigationSystem.RecastNavMesh",
+      "tags": [],
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "BP_alarm",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.BP_alarm_C_1",
+      "cls": "/Game/Project_File/BP/Actor/BP_alarm.BP_alarm_C",
+      "tags": [],
+      "xyz": [
+        -543.2864367433402,
+        426.65015574914344,
+        293.23356888778625
+      ]
+    },
+    {
+      "label": "Ultra_Dynamic_Sky",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.Ultra_Dynamic_Sky_C_2",
+      "cls": "/Game/UltraDynamicSky/Blueprints/Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C",
+      "tags": [],
+      "xyz": [
+        -560.6905662499935,
+        53.32846519802399,
+        1325.0350739159896
+      ]
+    },
+    {
+      "label": "Ultra_Dynamic_Weather",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.Ultra_Dynamic_Weather_C_2",
+      "cls": "/Game/UltraDynamicSky/Blueprints/Ultra_Dynamic_Weather.Ultra_Dynamic_Weather_C",
+      "tags": [],
+      "xyz": [
+        -1023.4824234393369,
+        23.775798395044603,
+        1451.1202107825377
+      ]
+    },
+    {
+      "label": "BP_AI",
+      "path": "/Game/Project_File/Maps/Showcase.Showcase:PersistentLevel.BP_AI_C_1",
+      "cls": "/Game/Project_File/BP/BP_AI.BP_AI_C",
+      "tags": [],
+      "xyz": [
+        -1044.2965863364657,
+        261.0443953297143,
+        88.00001333871597
+      ]
+    }
+  ]
+}

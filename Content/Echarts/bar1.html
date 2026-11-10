@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0; background-color: transparent; overflow: hidden;">
+  <!-- 修改点 1：移除固定像素，改为撑满视口 -->
+  <div id="container" style="width: 100vw; height: 100vh;"></div>
+
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, { renderer: 'canvas' });
+
+    var option = {
+      grid: {
+        top: '15%',    // 改为百分比，适应不同高度
+        left: '5%',
+        right: '5%',
+        bottom: '30%', // 优化底部留白，防止 Y 轴在全屏下显得太矮
+        containLabel: true 
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: { type: 'shadow' },
+        confine: true
+      },
+      legend: {
+        data: ['男性', '女性'],
+        bottom: '15%',    // 改为百分比定位
+        itemWidth: 10,
+        itemHeight: 10,
+        itemGap: 15,
+        textStyle: { 
+          color: '#eee', 
+          fontSize: 12 
+        }
+      },
+      xAxis: {
+        type: 'category',
+        data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+        axisLabel: { 
+          color: '#fff', 
+          fontSize: 10,
+          interval: 0 
+        },
+        axisTick: { show: false },
+        axisLine: { lineStyle: { color: 'rgba(255,255,255,0.2)' } }
+      },
+      yAxis: {
+        type: 'value',
+        axisLabel: { color: '#fff', fontSize: 10 },
+        splitLine: { lineStyle: { color: 'rgba(255,255,255,0.1)' } }
+      },
+      series: [
+        {
+          name: '男性',
+          type: 'bar',
+          stack: 'total',
+          barWidth: '60%', 
+          itemStyle: { color: '#01D5E2' },
+          data: [120, 132, 101, 134, 90, 230, 150, 182, 60, 70, 140, 180]
+        },
+        {
+          name: '女性',
+          type: 'bar',
+          stack: 'total',
+          itemStyle: { color: '#0069FA' },
+          data: [220, 182, 191, 140, 100, 120, 90, 70, 150, 130, 100, 90]
+        }
+      ]
+    };
+
+    myChart.setOption(option);
+
+    // --- UE5 通信逻辑 ---
+    if (typeof ue === "undefined") { ue = {}; }
+    if (typeof ue.interface === "undefined") { ue.interface = {}; }
+
+    ue.interface.ue2js = function(ueData) {
+      try {
+        var jsonObj = (typeof ueData === 'string') ? JSON.parse(ueData) : ueData;
+        if (jsonObj.male && jsonObj.female) {
+          myChart.setOption({
+            series: [
+              { name: '男性', data: jsonObj.male.map(Number) },
+              { name: '女性', data: jsonObj.female.map(Number) }
+            ]
+          }, false);
+          
+          if (typeof ue.interface.broadcast === "function") {
+            ue.interface.broadcast("UpdateSuccess", "人数更新成功！数据已应用。");
+          }
+        }
+      } catch (err) {
+        console.error("Update Error: " + err.message);
+        if (typeof ue.interface.broadcast === "function") {
+          ue.interface.broadcast("UpdateError", "错误: " + err.message);
+        }
+      }
+    };
+
+    // 修改点 2：使用 ResizeObserver 替换原有的 resize 监听
+    const resizeObserver = new ResizeObserver(() => {
+      if (myChart) {
+        myChart.resize();
+      }
+    });
+    resizeObserver.observe(dom);
+
+  </script>
+</body>
+</html>

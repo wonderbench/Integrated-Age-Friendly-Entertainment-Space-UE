@@ -1,0 +1,397 @@
+{
+	"assetPath": "/Game/Project_File/BP/Actor/BP_Camera",
+	"blueprintPath": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera",
+	"packageName": "/Game/Project_File/BP/Actor/BP_Camera",
+	"isLevelScript": false,
+	"blueprintClass": "Blueprint",
+	"parentClass": "/Script/Old_Man_Jiang.MonitorCameraActor",
+	"variables": [],
+	"functions": [
+		{
+			"name": "UserConstructionScript",
+			"kind": "override",
+			"graphSelector": "UserConstructionScript"
+		},
+		{
+			"name": "ReceiveBeginPlay",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "D17AE8F545AC3C2A733A3ABBAE239D54"
+		},
+		{
+			"name": "ReceiveActorBeginOverlap",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "813DDE694064B5B0A7C5049D227789EE"
+		},
+		{
+			"name": "ReceiveTick",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "E8A86F0E44D31DE188705E99D5B79CEB"
+		}
+	],
+	"components": [
+		{
+			"name": "SM_Camera_WireFrame",
+			"class": "StaticMeshComponent",
+			"parent": "MonitorRoot"
+		},
+		{
+			"name": "CameraScanVisual",
+			"class": "CameraScanVisualComponent",
+			"parent": ""
+		},
+		{
+			"name": "StaticMesh",
+			"class": "StaticMeshComponent",
+			"parent": "MonitorRoot"
+		}
+	],
+	"graphs": [
+		{
+			"name": "UserConstructionScript",
+			"selector": "UserConstructionScript",
+			"kind": "function",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera:UserConstructionScript",
+			"nodeCount": 2,
+			"nodes": [
+				{
+					"id": "BA99A41F46F1D8637DC59FA498D91375",
+					"class": "K2Node_FunctionEntry",
+					"title": "Construction Script",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "B34399A14D452E8BD0D61695BE74A827",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "B34399A14D452E8BD0D61695BE74A827",
+					"class": "K2Node_CallParentFunction",
+					"title": "Parent: Construction Script",
+					"posX": 200,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "BA99A41F46F1D8637DC59FA498D91375",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EventGraph",
+			"selector": "EventGraph",
+			"kind": "event_graph",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/Actor/BP_Camera.BP_Camera:EventGraph",
+			"nodeCount": 6,
+			"nodes": [
+				{
+					"id": "D17AE8F545AC3C2A733A3ABBAE239D54",
+					"class": "K2Node_Event",
+					"title": "Event BeginPlay",
+					"posX": 0,
+					"posY": -32,
+					"comment": "This node is disabled and will not be called.\r\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "453025F64E08588062D5C58EB7C8CF28",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "453025F64E08588062D5C58EB7C8CF28",
+					"class": "K2Node_CallParentFunction",
+					"title": "Parent: BeginPlay",
+					"posX": 256,
+					"posY": -32,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D17AE8F545AC3C2A733A3ABBAE239D54",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "813DDE694064B5B0A7C5049D227789EE",
+					"class": "K2Node_Event",
+					"title": "Event ActorBeginOverlap",
+					"posX": 0,
+					"posY": 112,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "FEE3F8AF4091DEBC10DB90BE9C9F32B2",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "OtherActor",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "FEE3F8AF4091DEBC10DB90BE9C9F32B2",
+									"pin": "OtherActor"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "FEE3F8AF4091DEBC10DB90BE9C9F32B2",
+					"class": "K2Node_CallParentFunction",
+					"title": "Parent: ActorBeginOverlap",
+					"posX": 256,
+					"posY": 112,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "813DDE694064B5B0A7C5049D227789EE",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "OtherActor",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "813DDE694064B5B0A7C5049D227789EE",
+									"pin": "OtherActor"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "E8A86F0E44D31DE188705E99D5B79CEB",
+					"class": "K2Node_Event",
+					"title": "Event Tick",
+					"posX": 0,
+					"posY": 272,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "6A7F46C04D5148E5180D189EF25B4603",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "DeltaSeconds",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "6A7F46C04D5148E5180D189EF25B4603",
+									"pin": "DeltaSeconds"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "6A7F46C04D5148E5180D189EF25B4603",
+					"class": "K2Node_CallParentFunction",
+					"title": "Parent: Tick",
+					"posX": 256,
+					"posY": 272,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E8A86F0E44D31DE188705E99D5B79CEB",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "DeltaSeconds",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E8A86F0E44D31DE188705E99D5B79CEB",
+									"pin": "DeltaSeconds"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

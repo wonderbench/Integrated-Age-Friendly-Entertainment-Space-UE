@@ -1,0 +1,1339 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-03",
+  "project": "Old_Man_Jiang",
+  "engine": "5.8",
+  "evidence": "Current editor metadata and Asset Registry reads; structure is not runtime verification.",
+  "coverage": {
+    "registryRoot": "/Game",
+    "registryRecords": 1870,
+    "coreBlueprintRecords": 32,
+    "loadedWorld": "/Game/MedaFurniturePack/Levels/Showcase",
+    "coreScope": "Blueprint, AnimBlueprint and WidgetBlueprint under /Game/Project_File; includes interfaces.",
+    "excluded": "Vendor internals and other maps not fully read or run. No gameplay writes/compile/save/PIE in this audit."
+  },
+  "dirtyPackagesAtAudit": [
+    "/Game/Project_File/BP/Actor/BP_LightBase_Box"
+  ],
+  "classCounts": {
+    "StaticMesh": 370,
+    "TextureCube": 2,
+    "World": 6,
+    "MaterialInstanceConstant": 199,
+    "Material": 98,
+    "Texture2D": 455,
+    "AnimSequence": 88,
+    "BlendSpace": 2,
+    "BlendSpace1D": 1,
+    "MapBuildDataRegistry": 1,
+    "MaterialFunction": 95,
+    "SkeletalMesh": 17,
+    "PhysicsAsset": 2,
+    "Skeleton": 11,
+    "Blueprint": 102,
+    "AnimBlueprint": 2,
+    "ObjectRedirector": 20,
+    "DataTable": 5,
+    "UserDefinedEnum": 45,
+    "UserDefinedStruct": 17,
+    "FontFace": 4,
+    "Font": 4,
+    "WidgetBlueprint": 31,
+    "IKRigDefinition": 4,
+    "IKRetargeter": 5,
+    "InputAction": 2,
+    "InputMappingContext": 1,
+    "EditorUtilityWidgetBlueprint": 12,
+    "UDS_Calendar_C": 1,
+    "EditorUtilityBlueprint": 11,
+    "UDS_CloudProfile_Data_C": 1,
+    "TextureRenderTarget2D": 7,
+    "UDS_Configuration_Array_C": 1,
+    "UDS_VersionInfo_C": 1,
+    "UDS_Planet_Preset_C": 6,
+    "UDS_DispatcherTunnel_C": 1,
+    "UDS_Climate_Preset_C": 23,
+    "CurveVector": 1,
+    "UDS_DLWE_Interaction_Settings_C": 1,
+    "UDW_Dispatcher_Tunnel_C": 1,
+    "UDS_Weather_Settings_C": 13,
+    "CurveLinearColor": 5,
+    "CurveFloat": 8,
+    "MaterialParameterCollection": 3,
+    "NiagaraSystem": 23,
+    "NiagaraScript": 33,
+    "NiagaraEmitter": 4,
+    "NiagaraParameterCollection": 2,
+    "SoundAttenuation": 1,
+    "AudioBus": 2,
+    "SoundWave": 68,
+    "UDS_Environment_Sound_C": 1,
+    "MetaSoundSource": 14,
+    "MetaSoundPatch": 9,
+    "SoundClass": 4,
+    "VolumeTexture": 6,
+    "TextureRenderTargetCube": 1,
+    "TextureRenderTargetVolume": 1,
+    "CurveLinearColorAtlas": 1,
+    "ControlRigBlueprint": 1,
+    "PoseAsset": 14
+  },
+  "folderCounts": {
+    "MedaFurniturePack": 328,
+    "OldManAnimset": 65,
+    "Project_File": 558,
+    "Scifi_HUD_Effects": 4,
+    "UltraDynamicSky": 849,
+    "Voyager": 62,
+    "字体": 4
+  },
+  "worlds": [
+    "/Game/MedaFurniturePack/Levels/Overview",
+    "/Game/MedaFurniturePack/Levels/Showcase",
+    "/Game/OldManAnimset/DemoLevel/DemoMap",
+    "/Game/Project_File/Tests/L_ElderControlTest",
+    "/Game/Project_File/Tests/L_ElderNavigationDemo",
+    "/Game/UltraDynamicSky/Maps/DemoMap"
+  ],
+  "assets": [
+    {
+      "path": "/Game/Project_File/BP/ABP_AI",
+      "className": "AnimBlueprint",
+      "parentClass": "ElderAnimInstance",
+      "componentRecords": 0,
+      "ownVariables": [
+        {
+          "name": "As BP AI",
+          "type": "ABP_AI_C*"
+        },
+        {
+          "name": "Local Forward Velocity",
+          "type": "double"
+        },
+        {
+          "name": "Local Right Velocity",
+          "type": "double"
+        },
+        {
+          "name": "TurnActive",
+          "type": "bool"
+        },
+        {
+          "name": "TurnCoordinate",
+          "type": "double"
+        },
+        {
+          "name": "TurnPhase",
+          "type": "double"
+        }
+      ],
+      "ownGraphs": [
+        {
+          "name": "AnimGraph",
+          "kind": "function",
+          "nodeCount": 2
+        },
+        {
+          "name": "New State Machine",
+          "kind": "subgraph",
+          "nodeCount": 2
+        },
+        {
+          "name": "Move",
+          "kind": "subgraph",
+          "nodeCount": 9
+        },
+        {
+          "name": "ABS_Move",
+          "kind": "subgraph",
+          "nodeCount": 0
+        },
+        {
+          "name": "Idle_Stand",
+          "kind": "subgraph",
+          "nodeCount": 2
+        },
+        {
+          "name": "Walk_Fwd_Loop",
+          "kind": "subgraph",
+          "nodeCount": 2
+        },
+        {
+          "name": "Strafe_L45_Loop",
+          "kind": "subgraph",
+          "nodeCount": 2
+        },
+        {
+          "name": "Strafe_R45_Loop",
+          "kind": "subgraph",
+          "nodeCount": 2
+        },
+        {
+          "name": "StrafeL_Loop",
+          "kind": "subgraph",
+          "nodeCount": 2
+        },
+        {
+          "name": "StrafeR_Loop",
+          "kind": "subgraph",
+          "nodeCount": 2
+        },
+        {
+          "name": "Strafe_L135_Loop",
+          "kind": "subgraph",
+          "nodeCount": 2
+        },
+        {
+          "name": "Strafe_R135_Loop",
+          "kind": "subgraph",
+          "nodeCount": 2
+        },
+        {
+          "name": "Walk_Bwd_Loop",
+          "kind": "subgraph",
+          "nodeCount": 2
+        },
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 17
+        }
+      ],
+      "packageDependencies": [
+        "/Script/AnimGraph",
+        "/Script/AnimGraphRuntime",
+        "/Script/Old_Man_Jiang",
+        "/Game/OldManAnimset/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton",
+        "/Game/OldManAnimset/Animations/Idle_Stand",
+        "/Game/OldManAnimset/Animations/StrafeL_Loop",
+        "/Game/OldManAnimset/Animations/StrafeR_Loop",
+        "/Game/OldManAnimset/Animations/Strafe_L135_Loop",
+        "/Game/OldManAnimset/Animations/Strafe_L45_Loop",
+        "/Game/OldManAnimset/Animations/Strafe_R135_Loop",
+        "/Game/OldManAnimset/Animations/Strafe_R45_Loop",
+        "/Game/OldManAnimset/Animations/Walk_Bwd_Loop",
+        "/Game/OldManAnimset/Animations/TurnInPlace",
+        "/Game/OldManAnimset/Animations/Walk_Fwd_Loop",
+        "/Game/Project_File/BP/BP_AI"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/Actor/BP_ActorBase",
+      "className": "Blueprint",
+      "parentClass": "Actor",
+      "componentRecords": 1,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 3
+        }
+      ],
+      "packageDependencies": []
+    },
+    {
+      "path": "/Game/Project_File/BP/Actor/BP_alarm",
+      "className": "Blueprint",
+      "parentClass": "BP_ActorBase_C",
+      "componentRecords": 3,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 13
+        },
+        {
+          "name": "Light_Begin",
+          "kind": "event",
+          "nodeCount": 0
+        },
+        {
+          "name": "CustomEvent",
+          "kind": "event",
+          "nodeCount": 0
+        }
+      ],
+      "packageDependencies": [
+        "/Engine/BasicShapes/Cylinder",
+        "/Engine/BasicShapes/BasicShapeMaterial",
+        "/Engine/EditorResources/LightIcons/S_LightError",
+        "/Game/Project_File/BP/Actor/BP_ActorBase"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/Actor/BP_Camera",
+      "className": "Blueprint",
+      "parentClass": "MonitorCameraActor",
+      "componentRecords": 5,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 6
+        }
+      ],
+      "packageDependencies": [
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/Material/M_WireFrame_Scan",
+        "/Game/Project_File/Model/Camera/Hikvision_DS-2CE56C2T-IRM",
+        "/Game/Project_File/Model/Camera/SM_Camera_WireFrame"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/Actor/BP_LightBase",
+      "className": "Blueprint",
+      "parentClass": "BP_ActorBase_C",
+      "componentRecords": 0,
+      "ownVariables": [
+        {
+          "name": "Light_Open?",
+          "type": "bool"
+        }
+      ],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 3
+        }
+      ],
+      "packageDependencies": [
+        "/Game/Project_File/BP/Actor/BP_ActorBase"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/Actor/BP_LightBase_Box",
+      "className": "Blueprint",
+      "parentClass": "BP_LightBase_C",
+      "componentRecords": 1,
+      "ownVariables": [
+        {
+          "name": "OpenLight?",
+          "type": "bool"
+        },
+        {
+          "name": "IsOpenLighting?",
+          "type": "bool"
+        }
+      ],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 33
+        },
+        {
+          "name": "Light_Show1",
+          "kind": "event",
+          "nodeCount": 0
+        }
+      ],
+      "packageDependencies": [
+        "/Engine/EditorResources/LightIcons/S_LightError",
+        "/Game/Project_File/BP/BPI_Actor_Call",
+        "/Game/Project_File/BP/Data/E_Time",
+        "/Game/Project_File/BP/Data/E_Weatther",
+        "/Game/Project_File/BP/Actor/BP_LightBase",
+        "/Game/Project_File/BP/Data/ST_LightChange_State",
+        "/Game/Project_File/BP/Data/ST_Weather",
+        "/Game/Project_File/BP/System/BGS_State"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/Actor/BP_Toilet",
+      "className": "Blueprint",
+      "parentClass": "Actor",
+      "componentRecords": 13,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 3
+        }
+      ],
+      "packageDependencies": [
+        "/Game/Project_File/Model/StaticMesh_Model/Toilet/Men1_2",
+        "/Game/Project_File/Model/StaticMesh_Model/Toilet/Men2_2",
+        "/Game/Project_File/Model/StaticMesh_Model/Toilet/polySurface9",
+        "/Game/Project_File/Model/StaticMesh_Model/Toilet/Qiang",
+        "/Game/Project_File/Model/StaticMesh_Model/Toilet/Riyongjiaju06_22_1",
+        "/Game/Project_File/Model/StaticMesh_Model/Toilet/Riyongjiaju06_22_2",
+        "/Game/Project_File/Model/StaticMesh_Model/Toilet/Riyongjiaju06_22_3",
+        "/Game/Project_File/Model/StaticMesh_Model/Toilet/Riyongjiaju06_23_2",
+        "/Game/Project_File/Model/StaticMesh_Model/Toilet/Riyongjiaju06_23_3",
+        "/Game/Project_File/Model/StaticMesh_Model/Toilet/Riyongjiaju06_23_4",
+        "/Game/Project_File/Model/StaticMesh_Model/Toilet/Taijie",
+        "/Game/Project_File/Model/StaticMesh_Model/Toilet/Xishoutai1"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/Actor/BP_WheelChair",
+      "className": "Blueprint",
+      "parentClass": "BP_ActorBase_C",
+      "componentRecords": 219,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 1
+        }
+      ],
+      "packageDependencies": [
+        "/Game/Project_File/BP/Actor/BP_ActorBase",
+        "/Game/Project_File/Model/WheelChair/pCube10",
+        "/Game/Project_File/Model/WheelChair/pCube101",
+        "/Game/Project_File/Model/WheelChair/pCube11",
+        "/Game/Project_File/Model/WheelChair/pCube111",
+        "/Game/Project_File/Model/WheelChair/pCube13",
+        "/Game/Project_File/Model/WheelChair/pCube131",
+        "/Game/Project_File/Model/WheelChair/pCube14",
+        "/Game/Project_File/Model/WheelChair/pCube141",
+        "/Game/Project_File/Model/WheelChair/pCube15",
+        "/Game/Project_File/Model/WheelChair/pCube151",
+        "/Game/Project_File/Model/WheelChair/pCube16",
+        "/Game/Project_File/Model/WheelChair/pCube161",
+        "/Game/Project_File/Model/WheelChair/pCube17",
+        "/Game/Project_File/Model/WheelChair/pCube171",
+        "/Game/Project_File/Model/WheelChair/pCube18",
+        "/Game/Project_File/Model/WheelChair/pCube181",
+        "/Game/Project_File/Model/WheelChair/pCube19",
+        "/Game/Project_File/Model/WheelChair/pCube191",
+        "/Game/Project_File/Model/WheelChair/pCube25",
+        "/Game/Project_File/Model/WheelChair/pCube251",
+        "/Game/Project_File/Model/WheelChair/pCube34",
+        "/Game/Project_File/Model/WheelChair/pCube341",
+        "/Game/Project_File/Model/WheelChair/pCube35",
+        "/Game/Project_File/Model/WheelChair/pCube351",
+        "/Game/Project_File/Model/WheelChair/pCube36",
+        "/Game/Project_File/Model/WheelChair/pCube361",
+        "/Game/Project_File/Model/WheelChair/pCube37",
+        "/Game/Project_File/Model/WheelChair/pCube371",
+        "/Game/Project_File/Model/WheelChair/pCube39",
+        "/Game/Project_File/Model/WheelChair/pCube391",
+        "/Game/Project_File/Model/WheelChair/pCube40",
+        "/Game/Project_File/Model/WheelChair/pCube401",
+        "/Game/Project_File/Model/WheelChair/pCube41",
+        "/Game/Project_File/Model/WheelChair/pCube411",
+        "/Game/Project_File/Model/WheelChair/pCube46",
+        "/Game/Project_File/Model/WheelChair/pCube461",
+        "/Game/Project_File/Model/WheelChair/pCube47",
+        "/Game/Project_File/Model/WheelChair/pCube471",
+        "/Game/Project_File/Model/WheelChair/pCube50",
+        "/Game/Project_File/Model/WheelChair/pCube501",
+        "/Game/Project_File/Model/WheelChair/pCube51",
+        "/Game/Project_File/Model/WheelChair/pCube511",
+        "/Game/Project_File/Model/WheelChair/pCube52",
+        "/Game/Project_File/Model/WheelChair/pCube521",
+        "/Game/Project_File/Model/WheelChair/pCube8",
+        "/Game/Project_File/Model/WheelChair/pCube81",
+        "/Game/Project_File/Model/WheelChair/pCube9",
+        "/Game/Project_File/Model/WheelChair/pCube91",
+        "/Game/Project_File/Model/WheelChair/pCylinder1",
+        "/Game/Project_File/Model/WheelChair/pCylinder11",
+        "/Game/Project_File/Model/WheelChair/pCylinder13",
+        "/Game/Project_File/Model/WheelChair/pCylinder131",
+        "/Game/Project_File/Model/WheelChair/pCylinder14",
+        "/Game/Project_File/Model/WheelChair/pCylinder141",
+        "/Game/Project_File/Model/WheelChair/pCylinder15",
+        "/Game/Project_File/Model/WheelChair/pCylinder151",
+        "/Game/Project_File/Model/WheelChair/pCylinder16",
+        "/Game/Project_File/Model/WheelChair/pCylinder161",
+        "/Game/Project_File/Model/WheelChair/pCylinder19",
+        "/Game/Project_File/Model/WheelChair/pCylinder191",
+        "/Game/Project_File/Model/WheelChair/pCylinder20",
+        "/Game/Project_File/Model/WheelChair/pCylinder201",
+        "/Game/Project_File/Model/WheelChair/pCylinder21",
+        "/Game/Project_File/Model/WheelChair/pCylinder211",
+        "/Game/Project_File/Model/WheelChair/pCylinder22",
+        "/Game/Project_File/Model/WheelChair/pCylinder221",
+        "/Game/Project_File/Model/WheelChair/pCylinder23",
+        "/Game/Project_File/Model/WheelChair/pCylinder231",
+        "/Game/Project_File/Model/WheelChair/pCylinder24",
+        "/Game/Project_File/Model/WheelChair/pCylinder241",
+        "/Game/Project_File/Model/WheelChair/pCylinder25",
+        "/Game/Project_File/Model/WheelChair/pCylinder251",
+        "/Game/Project_File/Model/WheelChair/pCylinder26",
+        "/Game/Project_File/Model/WheelChair/pCylinder261",
+        "/Game/Project_File/Model/WheelChair/pCylinder27",
+        "/Game/Project_File/Model/WheelChair/pCylinder271",
+        "/Game/Project_File/Model/WheelChair/pCylinder28",
+        "/Game/Project_File/Model/WheelChair/pCylinder281",
+        "/Game/Project_File/Model/WheelChair/pCylinder29",
+        "/Game/Project_File/Model/WheelChair/pCylinder291",
+        "/Game/Project_File/Model/WheelChair/pCylinder32",
+        "/Game/Project_File/Model/WheelChair/pCylinder321",
+        "/Game/Project_File/Model/WheelChair/pCylinder33",
+        "/Game/Project_File/Model/WheelChair/pCylinder331",
+        "/Game/Project_File/Model/WheelChair/pCylinder34",
+        "/Game/Project_File/Model/WheelChair/pCylinder341",
+        "/Game/Project_File/Model/WheelChair/pCylinder35",
+        "/Game/Project_File/Model/WheelChair/pCylinder351",
+        "/Game/Project_File/Model/WheelChair/pCylinder43",
+        "/Game/Project_File/Model/WheelChair/pCylinder431",
+        "/Game/Project_File/Model/WheelChair/pCylinder45",
+        "/Game/Project_File/Model/WheelChair/pCylinder451",
+        "/Game/Project_File/Model/WheelChair/pCylinder46",
+        "/Game/Project_File/Model/WheelChair/pCylinder461",
+        "/Game/Project_File/Model/WheelChair/pCylinder47",
+        "/Game/Project_File/Model/WheelChair/pCylinder471",
+        "/Game/Project_File/Model/WheelChair/pCylinder48",
+        "/Game/Project_File/Model/WheelChair/pCylinder481",
+        "/Game/Project_File/Model/WheelChair/pCylinder50",
+        "/Game/Project_File/Model/WheelChair/pCylinder501",
+        "/Game/Project_File/Model/WheelChair/pCylinder63",
+        "/Game/Project_File/Model/WheelChair/pCylinder631",
+        "/Game/Project_File/Model/WheelChair/pCylinder64",
+        "/Game/Project_File/Model/WheelChair/pCylinder641",
+        "/Game/Project_File/Model/WheelChair/pCylinder65",
+        "/Game/Project_File/Model/WheelChair/pCylinder651",
+        "/Game/Project_File/Model/WheelChair/pCylinder66",
+        "/Game/Project_File/Model/WheelChair/pCylinder661",
+        "/Game/Project_File/Model/WheelChair/pCylinder76",
+        "/Game/Project_File/Model/WheelChair/pCylinder761",
+        "/Game/Project_File/Model/WheelChair/pCylinder77",
+        "/Game/Project_File/Model/WheelChair/pCylinder771",
+        "/Game/Project_File/Model/WheelChair/pCylinder78",
+        "/Game/Project_File/Model/WheelChair/pCylinder781",
+        "/Game/Project_File/Model/WheelChair/pCylinder79",
+        "/Game/Project_File/Model/WheelChair/pCylinder791",
+        "/Game/Project_File/Model/WheelChair/pCylinder80",
+        "/Game/Project_File/Model/WheelChair/pCylinder801",
+        "/Game/Project_File/Model/WheelChair/pCylinder81",
+        "/Game/Project_File/Model/WheelChair/pCylinder811",
+        "/Game/Project_File/Model/WheelChair/pCylinder82",
+        "/Game/Project_File/Model/WheelChair/pCylinder821",
+        "/Game/Project_File/Model/WheelChair/pCylinder83",
+        "/Game/Project_File/Model/WheelChair/pCylinder831",
+        "/Game/Project_File/Model/WheelChair/pCylinder84",
+        "/Game/Project_File/Model/WheelChair/pCylinder841",
+        "/Game/Project_File/Model/WheelChair/pCylinder85",
+        "/Game/Project_File/Model/WheelChair/pCylinder851",
+        "/Game/Project_File/Model/WheelChair/pCylinder86",
+        "/Game/Project_File/Model/WheelChair/pCylinder861",
+        "/Game/Project_File/Model/WheelChair/pCylinder87",
+        "/Game/Project_File/Model/WheelChair/pCylinder871",
+        "/Game/Project_File/Model/WheelChair/pCylinder88",
+        "/Game/Project_File/Model/WheelChair/pCylinder881",
+        "/Game/Project_File/Model/WheelChair/pCylinder89",
+        "/Game/Project_File/Model/WheelChair/pCylinder891",
+        "/Game/Project_File/Model/WheelChair/pCylinder90",
+        "/Game/Project_File/Model/WheelChair/pCylinder901",
+        "/Game/Project_File/Model/WheelChair/pCylinder91",
+        "/Game/Project_File/Model/WheelChair/pCylinder911",
+        "/Game/Project_File/Model/WheelChair/pCylinder92",
+        "/Game/Project_File/Model/WheelChair/pCylinder921",
+        "/Game/Project_File/Model/WheelChair/pCylinder93",
+        "/Game/Project_File/Model/WheelChair/pCylinder931",
+        "/Game/Project_File/Model/WheelChair/pCylinder94",
+        "/Game/Project_File/Model/WheelChair/pCylinder941",
+        "/Game/Project_File/Model/WheelChair/pCylinder95",
+        "/Game/Project_File/Model/WheelChair/pCylinder951",
+        "/Game/Project_File/Model/WheelChair/pCylinder96",
+        "/Game/Project_File/Model/WheelChair/pCylinder961",
+        "/Game/Project_File/Model/WheelChair/pCylinder97",
+        "/Game/Project_File/Model/WheelChair/pCylinder971",
+        "/Game/Project_File/Model/WheelChair/pCylinder98",
+        "/Game/Project_File/Model/WheelChair/pCylinder981",
+        "/Game/Project_File/Model/WheelChair/pCylinder99",
+        "/Game/Project_File/Model/WheelChair/pCylinder991",
+        "/Game/Project_File/Model/WheelChair/pHelix1",
+        "/Game/Project_File/Model/WheelChair/pHelix11",
+        "/Game/Project_File/Model/WheelChair/polySurface11",
+        "/Game/Project_File/Model/WheelChair/polySurface111",
+        "/Game/Project_File/Model/WheelChair/polySurface14",
+        "/Game/Project_File/Model/WheelChair/polySurface141",
+        "/Game/Project_File/Model/WheelChair/polySurface15",
+        "/Game/Project_File/Model/WheelChair/polySurface151",
+        "/Game/Project_File/Model/WheelChair/polySurface17",
+        "/Game/Project_File/Model/WheelChair/polySurface171",
+        "/Game/Project_File/Model/WheelChair/polySurface18",
+        "/Game/Project_File/Model/WheelChair/polySurface181",
+        "/Game/Project_File/Model/WheelChair/polySurface19",
+        "/Game/Project_File/Model/WheelChair/polySurface191",
+        "/Game/Project_File/Model/WheelChair/polySurface2",
+        "/Game/Project_File/Model/WheelChair/polySurface21",
+        "/Game/Project_File/Model/WheelChair/polySurface22",
+        "/Game/Project_File/Model/WheelChair/polySurface221",
+        "/Game/Project_File/Model/WheelChair/polySurface23",
+        "/Game/Project_File/Model/WheelChair/polySurface231",
+        "/Game/Project_File/Model/WheelChair/polySurface25",
+        "/Game/Project_File/Model/WheelChair/polySurface251",
+        "/Game/Project_File/Model/WheelChair/polySurface26",
+        "/Game/Project_File/Model/WheelChair/polySurface261",
+        "/Game/Project_File/Model/WheelChair/polySurface27",
+        "/Game/Project_File/Model/WheelChair/polySurface271",
+        "/Game/Project_File/Model/WheelChair/polySurface28",
+        "/Game/Project_File/Model/WheelChair/polySurface281",
+        "/Game/Project_File/Model/WheelChair/polySurface3",
+        "/Game/Project_File/Model/WheelChair/polySurface31",
+        "/Game/Project_File/Model/WheelChair/polySurface311",
+        "/Game/Project_File/Model/WheelChair/polySurface3111",
+        "/Game/Project_File/Model/WheelChair/polySurface34",
+        "/Game/Project_File/Model/WheelChair/polySurface341",
+        "/Game/Project_File/Model/WheelChair/polySurface4",
+        "/Game/Project_File/Model/WheelChair/polySurface41",
+        "/Game/Project_File/Model/WheelChair/polySurface43",
+        "/Game/Project_File/Model/WheelChair/polySurface431",
+        "/Game/Project_File/Model/WheelChair/polySurface5",
+        "/Game/Project_File/Model/WheelChair/polySurface51",
+        "/Game/Project_File/Model/WheelChair/polySurface54",
+        "/Game/Project_File/Model/WheelChair/polySurface541",
+        "/Game/Project_File/Model/WheelChair/polySurface57",
+        "/Game/Project_File/Model/WheelChair/polySurface571",
+        "/Game/Project_File/Model/WheelChair/polySurface60",
+        "/Game/Project_File/Model/WheelChair/polySurface601",
+        "/Game/Project_File/Model/WheelChair/polySurface61",
+        "/Game/Project_File/Model/WheelChair/polySurface611",
+        "/Game/Project_File/Model/WheelChair/polySurface62",
+        "/Game/Project_File/Model/WheelChair/polySurface621",
+        "/Game/Project_File/Model/WheelChair/polySurface63",
+        "/Game/Project_File/Model/WheelChair/polySurface631",
+        "/Game/Project_File/Model/WheelChair/polySurface64",
+        "/Game/Project_File/Model/WheelChair/polySurface641",
+        "/Game/Project_File/Model/WheelChair/polySurface66",
+        "/Game/Project_File/Model/WheelChair/polySurface661",
+        "/Game/Project_File/Model/WheelChair/polySurface7",
+        "/Game/Project_File/Model/WheelChair/polySurface71",
+        "/Game/Project_File/Model/WheelChair/polySurface8",
+        "/Game/Project_File/Model/WheelChair/polySurface81",
+        "/Game/Project_File/Model/WheelChair/Xingdongfuzhu04_07_2",
+        "/Game/Project_File/Model/WheelChair/Xingdongfuzhu04_07_4",
+        "/Game/Project_File/Model/WheelChair/Xingdongfuzhu04_07_5"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/AI/BP_ElderSplinePath",
+      "className": "Blueprint",
+      "parentClass": "ElderSplinePath",
+      "componentRecords": 1,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 3
+        }
+      ],
+      "packageDependencies": [
+        "/Script/Old_Man_Jiang"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/BP_AI",
+      "className": "Blueprint",
+      "parentClass": "ElderlyAICharacter",
+      "componentRecords": 11,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 6
+        }
+      ],
+      "packageDependencies": [
+        "/Script/Old_Man_Jiang",
+        "/Game/OldManAnimset/Mannequin/Character/Mesh/SK_Mannequin",
+        "/Game/Project_File/BP/ABP_AI",
+        "/Game/Project_File/BP/Actor/BP_WheelChair"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/BP_Character_Base",
+      "className": "Blueprint",
+      "parentClass": "OrbitCameraCharacter",
+      "componentRecords": 7,
+      "ownVariables": [
+        {
+          "name": "Actor",
+          "type": "UStaticMeshComponent*"
+        }
+      ],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 4
+        }
+      ],
+      "packageDependencies": [
+        "/Script/Old_Man_Jiang"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/BP_Controller",
+      "className": "Blueprint",
+      "parentClass": "OrbitCameraController",
+      "componentRecords": 1,
+      "ownVariables": [
+        {
+          "name": "As BP Character Base",
+          "type": "ABP_Character_Base_C*"
+        },
+        {
+          "name": "Array Element",
+          "type": "AActor*"
+        }
+      ],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 13
+        }
+      ],
+      "packageDependencies": [
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Engine/EditorBlueprintResources/StandardMacros",
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/BP/BP_Character_Base",
+        "/Game/Project_File/BP/UBP/UBP_用户界面"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/BP_Player",
+      "className": "Blueprint",
+      "parentClass": "BP_Character_Base_C",
+      "componentRecords": 7,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 6
+        }
+      ],
+      "packageDependencies": [
+        "/Game/Project_File/BP/BP_Character_Base"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/BPI_Actor_Call",
+      "className": "Blueprint",
+      "parentClass": "Interface",
+      "componentRecords": 0,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "Light_Show",
+          "kind": "function",
+          "nodeCount": 1
+        }
+      ],
+      "packageDependencies": [
+        "/Game/Project_File/BP/Data/E_Time",
+        "/Game/Project_File/BP/Data/E_Weatther"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/System/BGM_GameMode",
+      "className": "Blueprint",
+      "parentClass": "GameModeBase",
+      "componentRecords": 1,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 2
+        }
+      ],
+      "packageDependencies": [
+        "/Game/Project_File/BP/BP_Controller",
+        "/Game/Project_File/BP/BP_Player",
+        "/Game/Project_File/BP/System/BGS_State"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/System/BGS_State",
+      "className": "Blueprint",
+      "parentClass": "GameStateBase",
+      "componentRecords": 1,
+      "ownVariables": [
+        {
+          "name": "ST_Weather",
+          "type": "FST_Weather"
+        },
+        {
+          "name": "ST_Weather_Temp",
+          "type": "FST_Weather"
+        },
+        {
+          "name": "ST_Time",
+          "type": "FST_LightChange_State"
+        },
+        {
+          "name": "F_TargetTimeOfDay",
+          "type": "double"
+        }
+      ],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 33
+        },
+        {
+          "name": "B_Call_LightShow",
+          "kind": "event",
+          "nodeCount": 0
+        },
+        {
+          "name": "A_CallLightShow",
+          "kind": "event",
+          "nodeCount": 0
+        }
+      ],
+      "packageDependencies": [
+        "/Engine/EditorBlueprintResources/StandardMacros",
+        "/Game/UltraDynamicSky/Blueprints/Weather_Effects/System/UDS_Weather_Settings",
+        "/Game/UltraDynamicSky/Blueprints/Weather_Effects/Weather_Presets/Cloudy",
+        "/Game/Project_File/BP/BPI_Actor_Call",
+        "/Game/Project_File/BP/Data/E_Time",
+        "/Game/Project_File/BP/Data/E_Weatther",
+        "/Game/UltraDynamicSky/Blueprints/Functions/UltraDynamicSky_Functions",
+        "/Game/UltraDynamicSky/Blueprints/Weather_Effects/Weather_Presets/Overcast",
+        "/Game/UltraDynamicSky/Blueprints/Weather_Effects/Weather_Presets/Rain_Thunderstorm",
+        "/Game/Project_File/BP/Data/ST_LightChange_State",
+        "/Game/Project_File/BP/Data/ST_Weather",
+        "/Game/UltraDynamicSky/Blueprints/Functions/UltraDynamicWeather_Functions"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/Support/BPI/BPI_用户界面",
+      "className": "Blueprint",
+      "parentClass": "Interface",
+      "componentRecords": 0,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "点击缩放",
+          "kind": "function",
+          "nodeCount": 1
+        }
+      ],
+      "packageDependencies": []
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_人次统计",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 9
+        },
+        {
+          "name": "切换人次表",
+          "kind": "event",
+          "nodeCount": 0
+        }
+      ],
+      "packageDependencies": [
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Game/字体/SourceHanSansSC-Medium-2_Font",
+        "/Script/Old_Man_Jiang",
+        "/Game/Scifi_HUD_Effects/Materials/Master/M_FlipBook_Jianshi_Inst",
+        "/Game/Project_File/UI/Texture/游戏内贴图/ChatGPT_Image_2026年4月29日_15_49_19__1_",
+        "/Script/JsonLibrary",
+        "/Script/WebUI",
+        "/Game/Project_File/BluePrint/UIBlueprint/UBP_人次统计"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_右侧栏",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 4
+        }
+      ],
+      "packageDependencies": [
+        "/Script/SlateCore",
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/BP/UBP/UBP_能耗曲线",
+        "/Game/Project_File/BP/UBP/UBP_设备统计",
+        "/Game/Project_File/BP/UBP/UBP_天气选择",
+        "/Game/Project_File/BP/UBP/UBP_时间选择"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_地点",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 3
+        }
+      ],
+      "packageDependencies": [
+        "/Script/SlateCore",
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/BP/UBP/Fonts/SourceHanSansSC-Medium-2_Font",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/2",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/坐标-fill"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_天气选择",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [
+        {
+          "name": "BGS_GameState",
+          "type": "ABGS_State_C*"
+        }
+      ],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 21
+        }
+      ],
+      "packageDependencies": [
+        "/Script/SlateCore",
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/BP/Data/DT_Weather",
+        "/Game/Project_File/BP/Data/ST_Weather",
+        "/Game/Project_File/BP/System/BGS_State",
+        "/Game/Project_File/BP/UBP/Fonts/SourceHanSansSC-Medium-2_Font",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_15_49_19__1_",
+        "/Game/Project_File/BP/UBP/Effects/Materials/Master/M_FlipBook_Jianshi_Inst"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_安装指标",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 9
+        },
+        {
+          "name": "切换安装表",
+          "kind": "event",
+          "nodeCount": 0
+        }
+      ],
+      "packageDependencies": [
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Game/字体/SourceHanSansSC-Medium-2_Font",
+        "/Script/Old_Man_Jiang",
+        "/Game/Scifi_HUD_Effects/Materials/Master/M_FlipBook_Jianshi_Inst",
+        "/Game/Project_File/UI/Texture/游戏内贴图/ChatGPT_Image_2026年4月29日_15_49_19__1_",
+        "/Script/JsonLibrary",
+        "/Script/WebUI",
+        "/Game/Project_File/BluePrint/UIBlueprint/UBP_安装指标"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_小菜单",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [
+        {
+          "name": "ActiveColor",
+          "type": "FLinearColor"
+        },
+        {
+          "name": "InactiveColor",
+          "type": "FLinearColor"
+        }
+      ],
+      "ownGraphs": [
+        {
+          "name": "SetIsActive",
+          "kind": "function",
+          "nodeCount": 8
+        },
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 41
+        }
+      ],
+      "packageDependencies": [
+        "/Script/SlateCore",
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Script/MovieScene",
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/2",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/CRMEB-编辑-面性",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/CRMEB-首页-面性",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/set1_filled"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_左侧栏",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 3
+        }
+      ],
+      "packageDependencies": [
+        "/Script/SlateCore",
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/BP/UBP/UBP_小菜单",
+        "/Game/Project_File/BP/UBP/UBP_当前区域"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_当前区域",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [
+        {
+          "name": "BP_BaseDong",
+          "type": "UObject*"
+        },
+        {
+          "name": "选择",
+          "type": "bool"
+        },
+        {
+          "name": "选择_0",
+          "type": "bool"
+        },
+        {
+          "name": "选择_1",
+          "type": "bool"
+        }
+      ],
+      "ownGraphs": [
+        {
+          "name": "SetIsActive",
+          "kind": "function",
+          "nodeCount": 20
+        },
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 0
+        }
+      ],
+      "packageDependencies": [
+        "/Script/SlateCore",
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Script/MovieSceneTracks",
+        "/Script/MovieScene",
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/BP/UBP/Fonts/SourceHanSansSC-Medium-2_Font",
+        "/Game/Project_File/BP/UBP/Effects/Materials/Master/M_FlipBook_Jianshi_Inst",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_15_38_46__1_",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/5a7423accb45a55002f813d556b7ff53",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_14_25_22__1__-_副本",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_14_25_22__2__-_副本"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_时间框",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [
+        {
+          "name": "BP_BaseDong",
+          "type": "UObject*"
+        },
+        {
+          "name": "BP_BaseQu",
+          "type": "UObject*"
+        },
+        {
+          "name": "UBP_用户界面",
+          "type": "UUBP_用户界面_C*"
+        }
+      ],
+      "ownGraphs": [
+        {
+          "name": "设置时间",
+          "kind": "function",
+          "nodeCount": 5
+        },
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 8
+        }
+      ],
+      "packageDependencies": [
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/BP/UBP/UBP_用户界面",
+        "/Game/Project_File/BP/UBP/Fonts/SourceHanSansSC-Medium-2_Font",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/CRMEB-晴转多云-面性",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_14_44_24__1_"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_时间选择",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [
+        {
+          "name": "BGS_GameState",
+          "type": "ABGS_State_C*"
+        }
+      ],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 19
+        }
+      ],
+      "packageDependencies": [
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Game/字体/SourceHanSansSC-Medium-2_Font",
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/BP/Data/DT_Time",
+        "/Game/Project_File/BP/Data/ST_LightChange_State",
+        "/Game/Project_File/BP/Data/ST_Weather",
+        "/Game/Project_File/BP/System/BGS_State",
+        "/Game/Scifi_HUD_Effects/Materials/Master/M_FlipBook_Jianshi_Inst",
+        "/Game/Project_File/UI/Texture/游戏内贴图/ChatGPT_Image_2026年4月29日_15_49_19__1_"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_活动内容计划",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 3
+        }
+      ],
+      "packageDependencies": [
+        "/Script/SlateCore",
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/BP/UBP/Fonts/SourceHanSansSC-Medium-2_Font",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_15_49_19__1_",
+        "/Game/Project_File/BP/UBP/Effects/Materials/Master/M_FlipBook_Jianshi_Inst",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/健康",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/太阳",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/手工刀",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/棋牌__2_",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/电影",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/音乐"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_用户界面",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [
+        {
+          "name": "Color",
+          "type": "FLinearColor"
+        }
+      ],
+      "ownGraphs": [
+        {
+          "name": "ChangeColor",
+          "kind": "function",
+          "nodeCount": 9
+        },
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 20
+        }
+      ],
+      "packageDependencies": [
+        "/Script/SlateCore",
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Script/MovieScene",
+        "/Engine/EditorBlueprintResources/StandardMacros",
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/BP/BPI_Actor_Call",
+        "/Game/Project_File/BP/Data/E_Time",
+        "/Game/Project_File/BP/Data/E_Weatther",
+        "/Game/Project_File/BP/System/BGS_State",
+        "/Game/Project_File/BP/UBP/UBP_右侧栏",
+        "/Game/Project_File/BP/UBP/UBP_天气选择",
+        "/Game/Project_File/BP/UBP/UBP_时间选择",
+        "/Game/Project_File/BP/UBP/Fonts/SourceHanSansSC-Medium-2_Font",
+        "/Game/Project_File/BP/UBP/UBP_左侧栏",
+        "/Game/Project_File/BP/UBP/UBP_时间框",
+        "/Game/Project_File/BP/UBP/Support/BPI/BPI_用户界面",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/test",
+        "/Game/Project_File/BP/UBP/UBP_缩放"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_缩放",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [
+        {
+          "name": "As BP First Person Player Controller",
+          "type": "UObject*"
+        },
+        {
+          "name": "UIReceiver",
+          "type": "TScriptInterface"
+        }
+      ],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 7
+        }
+      ],
+      "packageDependencies": [
+        "/Script/SlateCore",
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/BP/BPI_Actor_Call",
+        "/Game/Project_File/BP/UBP/Support/BPI/BPI_用户界面",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_16_28_58__1_",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_16_52_38",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_16_52_38_-_副本",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_16_52_38_-_副本__2_",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_16_52_38_-_副本__3_"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_能耗曲线",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 9
+        },
+        {
+          "name": "切换耗能表",
+          "kind": "event",
+          "nodeCount": 0
+        }
+      ],
+      "packageDependencies": [
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Game/字体/SourceHanSansSC-Medium-2_Font",
+        "/Script/Old_Man_Jiang",
+        "/Game/Scifi_HUD_Effects/Materials/Master/M_FlipBook_Jianshi_Inst",
+        "/Game/Project_File/UI/Texture/游戏内贴图/ChatGPT_Image_2026年4月29日_15_49_19__1_",
+        "/Script/JsonLibrary",
+        "/Script/WebUI",
+        "/Game/Project_File/UI/Texture/矢量贴图/electricity__1_",
+        "/Game/Project_File/UI/Texture/矢量贴图/water",
+        "/Game/Project_File/BluePrint/UIBlueprint/UBP_能耗曲线"
+      ]
+    },
+    {
+      "path": "/Game/Project_File/BP/UBP/UBP_设备统计",
+      "className": "WidgetBlueprint",
+      "parentClass": "ProjectUserWidgetBase",
+      "componentRecords": 0,
+      "ownVariables": [],
+      "ownGraphs": [
+        {
+          "name": "EventGraph",
+          "kind": "event_graph",
+          "nodeCount": 3
+        }
+      ],
+      "packageDependencies": [
+        "/Script/SlateCore",
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Script/Old_Man_Jiang",
+        "/Game/Project_File/BP/UBP/Fonts/SourceHanSansSC-Medium-2_Font",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_15_49_19__1_",
+        "/Game/Project_File/BP/UBP/Effects/Materials/Master/M_FlipBook_Jianshi_Inst",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_15_38_46__1_",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_15_25_34__1_",
+        "/Game/Project_File/BP/UBP/Textures/游戏内贴图/ChatGPT_Image_2026年4月29日_15_34_41__1_",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/健康检查",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/感官发育",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/日用家居五金",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/智能门窗",
+        "/Game/Project_File/BP/UBP/Textures/矢量贴图/轮椅"
+      ]
+    }
+  ],
+  "verifiedDefaults": {
+    "BGM_GameMode": {
+      "DefaultPawnClass": "/Game/Project_File/BP/BP_Player.BP_Player_C",
+      "PlayerControllerClass": "/Game/Project_File/BP/BP_Controller.BP_Controller_C",
+      "GameStateClass": "/Game/Project_File/BP/System/BGS_State.BGS_State_C"
+    },
+    "BP_AI": {
+      "MaleMesh": "/Game/OldManAnimset/Mannequin/Character/Mesh/SK_Mannequin.SK_Mannequin",
+      "FemaleMesh": "/Game/OldManAnimset/Mannequin/Character/Mesh/SK_Mannequin.SK_Mannequin",
+      "StandAnimation": null,
+      "SitAnimation": null,
+      "FallAnimation": null,
+      "WheelchairIdleAnimation": null
+    }
+  },
+  "notes": [
+    "Package dependencies alone do not prove executable call chains.",
+    "Component counts are tool metadata records, not proof of duplicate geometry.",
+    "Some Blueprint metadata reflects an unsaved editor package.",
+    "Null animation defaults do not invalidate existing ABP locomotion; posture hooks still require implementation."
+  ]
+}

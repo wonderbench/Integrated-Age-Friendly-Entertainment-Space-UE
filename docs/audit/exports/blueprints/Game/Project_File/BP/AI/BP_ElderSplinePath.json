@@ -1,0 +1,169 @@
+{
+	"assetPath": "/Game/Project_File/BP/AI/BP_ElderSplinePath",
+	"blueprintPath": "/Game/Project_File/BP/AI/BP_ElderSplinePath.BP_ElderSplinePath",
+	"packageName": "/Game/Project_File/BP/AI/BP_ElderSplinePath",
+	"isLevelScript": false,
+	"blueprintClass": "Blueprint",
+	"parentClass": "/Script/Old_Man_Jiang.ElderSplinePath",
+	"variables": [],
+	"functions": [
+		{
+			"name": "UserConstructionScript",
+			"kind": "override",
+			"graphSelector": "UserConstructionScript"
+		},
+		{
+			"name": "ReceiveBeginPlay",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "BC1A22A941801423E9809EBAF1762664"
+		},
+		{
+			"name": "ReceiveActorBeginOverlap",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "C3A4393546970EB6F6E01D9469EF2BBA"
+		},
+		{
+			"name": "ReceiveTick",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "63D492F04E8E04B16B81798F7581A1EE"
+		}
+	],
+	"components": [],
+	"graphs": [
+		{
+			"name": "UserConstructionScript",
+			"selector": "UserConstructionScript",
+			"kind": "function",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/AI/BP_ElderSplinePath.BP_ElderSplinePath:UserConstructionScript",
+			"nodeCount": 1,
+			"nodes": [
+				{
+					"id": "283E425843011908BB85F3A5232CA12D",
+					"class": "K2Node_FunctionEntry",
+					"title": "Construction Script",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EventGraph",
+			"selector": "EventGraph",
+			"kind": "event_graph",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/AI/BP_ElderSplinePath.BP_ElderSplinePath:EventGraph",
+			"nodeCount": 3,
+			"nodes": [
+				{
+					"id": "BC1A22A941801423E9809EBAF1762664",
+					"class": "K2Node_Event",
+					"title": "Event BeginPlay",
+					"posX": 0,
+					"posY": 0,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "C3A4393546970EB6F6E01D9469EF2BBA",
+					"class": "K2Node_Event",
+					"title": "Event ActorBeginOverlap",
+					"posX": 0,
+					"posY": 80,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "OtherActor",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "63D492F04E8E04B16B81798F7581A1EE",
+					"class": "K2Node_Event",
+					"title": "Event Tick",
+					"posX": 0,
+					"posY": 192,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "DeltaSeconds",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

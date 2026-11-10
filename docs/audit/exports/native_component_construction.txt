@@ -1,0 +1,17 @@
+Source/Old_Man_Jiang/Private\OrbitCameraCharacter.cpp:92:	CameraOrbitPivot = CreateDefaultSubobject<USceneComponent>(TEXT("CameraOrbitPivot"));
+Source/Old_Man_Jiang/Private\OrbitCameraCharacter.cpp:96:	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
+Source/Old_Man_Jiang/Private\OrbitCameraCharacter.cpp:110:	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+Source/Old_Man_Jiang/Private\MonitorCameraActor.cpp:10:	MonitorRoot = CreateDefaultSubobject<USceneComponent>(TEXT("MonitorRoot")); SetRootComponent(MonitorRoot);
+Source/Old_Man_Jiang/Private\MonitorCameraActor.cpp:11:	MonitorRange = CreateDefaultSubobject<USphereComponent>(TEXT("MonitorRange")); MonitorRange->SetupAttachment(MonitorRoot);
+Source/Old_Man_Jiang/Private\ElderlyAIController.cpp:12:	AIPerception = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AIPerception"));
+Source/Old_Man_Jiang/Private\ElderlyAIController.cpp:13:	SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("SightConfig"));
+Source/Old_Man_Jiang/Private\ElderSplinePath.cpp:7:	Spline=CreateDefaultSubobject<USplineComponent>(TEXT("RouteSpline"));
+Source/Old_Man_Jiang/Private\ElderlyAICharacter.cpp:25:	CrutchMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CrutchMesh"));
+Source/Old_Man_Jiang/Private\ElderlyAICharacter.cpp:32:	ElderNavigation=CreateDefaultSubobject<UElderNavigationComponent>(TEXT("ElderNavigation"));
+Source/Old_Man_Jiang/Private\ElderlyAICharacter.cpp:37:	PlayerCameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("ElderPlayerCameraBoom"));
+Source/Old_Man_Jiang/Private\ElderlyAICharacter.cpp:42:	PlayerCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("ElderPlayerCamera"));
+Source/Old_Man_Jiang/Private\ElderlyAICharacter.cpp:47:	ElderSightOrigin = CreateDefaultSubobject<USceneComponent>(TEXT("ElderSightOrigin"));
+Source/Old_Man_Jiang/Private\ElderlyAICharacter.cpp:49:	SightConeScale = CreateDefaultSubobject<USceneComponent>(TEXT("SightConeScale"));
+Source/Old_Man_Jiang/Private\ElderlyAICharacter.cpp:51:	SightConeMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SightConeMesh"));
+Source/Old_Man_Jiang/Private\ElderlyAICharacter.cpp:58:	SightLines = CreateDefaultSubobject<ULineBatchComponent>(TEXT("SightLines"));
+Source/Old_Man_Jiang/Private\ElderlyAICharacter.cpp:66:	Wheelchair = CreateDefaultSubobject<UChildActorComponent>(TEXT("Wheelchair"));

@@ -1,0 +1,1859 @@
+{
+	"assetPath": "/Game/Project_File/BP/System/BGS_State",
+	"blueprintPath": "/Game/Project_File/BP/System/BGS_State.BGS_State",
+	"packageName": "/Game/Project_File/BP/System/BGS_State",
+	"isLevelScript": false,
+	"blueprintClass": "Blueprint",
+	"parentClass": "/Script/Engine.GameStateBase",
+	"variables": [
+		{
+			"name": "ST_Weather",
+			"typeSpec": "struct:/Game/Project_File/BP/Data/ST_Weather.ST_Weather",
+			"pinCategory": "struct",
+			"guid": "BE0466434E01B8255EAF2D8FE7BE5EC9",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		},
+		{
+			"name": "ST_Weather_Temp",
+			"typeSpec": "struct:/Game/Project_File/BP/Data/ST_Weather.ST_Weather",
+			"pinCategory": "struct",
+			"guid": "694AC37946C1E534F075029C89396236",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		},
+		{
+			"name": "ST_Time",
+			"typeSpec": "struct:/Game/Project_File/BP/Data/ST_LightChange_State.ST_LightChange_State",
+			"pinCategory": "struct",
+			"guid": "88BA25E141A3609C57859BB7F252A29C",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		},
+		{
+			"name": "F_TargetTimeOfDay",
+			"typeSpec": "double",
+			"pinCategory": "real",
+			"guid": "35814050403D88584CC48897A51671F7",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		}
+	],
+	"functions": [
+		{
+			"name": "UserConstructionScript",
+			"kind": "override",
+			"graphSelector": "UserConstructionScript"
+		},
+		{
+			"name": "ReceiveBeginPlay",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "50E265904427DEBC5390329220F9FE35"
+		},
+		{
+			"name": "ReceiveTick",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "38235BB14F89B7E76C7E5296A4796FCC"
+		},
+		{
+			"name": "B_Call_LightShow",
+			"kind": "custom_event",
+			"graphSelector": "EventGraph",
+			"nodeId": "8D8F0C784CF32BE324CA1285BE3F1032"
+		},
+		{
+			"name": "A_CallLightShow",
+			"kind": "custom_event",
+			"graphSelector": "EventGraph",
+			"nodeId": "E99EFC7E4426DE7D46EB259CF076ABB6"
+		}
+	],
+	"components": [
+		{
+			"name": "DefaultSceneRoot",
+			"class": "SceneComponent",
+			"parent": ""
+		}
+	],
+	"graphs": [
+		{
+			"name": "UserConstructionScript",
+			"selector": "UserConstructionScript",
+			"kind": "function",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/System/BGS_State.BGS_State:UserConstructionScript",
+			"nodeCount": 1,
+			"nodes": [
+				{
+					"id": "22F36F044E9A3138D5A3089F7238E74E",
+					"class": "K2Node_FunctionEntry",
+					"title": "Construction Script",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EventGraph",
+			"selector": "EventGraph",
+			"kind": "event_graph",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/System/BGS_State.BGS_State:EventGraph",
+			"nodeCount": 33,
+			"nodes": [
+				{
+					"id": "50E265904427DEBC5390329220F9FE35",
+					"class": "K2Node_Event",
+					"title": "Event BeginPlay",
+					"posX": 88,
+					"posY": 734,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "38235BB14F89B7E76C7E5296A4796FCC",
+					"class": "K2Node_Event",
+					"title": "Event Tick",
+					"posX": 88,
+					"posY": 814,
+					"comment": "This node is disabled and will not be called.\r\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "DeltaSeconds",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "8D8F0C784CF32BE324CA1285BE3F1032",
+					"class": "K2Node_CustomEvent",
+					"title": "B_Call_LightShow\nCustom Event",
+					"posX": -512,
+					"posY": 911,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E485134A4D04AC46376D32B1ED249EBC",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "E485134A4D04AC46376D32B1ED249EBC",
+					"class": "K2Node_CallFunction",
+					"title": "Get All Actors with Tag",
+					"posX": -278,
+					"posY": 926,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "8D8F0C784CF32BE324CA1285BE3F1032",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "33F61167472D6EDD07DE7E8DA98E6031",
+									"pin": "Exec"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__GameplayStatics",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WorldContextObject",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Tag",
+							"type": "name",
+							"direction": "Input",
+							"defaultValue": "BP_Light",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "OutActors",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "FD9583B2449EF07AC21B5789CE577C1C",
+									"pin": "InputPin"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "33F61167472D6EDD07DE7E8DA98E6031",
+					"class": "K2Node_MacroInstance",
+					"title": "For Each Loop",
+					"posX": 88,
+					"posY": 926,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Exec",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E485134A4D04AC46376D32B1ED249EBC",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "Array",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "FD9583B2449EF07AC21B5789CE577C1C",
+									"pin": "OutputPin"
+								}
+							]
+						},
+						{
+							"name": "LoopBody",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E6A88EEF47517D87EB86CEBBD6859E6D",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "Array Element",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E6A88EEF47517D87EB86CEBBD6859E6D",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "Array Index",
+							"type": "int",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Completed",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "E6A88EEF47517D87EB86CEBBD6859E6D",
+					"class": "K2Node_Message",
+					"title": "Light Show\nTarget is BPI Actor Call",
+					"posX": 416,
+					"posY": 912,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "33F61167472D6EDD07DE7E8DA98E6031",
+									"pin": "LoopBody"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "33F61167472D6EDD07DE7E8DA98E6031",
+									"pin": "Array Element"
+								}
+							]
+						},
+						{
+							"name": "E_ Time",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NewEnumerator3",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "632772F44B61CE88434BA085D9A9B030",
+									"pin": "Time_3_F376A17A448D5664DFAC93B864D92D3B"
+								}
+							]
+						},
+						{
+							"name": "E_Weather_Temp",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NewEnumerator3",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C68F026248919200F879BA95D353AA93",
+									"pin": "E_Weatehr_2_2CC992464C32589006D58DB506EB2D72"
+								}
+							]
+						},
+						{
+							"name": "E_Weather",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NewEnumerator8",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "91D4BEAB4AE4F67EEF2EF7B887D397AA",
+									"pin": "E_Weatehr_2_2CC992464C32589006D58DB506EB2D72"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "632772F44B61CE88434BA085D9A9B030",
+					"class": "K2Node_BreakStruct",
+					"title": "Break ST Light Change State",
+					"posX": 88,
+					"posY": 1081,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_LightChange_State",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "29092DA8467053704F37D9895B12B8FA",
+									"pin": "ST_Time"
+								}
+							]
+						},
+						{
+							"name": "Time_3_F376A17A448D5664DFAC93B864D92D3B",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E6A88EEF47517D87EB86CEBBD6859E6D",
+									"pin": "E_ Time"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "29092DA8467053704F37D9895B12B8FA",
+					"class": "K2Node_VariableGet",
+					"title": "Get ST_Time",
+					"posX": -278,
+					"posY": 1104,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_Time",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "632772F44B61CE88434BA085D9A9B030",
+									"pin": "ST_LightChange_State"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "36A9C4E94A20DF1050CEEDB03EB1C471",
+					"class": "K2Node_VariableGet",
+					"title": "Get ST_Weather_Temp",
+					"posX": -278,
+					"posY": 1168,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_Weather_Temp",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C68F026248919200F879BA95D353AA93",
+									"pin": "ST_Weather"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "C68F026248919200F879BA95D353AA93",
+					"class": "K2Node_BreakStruct",
+					"title": "Break ST Weather",
+					"posX": 88,
+					"posY": 1145,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_Weather",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "36A9C4E94A20DF1050CEEDB03EB1C471",
+									"pin": "ST_Weather_Temp"
+								}
+							]
+						},
+						{
+							"name": "E_Weatehr_2_2CC992464C32589006D58DB506EB2D72",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E6A88EEF47517D87EB86CEBBD6859E6D",
+									"pin": "E_Weather_Temp"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "DCE5F58F423BA64D1E58E5927A6D41F8",
+					"class": "K2Node_VariableGet",
+					"title": "Get ST_Weather",
+					"posX": -278,
+					"posY": 1232,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_Weather",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "91D4BEAB4AE4F67EEF2EF7B887D397AA",
+									"pin": "ST_Weather"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "91D4BEAB4AE4F67EEF2EF7B887D397AA",
+					"class": "K2Node_BreakStruct",
+					"title": "Break ST Weather",
+					"posX": 88,
+					"posY": 1209,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_Weather",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "DCE5F58F423BA64D1E58E5927A6D41F8",
+									"pin": "ST_Weather"
+								}
+							]
+						},
+						{
+							"name": "E_Weatehr_2_2CC992464C32589006D58DB506EB2D72",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E6A88EEF47517D87EB86CEBBD6859E6D",
+									"pin": "E_Weather"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "FD9583B2449EF07AC21B5789CE577C1C",
+					"class": "K2Node_Knot",
+					"title": "Reroute Node",
+					"posX": -25,
+					"posY": 990,
+					"comment": "",
+					"pins": [
+						{
+							"name": "InputPin",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E485134A4D04AC46376D32B1ED249EBC",
+									"pin": "OutActors"
+								}
+							]
+						},
+						{
+							"name": "OutputPin",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "33F61167472D6EDD07DE7E8DA98E6031",
+									"pin": "Array"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "F6C1BABD4325950B30EFD0A48250719A",
+					"class": "K2Node_CallFunction",
+					"title": "Set Time Of Day · 𝖴𝖣𝖲",
+					"posX": 416,
+					"posY": 1472,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "904124A5462342C41F8CF5A77065C37A",
+									"pin": "Update"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Game/UltraDynamicSky/Blueprints/Functions/UltraDynamicSky_Functions.Default__UltraDynamicSky_Functions_C",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Time of Day",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "20CAB51749971C78E71B0592DE2D69B0",
+									"pin": "ReturnValue"
+								}
+							]
+						},
+						{
+							"name": "__WorldContext",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "A23B54484D84DFFD78A68D82AE494584",
+					"class": "K2Node_CallFunction",
+					"title": "Get Time Of Day · 𝖴𝖣𝖲",
+					"posX": -278,
+					"posY": 1346,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Game/UltraDynamicSky/Blueprints/Functions/UltraDynamicSky_Functions.Default__UltraDynamicSky_Functions_C",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "__WorldContext",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Time of Day",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "20CAB51749971C78E71B0592DE2D69B0",
+									"pin": "A"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "904124A5462342C41F8CF5A77065C37A",
+					"class": "K2Node_Timeline",
+					"title": "Timeline",
+					"posX": -278,
+					"posY": 1472,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Play",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "PlayFromStart",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A531399944F49FBAF625718D7D4BCE07",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "Stop",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Reverse",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ReverseFromEnd",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Update",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F6C1BABD4325950B30EFD0A48250719A",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "Finished",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "64D64E0C49D15AC375ECB5A73FA7BF96",
+									"pin": "InputPin"
+								}
+							]
+						},
+						{
+							"name": "SetNewTime",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NewTime",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Direction",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NewTrack_0",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "20CAB51749971C78E71B0592DE2D69B0",
+									"pin": "Alpha"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "20CAB51749971C78E71B0592DE2D69B0",
+					"class": "K2Node_CallFunction",
+					"title": "Lerp",
+					"posX": 88,
+					"posY": 1506,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__KismetMathLibrary",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "A",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A23B54484D84DFFD78A68D82AE494584",
+									"pin": "Time of Day"
+								}
+							]
+						},
+						{
+							"name": "B",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9E8FB93A49A2E8CD1A5B0E87FF6FA3BA",
+									"pin": "F_TargetTimeOfDay"
+								}
+							]
+						},
+						{
+							"name": "Alpha",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "904124A5462342C41F8CF5A77065C37A",
+									"pin": "NewTrack_0"
+								}
+							]
+						},
+						{
+							"name": "ReturnValue",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F6C1BABD4325950B30EFD0A48250719A",
+									"pin": "Time of Day"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "9E8FB93A49A2E8CD1A5B0E87FF6FA3BA",
+					"class": "K2Node_VariableGet",
+					"title": "Get F_TargetTimeOfDay",
+					"posX": -278,
+					"posY": 1426,
+					"comment": "",
+					"pins": [
+						{
+							"name": "F_TargetTimeOfDay",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "20CAB51749971C78E71B0592DE2D69B0",
+									"pin": "B"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "768B679349F4576F24D46496F8C6E41E",
+					"class": "K2Node_VariableGet",
+					"title": "Get ST_Time",
+					"posX": -1023,
+					"posY": 1497,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_Time",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C0950A54444FEF043AC189AB1C89CB66",
+									"pin": "ST_LightChange_State"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "C0950A54444FEF043AC189AB1C89CB66",
+					"class": "K2Node_BreakStruct",
+					"title": "Break ST Light Change State",
+					"posX": -800,
+					"posY": 1474,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_LightChange_State",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "768B679349F4576F24D46496F8C6E41E",
+									"pin": "ST_Time"
+								}
+							]
+						},
+						{
+							"name": "Time_3_F376A17A448D5664DFAC93B864D92D3B",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Vlaue_5_CE93918E4847B89F8CC97BB0223E9927",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A531399944F49FBAF625718D7D4BCE07",
+									"pin": "F_TargetTimeOfDay"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "A531399944F49FBAF625718D7D4BCE07",
+					"class": "K2Node_VariableSet",
+					"title": "Set F_TargetTimeOfDay",
+					"posX": -512,
+					"posY": 1488,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2C884F3E4138A4800FAEF09016557939",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "904124A5462342C41F8CF5A77065C37A",
+									"pin": "PlayFromStart"
+								}
+							]
+						},
+						{
+							"name": "F_TargetTimeOfDay",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C0950A54444FEF043AC189AB1C89CB66",
+									"pin": "Vlaue_5_CE93918E4847B89F8CC97BB0223E9927"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "86BCFF994C14DF60260125AA076F0BAB",
+					"class": "K2Node_CallFunction",
+					"title": "B Call Light Show\nTarget is BGS State",
+					"posX": 88,
+					"posY": 1888,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "64D64E0C49D15AC375ECB5A73FA7BF96",
+									"pin": "OutputPin"
+								},
+								{
+									"nodeId": "14999783494804D8A81D32A08BA210D1",
+									"pin": "then"
+								},
+								{
+									"nodeId": "9464E961434A2E6CD6A0BD8B531C13E9",
+									"pin": "then"
+								},
+								{
+									"nodeId": "EB02482349C8AFEB8C79779C7181AF78",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "01D730D84EA218620766C5A040FBE20B",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "E99EFC7E4426DE7D46EB259CF076ABB6",
+					"class": "K2Node_CustomEvent",
+					"title": "A_CallLightShow\nCustom Event",
+					"posX": -1460,
+					"posY": 1457,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "94C084424A22C1813A0BE9AF1007B910",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "IsChangeTime?",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2C884F3E4138A4800FAEF09016557939",
+									"pin": "Condition"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "64D64E0C49D15AC375ECB5A73FA7BF96",
+					"class": "K2Node_Knot",
+					"title": "Reroute Node",
+					"posX": 0,
+					"posY": 1537,
+					"comment": "",
+					"pins": [
+						{
+							"name": "InputPin",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "904124A5462342C41F8CF5A77065C37A",
+									"pin": "Finished"
+								}
+							]
+						},
+						{
+							"name": "OutputPin",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "86BCFF994C14DF60260125AA076F0BAB",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "2C884F3E4138A4800FAEF09016557939",
+					"class": "K2Node_IfThenElse",
+					"title": "Branch",
+					"posX": -1216,
+					"posY": 1472,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "94C084424A22C1813A0BE9AF1007B910",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "Condition",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E99EFC7E4426DE7D46EB259CF076ABB6",
+									"pin": "IsChangeTime?"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A531399944F49FBAF625718D7D4BCE07",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "else",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "4141E9ED42B1E7A7AF255E88868DB960",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "2A5D7E6545767FB9AE8F6AA5725F82B4",
+					"class": "K2Node_VariableGet",
+					"title": "Get ST_Weather",
+					"posX": -1431,
+					"posY": 1895,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_Weather",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2080358942CF4F95A7B8E0A39B428AB2",
+									"pin": "ST_Weather"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "2080358942CF4F95A7B8E0A39B428AB2",
+					"class": "K2Node_BreakStruct",
+					"title": "Break ST Weather",
+					"posX": -1280,
+					"posY": 1872,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_Weather",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2A5D7E6545767FB9AE8F6AA5725F82B4",
+									"pin": "ST_Weather"
+								}
+							]
+						},
+						{
+							"name": "E_Weatehr_2_2CC992464C32589006D58DB506EB2D72",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "4141E9ED42B1E7A7AF255E88868DB960",
+									"pin": "Selection"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "4141E9ED42B1E7A7AF255E88868DB960",
+					"class": "K2Node_SwitchEnum",
+					"title": "Switch on E_Weatther",
+					"posX": -1023,
+					"posY": 1840,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2C884F3E4138A4800FAEF09016557939",
+									"pin": "else"
+								}
+							]
+						},
+						{
+							"name": "Selection",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NewEnumerator8",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2080358942CF4F95A7B8E0A39B428AB2",
+									"pin": "E_Weatehr_2_2CC992464C32589006D58DB506EB2D72"
+								}
+							]
+						},
+						{
+							"name": "NotEqual_ByteByte",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__KismetMathLibrary",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NewEnumerator8",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NewEnumerator3",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "14999783494804D8A81D32A08BA210D1",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "NewEnumerator2",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9464E961434A2E6CD6A0BD8B531C13E9",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "NewEnumerator7",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EB02482349C8AFEB8C79779C7181AF78",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "14999783494804D8A81D32A08BA210D1",
+					"class": "K2Node_CallFunction",
+					"title": "Change Weather · 𝖴𝖣𝖶",
+					"posX": -800,
+					"posY": 1728,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "4141E9ED42B1E7A7AF255E88868DB960",
+									"pin": "NewEnumerator3"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "86BCFF994C14DF60260125AA076F0BAB",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Game/UltraDynamicSky/Blueprints/Functions/UltraDynamicWeather_Functions.Default__UltraDynamicWeather_Functions_C",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "New Weather Type",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Game/UltraDynamicSky/Blueprints/Weather_Effects/Weather_Presets/Cloudy.Cloudy",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Time To Transition To New Weather (Seconds)",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "3.000000",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "__WorldContext",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "9464E961434A2E6CD6A0BD8B531C13E9",
+					"class": "K2Node_CallFunction",
+					"title": "Change Weather · 𝖴𝖣𝖶",
+					"posX": -800,
+					"posY": 1904,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "4141E9ED42B1E7A7AF255E88868DB960",
+									"pin": "NewEnumerator2"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "86BCFF994C14DF60260125AA076F0BAB",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Game/UltraDynamicSky/Blueprints/Functions/UltraDynamicWeather_Functions.Default__UltraDynamicWeather_Functions_C",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "New Weather Type",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Game/UltraDynamicSky/Blueprints/Weather_Effects/Weather_Presets/Overcast.Overcast",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Time To Transition To New Weather (Seconds)",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "3.000000",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "__WorldContext",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "EB02482349C8AFEB8C79779C7181AF78",
+					"class": "K2Node_CallFunction",
+					"title": "Change Weather · 𝖴𝖣𝖶",
+					"posX": -800,
+					"posY": 2096,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "4141E9ED42B1E7A7AF255E88868DB960",
+									"pin": "NewEnumerator7"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "86BCFF994C14DF60260125AA076F0BAB",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Game/UltraDynamicSky/Blueprints/Functions/UltraDynamicWeather_Functions.Default__UltraDynamicWeather_Functions_C",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "New Weather Type",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Game/UltraDynamicSky/Blueprints/Weather_Effects/Weather_Presets/Rain_Thunderstorm.Rain_Thunderstorm",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Time To Transition To New Weather (Seconds)",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "3.000000",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "__WorldContext",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "01D730D84EA218620766C5A040FBE20B",
+					"class": "K2Node_CallFunction",
+					"title": "Print String",
+					"posX": 416,
+					"posY": 1904,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "86BCFF994C14DF60260125AA076F0BAB",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__KismetSystemLibrary",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WorldContextObject",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "InString",
+							"type": "string",
+							"direction": "Input",
+							"defaultValue": "时间切换结束",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "bPrintToScreen",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "bPrintToLog",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "TextColor",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Duration",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "2.000000",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Key",
+							"type": "name",
+							"direction": "Input",
+							"defaultValue": "None",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "94C084424A22C1813A0BE9AF1007B910",
+					"class": "K2Node_CallFunction",
+					"title": "B Call Light Show\nTarget is BGS State",
+					"posX": -1500,
+					"posY": 1220,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E99EFC7E4426DE7D46EB259CF076ABB6",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2C884F3E4138A4800FAEF09016557939",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

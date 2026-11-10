@@ -1,0 +1,821 @@
+{
+	"assetPath": "/Game/Project_File/BP/BP_Controller",
+	"blueprintPath": "/Game/Project_File/BP/BP_Controller.BP_Controller",
+	"packageName": "/Game/Project_File/BP/BP_Controller",
+	"isLevelScript": false,
+	"blueprintClass": "Blueprint",
+	"parentClass": "/Script/Old_Man_Jiang.OrbitCameraController",
+	"variables": [
+		{
+			"name": "As BP Character Base",
+			"typeSpec": "object:/Game/Project_File/BP/BP_Character_Base.BP_Character_Base_C",
+			"pinCategory": "object",
+			"guid": "1043B8C94D7B52602A35C183B70DFB05",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		},
+		{
+			"name": "Array Element",
+			"typeSpec": "object:/Script/Engine.Actor",
+			"pinCategory": "object",
+			"guid": "E2047C8047F9A81D36D2C0AB39A86092",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		}
+	],
+	"functions": [
+		{
+			"name": "UserConstructionScript",
+			"kind": "override",
+			"graphSelector": "UserConstructionScript"
+		},
+		{
+			"name": "ReceiveBeginPlay",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "6D81DFA3499BC5D94AE4188612C281C9"
+		},
+		{
+			"name": "ReceiveTick",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "61E6193E4F11B2DADF453BA022EBC8C7"
+		}
+	],
+	"components": [],
+	"graphs": [
+		{
+			"name": "UserConstructionScript",
+			"selector": "UserConstructionScript",
+			"kind": "function",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/BP_Controller.BP_Controller:UserConstructionScript",
+			"nodeCount": 1,
+			"nodes": [
+				{
+					"id": "62C0042F4A9BCA4B794BF1A95E395161",
+					"class": "K2Node_FunctionEntry",
+					"title": "Construction Script",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EventGraph",
+			"selector": "EventGraph",
+			"kind": "event_graph",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/BP_Controller.BP_Controller:EventGraph",
+			"nodeCount": 13,
+			"nodes": [
+				{
+					"id": "6D81DFA3499BC5D94AE4188612C281C9",
+					"class": "K2Node_Event",
+					"title": "Event BeginPlay",
+					"posX": 0,
+					"posY": -80,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "889CF8DE415C5400EE6B45A5E191167E",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "61E6193E4F11B2DADF453BA022EBC8C7",
+					"class": "K2Node_Event",
+					"title": "Event Tick",
+					"posX": 944,
+					"posY": 64,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "DeltaSeconds",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "889CF8DE415C5400EE6B45A5E191167E",
+					"class": "K2Node_CreateWidget",
+					"title": "Create UBP 用户界面 Widget",
+					"posX": 176,
+					"posY": -80,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "6D81DFA3499BC5D94AE4188612C281C9",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C94F0D9E4C29C7005ADC46BCB121AF75",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "Class",
+							"type": "class",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Game/Project_File/BP/UBP/UBP_用户界面.UBP_用户界面_C",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ReturnValue",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C94F0D9E4C29C7005ADC46BCB121AF75",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "OwningPlayer",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "C94F0D9E4C29C7005ADC46BCB121AF75",
+					"class": "K2Node_CallFunction",
+					"title": "Add to Viewport\nTarget is User Widget",
+					"posX": 496,
+					"posY": -95,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "889CF8DE415C5400EE6B45A5E191167E",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "DB2B2CD443B767EA4CBB26BA682A6BE4",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "889CF8DE415C5400EE6B45A5E191167E",
+									"pin": "ReturnValue"
+								}
+							]
+						},
+						{
+							"name": "ZOrder",
+							"type": "int",
+							"direction": "Input",
+							"defaultValue": "0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "E0BA07A145A88FC7D43F1E921D0C1939",
+					"class": "K2Node_CallFunction",
+					"title": "Set Orbit Pivot Location\nTarget is Orbit Camera Controller",
+					"posX": 2128,
+					"posY": 77,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "6468AAA24A6460FD233F6ABC5B3B5872",
+									"pin": "Completed"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NewPivotLocation",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "0, 0, 0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "83DA97F842FEABE981AAA3B9780F21FE",
+									"pin": "Origin"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "F25ED7DB475EA2D0E7A6C0995F0E89BA",
+					"class": "K2Node_CallFunction",
+					"title": "Get Owner\nTarget is Actor",
+					"posX": 688,
+					"posY": -63,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ReturnValue",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "DB2B2CD443B767EA4CBB26BA682A6BE4",
+									"pin": "Object"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "DB2B2CD443B767EA4CBB26BA682A6BE4",
+					"class": "K2Node_DynamicCast",
+					"title": "Cast To BP_Character_Base",
+					"posX": 944,
+					"posY": -80,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C94F0D9E4C29C7005ADC46BCB121AF75",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "52A1B73942D04EF7E246BBAE29A14572",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "CastFailed",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "0AB8B43548B5EC1855CCFAB7086C51B0",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "Object",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F25ED7DB475EA2D0E7A6C0995F0E89BA",
+									"pin": "ReturnValue"
+								}
+							]
+						},
+						{
+							"name": "AsBP Character Base",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "52A1B73942D04EF7E246BBAE29A14572",
+									"pin": "As BP Character Base"
+								}
+							]
+						},
+						{
+							"name": "bSuccess",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "52A1B73942D04EF7E246BBAE29A14572",
+					"class": "K2Node_VariableSet",
+					"title": "Set As BP Character Base",
+					"posX": 1216,
+					"posY": -64,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "DB2B2CD443B767EA4CBB26BA682A6BE4",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "0AB8B43548B5EC1855CCFAB7086C51B0",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "As BP Character Base",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "DB2B2CD443B767EA4CBB26BA682A6BE4",
+									"pin": "AsBP Character Base"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "0AB8B43548B5EC1855CCFAB7086C51B0",
+					"class": "K2Node_CallFunction",
+					"title": "Get All Actors with Tag",
+					"posX": 1456,
+					"posY": -48,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "52A1B73942D04EF7E246BBAE29A14572",
+									"pin": "then"
+								},
+								{
+									"nodeId": "DB2B2CD443B767EA4CBB26BA682A6BE4",
+									"pin": "CastFailed"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "6468AAA24A6460FD233F6ABC5B3B5872",
+									"pin": "Exec"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__GameplayStatics",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WorldContextObject",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Tag",
+							"type": "name",
+							"direction": "Input",
+							"defaultValue": "Camera_1",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "OutActors",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "6468AAA24A6460FD233F6ABC5B3B5872",
+									"pin": "Array"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "6468AAA24A6460FD233F6ABC5B3B5872",
+					"class": "K2Node_MacroInstance",
+					"title": "For Each Loop",
+					"posX": 1776,
+					"posY": -48,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Exec",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "0AB8B43548B5EC1855CCFAB7086C51B0",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "Array",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "0AB8B43548B5EC1855CCFAB7086C51B0",
+									"pin": "OutActors"
+								}
+							]
+						},
+						{
+							"name": "LoopBody",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "82F3DFFE44B25EF293A1E48BEA1D60FF",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "Array Element",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "82F3DFFE44B25EF293A1E48BEA1D60FF",
+									"pin": "Array Element"
+								}
+							]
+						},
+						{
+							"name": "Array Index",
+							"type": "int",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Completed",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E0BA07A145A88FC7D43F1E921D0C1939",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "82F3DFFE44B25EF293A1E48BEA1D60FF",
+					"class": "K2Node_VariableSet",
+					"title": "Set Array Element",
+					"posX": 2128,
+					"posY": -32,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "6468AAA24A6460FD233F6ABC5B3B5872",
+									"pin": "LoopBody"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Array Element",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "6468AAA24A6460FD233F6ABC5B3B5872",
+									"pin": "Array Element"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "9BD529A54F7FB8837DC42A97C76233B7",
+					"class": "K2Node_VariableGet",
+					"title": "Get Array Element",
+					"posX": 1583,
+					"posY": 182,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Array Element",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "83DA97F842FEABE981AAA3B9780F21FE",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "83DA97F842FEABE981AAA3B9780F21FE",
+					"class": "K2Node_CallFunction",
+					"title": "Get Actor Bounds\nTarget is Actor",
+					"posX": 1776,
+					"posY": 144,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9BD529A54F7FB8837DC42A97C76233B7",
+									"pin": "Array Element"
+								}
+							]
+						},
+						{
+							"name": "bOnlyCollidingComponents",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Origin",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "0, 0, 0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E0BA07A145A88FC7D43F1E921D0C1939",
+									"pin": "NewPivotLocation"
+								}
+							]
+						},
+						{
+							"name": "BoxExtent",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "0, 0, 0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "bIncludeFromChildActors",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

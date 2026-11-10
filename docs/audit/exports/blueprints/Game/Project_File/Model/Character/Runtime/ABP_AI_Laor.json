@@ -1,0 +1,3000 @@
+{
+	"assetPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor",
+	"blueprintPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor",
+	"packageName": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor",
+	"isLevelScript": false,
+	"blueprintClass": "AnimBlueprint",
+	"parentClass": "/Script/Old_Man_Jiang.ElderAnimInstance",
+	"variables": [
+		{
+			"name": "As BP AI",
+			"typeSpec": "object:/Game/Project_File/BP/BP_AI.BP_AI_C",
+			"pinCategory": "object",
+			"guid": "3C34DE7E4280B31A2A5389ACF497362B",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		},
+		{
+			"name": "Local Forward Velocity",
+			"typeSpec": "double",
+			"pinCategory": "real",
+			"guid": "020C55DE4C4B11B0B8979E881FF4C892",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		},
+		{
+			"name": "Local Right Velocity",
+			"typeSpec": "double",
+			"pinCategory": "real",
+			"guid": "8A6771D5418A0C9859B751AB92C50E1D",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		},
+		{
+			"name": "TurnActive",
+			"typeSpec": "bool",
+			"pinCategory": "bool",
+			"guid": "4CD999154E19F449ACD7328AFFFB6BFB",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		},
+		{
+			"name": "TurnCoordinate",
+			"typeSpec": "double",
+			"pinCategory": "real",
+			"guid": "000F36BD4B76851FFB796EA275DDEC50",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		},
+		{
+			"name": "TurnPhase",
+			"typeSpec": "double",
+			"pinCategory": "real",
+			"guid": "D8092F4F4954C3189F7B7BB9CC106E2D",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		}
+	],
+	"functions": [
+		{
+			"name": "AnimGraph",
+			"kind": "function",
+			"graphSelector": "AnimGraph"
+		},
+		{
+			"name": "BlueprintUpdateAnimation",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "ED9997454219B2DCFE9F658692FB5842"
+		},
+		{
+			"name": "BlueprintInitializeAnimation",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "D045F1E44C1DFB66EC04C7BB37B08FAB"
+		}
+	],
+	"components": [],
+	"graphs": [
+		{
+			"name": "AnimGraph",
+			"selector": "AnimGraph",
+			"kind": "function",
+			"nested": false,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:AnimGraph",
+			"nodeCount": 16,
+			"nodes": [
+				{
+					"id": "DF0ACC7C4F02DAE3C05DC0A3CDCEBF3E",
+					"class": "AnimGraphNode_Root",
+					"title": "Output Pose\nAnimGraph",
+					"posX": 1850,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Result",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "65F13D1C41BEFE1CBC5C349A17087C55",
+									"pin": "Pose"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "527AD3C848B2CEF9726465BDB5DD73BC",
+					"class": "AnimGraphNode_StateMachine",
+					"title": "New State Machine\nState Machine",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "1A32F4F846485B69EB8A108A26C42D6E",
+									"pin": "BlendPose_1"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "1A32F4F846485B69EB8A108A26C42D6E",
+					"class": "AnimGraphNode_BlendListByBool",
+					"title": "Blend Poses by bool",
+					"posX": 720,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "BlendPose_0",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "399EAF6C4A0C3ED6E6E751B105DA2697",
+									"pin": "Pose"
+								}
+							]
+						},
+						{
+							"name": "BlendPose_1",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "527AD3C848B2CEF9726465BDB5DD73BC",
+									"pin": "Pose"
+								}
+							]
+						},
+						{
+							"name": "BlendTime_0",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.2",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "BlendTime_1",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.2",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "bActiveValue",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "False",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "01173CC2445F653D6D22E8899E6EC7BB",
+									"pin": "WheelchairPoseActive"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "857A46B7461B6B84556274A0C3A16EF9",
+									"pin": "BlendPose_1"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "399EAF6C4A0C3ED6E6E751B105DA2697",
+					"class": "AnimGraphNode_SequencePlayer",
+					"title": "Sequence Player",
+					"posX": 360,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Sequence",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "4695893A4657054F4AEDF69C8B26E215",
+									"pin": "WheelchairPoseAnimation"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "1A32F4F846485B69EB8A108A26C42D6E",
+									"pin": "BlendPose_0"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "01173CC2445F653D6D22E8899E6EC7BB",
+					"class": "K2Node_VariableGet",
+					"title": "Get WheelchairPoseActive",
+					"posX": 0,
+					"posY": 200,
+					"comment": "",
+					"pins": [
+						{
+							"name": "WheelchairPoseActive",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "1A32F4F846485B69EB8A108A26C42D6E",
+									"pin": "bActiveValue"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "4695893A4657054F4AEDF69C8B26E215",
+					"class": "K2Node_VariableGet",
+					"title": "Get WheelchairPoseAnimation",
+					"posX": 0,
+					"posY": 400,
+					"comment": "",
+					"pins": [
+						{
+							"name": "WheelchairPoseAnimation",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "399EAF6C4A0C3ED6E6E751B105DA2697",
+									"pin": "Sequence"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "35DB02A140C89BF7F8CEE69337362DE7",
+					"class": "AnimGraphNode_SequencePlayer",
+					"title": "Sequence Player",
+					"posX": 750,
+					"posY": 420,
+					"comment": "[Elder Fall] Non-looping; same player remains active through Falling -> Fallen.",
+					"pins": [
+						{
+							"name": "Sequence",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5CB0A9D24E7C061B5AE8F1B2BA851E98",
+									"pin": "FallPoseAnimation"
+								}
+							]
+						},
+						{
+							"name": "StartPosition",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D78A14F2400868D7C743FABD63D9BD1A",
+									"pin": "FallPoseStartPosition"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "857A46B7461B6B84556274A0C3A16EF9",
+									"pin": "BlendPose_0"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "857A46B7461B6B84556274A0C3A16EF9",
+					"class": "AnimGraphNode_BlendListByBool",
+					"title": "Blend Poses by bool",
+					"posX": 1100,
+					"posY": 0,
+					"comment": "[Elder Fall] Existing locomotion/wheelchair graph preserved on False.",
+					"pins": [
+						{
+							"name": "BlendPose_0",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "35DB02A140C89BF7F8CEE69337362DE7",
+									"pin": "Pose"
+								}
+							]
+						},
+						{
+							"name": "BlendPose_1",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "1A32F4F846485B69EB8A108A26C42D6E",
+									"pin": "Pose"
+								}
+							]
+						},
+						{
+							"name": "BlendTime_0",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.100000",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "BlendTime_1",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.15",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "bActiveValue",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "False",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "31249FE9450CD031162340805A5783B7",
+									"pin": "FallPoseActive"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "65F13D1C41BEFE1CBC5C349A17087C55",
+									"pin": "BlendPose_1"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "31249FE9450CD031162340805A5783B7",
+					"class": "K2Node_VariableGet",
+					"title": "Get FallPoseActive",
+					"posX": 750,
+					"posY": 650,
+					"comment": "",
+					"pins": [
+						{
+							"name": "FallPoseActive",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "857A46B7461B6B84556274A0C3A16EF9",
+									"pin": "bActiveValue"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "5CB0A9D24E7C061B5AE8F1B2BA851E98",
+					"class": "K2Node_VariableGet",
+					"title": "Get FallPoseAnimation",
+					"posX": 360,
+					"posY": 720,
+					"comment": "",
+					"pins": [
+						{
+							"name": "FallPoseAnimation",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "35DB02A140C89BF7F8CEE69337362DE7",
+									"pin": "Sequence"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "D78A14F2400868D7C743FABD63D9BD1A",
+					"class": "K2Node_VariableGet",
+					"title": "Get FallPoseStartPosition",
+					"posX": 360,
+					"posY": 850,
+					"comment": "",
+					"pins": [
+						{
+							"name": "FallPoseStartPosition",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "35DB02A140C89BF7F8CEE69337362DE7",
+									"pin": "StartPosition"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "B038BAC4476EB8DDD471BE9B9AEBE619",
+					"class": "K2Node_VariableGet",
+					"title": "Get GetUpPoseAnimation",
+					"posX": 750,
+					"posY": 620,
+					"comment": "",
+					"pins": [
+						{
+							"name": "GetUpPoseAnimation",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F1C60A5F4A71729CCD1DD98D4A0CADB7",
+									"pin": "Sequence"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "F49A1179463B3D19D775F1846709FEC1",
+					"class": "K2Node_VariableGet",
+					"title": "Get GetUpPoseActive",
+					"posX": 1100,
+					"posY": 820,
+					"comment": "",
+					"pins": [
+						{
+							"name": "GetUpPoseActive",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "65F13D1C41BEFE1CBC5C349A17087C55",
+									"pin": "bActiveValue"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "65F13D1C41BEFE1CBC5C349A17087C55",
+					"class": "AnimGraphNode_BlendListByBool",
+					"title": "Blend Poses by bool",
+					"posX": 1500,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "BlendPose_0",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F1C60A5F4A71729CCD1DD98D4A0CADB7",
+									"pin": "Pose"
+								}
+							]
+						},
+						{
+							"name": "BlendPose_1",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "857A46B7461B6B84556274A0C3A16EF9",
+									"pin": "Pose"
+								}
+							]
+						},
+						{
+							"name": "BlendTime_0",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.15",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "BlendTime_1",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.15",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "bActiveValue",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "False",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F49A1179463B3D19D775F1846709FEC1",
+									"pin": "GetUpPoseActive"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "DF0ACC7C4F02DAE3C05DC0A3CDCEBF3E",
+									"pin": "Result"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "F1C60A5F4A71729CCD1DD98D4A0CADB7",
+					"class": "AnimGraphNode_SequenceEvaluator",
+					"title": "Sequence Evaluator (by time)",
+					"posX": 1100,
+					"posY": 620,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Sequence",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "B038BAC4476EB8DDD471BE9B9AEBE619",
+									"pin": "GetUpPoseAnimation"
+								}
+							]
+						},
+						{
+							"name": "ExplicitTime",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9D57F9FD4ED569055DE420964C59F9F2",
+									"pin": "GetUpPoseTime"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "65F13D1C41BEFE1CBC5C349A17087C55",
+									"pin": "BlendPose_0"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "9D57F9FD4ED569055DE420964C59F9F2",
+					"class": "K2Node_VariableGet",
+					"title": "Get GetUpPoseTime",
+					"posX": 750,
+					"posY": 780,
+					"comment": "",
+					"pins": [
+						{
+							"name": "GetUpPoseTime",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F1C60A5F4A71729CCD1DD98D4A0CADB7",
+									"pin": "ExplicitTime"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "New State Machine",
+			"selector": "New State Machine",
+			"kind": "subgraph",
+			"nested": true,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:AnimGraph.AnimGraphNode_StateMachine_0.New State Machine",
+			"nodeCount": 2,
+			"nodes": [
+				{
+					"id": "8B43C92E4A25CEB323606A95771218A1",
+					"class": "AnimStateEntryNode",
+					"title": "New State Machine",
+					"posX": 0,
+					"posY": 17,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Entry",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24F0297445F496D2C4AE048A34170580",
+									"pin": "In"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "24F0297445F496D2C4AE048A34170580",
+					"class": "AnimStateNode",
+					"title": "Move",
+					"posX": 176,
+					"posY": 16,
+					"comment": "",
+					"pins": [
+						{
+							"name": "In",
+							"type": "Transition",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "8B43C92E4A25CEB323606A95771218A1",
+									"pin": "Entry"
+								}
+							]
+						},
+						{
+							"name": "Out",
+							"type": "Transition",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Move",
+			"selector": "Move",
+			"kind": "subgraph",
+			"nested": true,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:AnimGraph.AnimGraphNode_StateMachine_0.New State Machine.AnimStateNode_0.Move",
+			"nodeCount": 11,
+			"nodes": [
+				{
+					"id": "D9FBC18D43100E05E3FE1698373E95F4",
+					"class": "AnimGraphNode_StateResult",
+					"title": "Output Animation Pose",
+					"posX": 1080,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Result",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3A472DEC442FE78E1B879283FEA39086",
+									"pin": "Pose"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "ADF7FC524AE11E8EE2CCD3901F3F459D",
+					"class": "AnimGraphNode_BlendSpaceGraph",
+					"title": "ABS_Move\nBlendspace",
+					"posX": 360,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "X",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "0484CFFC4C19817D824EC1B25D775694",
+									"pin": "LocomotionBlendRight"
+								}
+							]
+						},
+						{
+							"name": "Y",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EE5DB9484016F144CFC253A5802E76E6",
+									"pin": "LocomotionBlendForward"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3A472DEC442FE78E1B879283FEA39086",
+									"pin": "BlendPose_1"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "09BA208E49EEDC06DB601A903DFDC80F",
+					"class": "K2Node_VariableGet",
+					"title": "Get Local Right Velocity",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Local Right Velocity",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "ED736F1840B705242D97EFA9B902EC1E",
+					"class": "K2Node_VariableGet",
+					"title": "Get Local Forward Velocity",
+					"posX": 0,
+					"posY": 200,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Local Forward Velocity",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "3A472DEC442FE78E1B879283FEA39086",
+					"class": "AnimGraphNode_BlendListByBool",
+					"title": "Blend Poses by bool",
+					"posX": 720,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "BlendPose_0",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "B7805C084FCF362CDF4C78B92CA2B891",
+									"pin": "Pose"
+								}
+							]
+						},
+						{
+							"name": "BlendPose_1",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "ADF7FC524AE11E8EE2CCD3901F3F459D",
+									"pin": "Pose"
+								}
+							]
+						},
+						{
+							"name": "BlendTime_0",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.12",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "BlendTime_1",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.12",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "bActiveValue",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "False",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "49283EA04D0503FA37F57F8C2F3AFDA9",
+									"pin": "RootTurnActive"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D9FBC18D43100E05E3FE1698373E95F4",
+									"pin": "Result"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "B7805C084FCF362CDF4C78B92CA2B891",
+					"class": "AnimGraphNode_BlendSpacePlayer",
+					"title": "TurnInPlace_Laor\nBlendspace Player",
+					"posX": 360,
+					"posY": 200,
+					"comment": "",
+					"pins": [
+						{
+							"name": "X",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "985D8CF045EA6E5D12A7F5951498BAD7",
+									"pin": "RootTurnCoordinate"
+								}
+							]
+						},
+						{
+							"name": "Y",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.000000",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "PlayRate",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "1.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2275E691441BEB05271119AF42991D05",
+									"pin": "RootTurnPlayRate"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3A472DEC442FE78E1B879283FEA39086",
+									"pin": "BlendPose_0"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "49283EA04D0503FA37F57F8C2F3AFDA9",
+					"class": "K2Node_VariableGet",
+					"title": "Get RootTurnActive",
+					"posX": 0,
+					"posY": 400,
+					"comment": "",
+					"pins": [
+						{
+							"name": "RootTurnActive",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3A472DEC442FE78E1B879283FEA39086",
+									"pin": "bActiveValue"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "985D8CF045EA6E5D12A7F5951498BAD7",
+					"class": "K2Node_VariableGet",
+					"title": "Get RootTurnCoordinate",
+					"posX": 0,
+					"posY": 600,
+					"comment": "",
+					"pins": [
+						{
+							"name": "RootTurnCoordinate",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "B7805C084FCF362CDF4C78B92CA2B891",
+									"pin": "X"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "2275E691441BEB05271119AF42991D05",
+					"class": "K2Node_VariableGet",
+					"title": "Get RootTurnPlayRate",
+					"posX": 0,
+					"posY": 800,
+					"comment": "",
+					"pins": [
+						{
+							"name": "RootTurnPlayRate",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "B7805C084FCF362CDF4C78B92CA2B891",
+									"pin": "PlayRate"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "0484CFFC4C19817D824EC1B25D775694",
+					"class": "K2Node_VariableGet",
+					"title": "Get LocomotionBlendRight",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "LocomotionBlendRight",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "ADF7FC524AE11E8EE2CCD3901F3F459D",
+									"pin": "X"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "EE5DB9484016F144CFC253A5802E76E6",
+					"class": "K2Node_VariableGet",
+					"title": "Get LocomotionBlendForward",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "LocomotionBlendForward",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "ADF7FC524AE11E8EE2CCD3901F3F459D",
+									"pin": "Y"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ABS_Move",
+			"selector": "ABS_Move",
+			"kind": "subgraph",
+			"nested": true,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:AnimGraph.AnimGraphNode_StateMachine_0.New State Machine.AnimStateNode_0.Move.AnimGraphNode_BlendSpaceGraph_0.ABS_Move",
+			"nodeCount": 0,
+			"nodes": []
+		},
+		{
+			"name": "Idle_Stand",
+			"selector": "Idle_Stand",
+			"kind": "subgraph",
+			"nested": true,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:AnimGraph.AnimGraphNode_StateMachine_0.New State Machine.AnimStateNode_0.Move.AnimGraphNode_BlendSpaceGraph_0.ABS_Move.Idle_Stand",
+			"nodeCount": 2,
+			"nodes": [
+				{
+					"id": "D8B9FC9F4DF3DC0FD3E1ECBAD4C0DE14",
+					"class": "AnimGraphNode_BlendSpaceSampleResult",
+					"title": "Output Animation Pose",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Result",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "4EA48D234BF75778E526198947D9554C",
+									"pin": "Pose"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "4EA48D234BF75778E526198947D9554C",
+					"class": "AnimGraphNode_SequencePlayer",
+					"title": "Idle_Stand_Laor\nSequence Player\nGraph sync group",
+					"posX": -400,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D8B9FC9F4DF3DC0FD3E1ECBAD4C0DE14",
+									"pin": "Result"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Walk_Fwd_Loop",
+			"selector": "Walk_Fwd_Loop",
+			"kind": "subgraph",
+			"nested": true,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:AnimGraph.AnimGraphNode_StateMachine_0.New State Machine.AnimStateNode_0.Move.AnimGraphNode_BlendSpaceGraph_0.ABS_Move.Walk_Fwd_Loop",
+			"nodeCount": 3,
+			"nodes": [
+				{
+					"id": "8B7984D54119DB7B61AD84BAD8832398",
+					"class": "AnimGraphNode_BlendSpaceSampleResult",
+					"title": "Output Animation Pose",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Result",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "562F882D48ECAB8D898B88B07641C23D",
+									"pin": "Pose"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "562F882D48ECAB8D898B88B07641C23D",
+					"class": "AnimGraphNode_SequencePlayer",
+					"title": "Walk_Fwd_Loop_Laor\nSequence Player\nGraph sync group",
+					"posX": -400,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "PlayRate",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "1.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9C7025DB4575A4CE2A9CBFA6B699C08E",
+									"pin": "LocomotionPlayRate"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "8B7984D54119DB7B61AD84BAD8832398",
+									"pin": "Result"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "9C7025DB4575A4CE2A9CBFA6B699C08E",
+					"class": "K2Node_VariableGet",
+					"title": "Get LocomotionPlayRate",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "LocomotionPlayRate",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "562F882D48ECAB8D898B88B07641C23D",
+									"pin": "PlayRate"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Strafe_L45_Loop",
+			"selector": "Strafe_L45_Loop",
+			"kind": "subgraph",
+			"nested": true,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:AnimGraph.AnimGraphNode_StateMachine_0.New State Machine.AnimStateNode_0.Move.AnimGraphNode_BlendSpaceGraph_0.ABS_Move.Strafe_L45_Loop",
+			"nodeCount": 3,
+			"nodes": [
+				{
+					"id": "39681B13488924C7D6514AB9B963D5D1",
+					"class": "AnimGraphNode_BlendSpaceSampleResult",
+					"title": "Output Animation Pose",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Result",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "4D9B7BC24B736BB7BD66A581F6764FCF",
+									"pin": "Pose"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "4D9B7BC24B736BB7BD66A581F6764FCF",
+					"class": "AnimGraphNode_SequencePlayer",
+					"title": "Strafe_L45_Loop_Laor\nSequence Player\nGraph sync group",
+					"posX": -400,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "PlayRate",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "1.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "770C5E644E624EC6BD6029819D18D978",
+									"pin": "LocomotionPlayRate"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "39681B13488924C7D6514AB9B963D5D1",
+									"pin": "Result"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "770C5E644E624EC6BD6029819D18D978",
+					"class": "K2Node_VariableGet",
+					"title": "Get LocomotionPlayRate",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "LocomotionPlayRate",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "4D9B7BC24B736BB7BD66A581F6764FCF",
+									"pin": "PlayRate"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Strafe_R45_Loop",
+			"selector": "Strafe_R45_Loop",
+			"kind": "subgraph",
+			"nested": true,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:AnimGraph.AnimGraphNode_StateMachine_0.New State Machine.AnimStateNode_0.Move.AnimGraphNode_BlendSpaceGraph_0.ABS_Move.Strafe_R45_Loop",
+			"nodeCount": 3,
+			"nodes": [
+				{
+					"id": "67BB6B5D4DBBBC5377AAB29581A441B9",
+					"class": "AnimGraphNode_BlendSpaceSampleResult",
+					"title": "Output Animation Pose",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Result",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "36C658FE4F523904973C74A9D2FB9027",
+									"pin": "Pose"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "36C658FE4F523904973C74A9D2FB9027",
+					"class": "AnimGraphNode_SequencePlayer",
+					"title": "Strafe_R45_Loop_Laor\nSequence Player\nGraph sync group",
+					"posX": -400,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "PlayRate",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "1.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "B5B891414A53733298A8A3B3A2EB44CC",
+									"pin": "LocomotionPlayRate"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "67BB6B5D4DBBBC5377AAB29581A441B9",
+									"pin": "Result"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "B5B891414A53733298A8A3B3A2EB44CC",
+					"class": "K2Node_VariableGet",
+					"title": "Get LocomotionPlayRate",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "LocomotionPlayRate",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "36C658FE4F523904973C74A9D2FB9027",
+									"pin": "PlayRate"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "StrafeL_Loop",
+			"selector": "StrafeL_Loop",
+			"kind": "subgraph",
+			"nested": true,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:AnimGraph.AnimGraphNode_StateMachine_0.New State Machine.AnimStateNode_0.Move.AnimGraphNode_BlendSpaceGraph_0.ABS_Move.StrafeL_Loop",
+			"nodeCount": 3,
+			"nodes": [
+				{
+					"id": "38A9BEEE48CA414899BB63B28D49530E",
+					"class": "AnimGraphNode_BlendSpaceSampleResult",
+					"title": "Output Animation Pose",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Result",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "7D03C8F24596EDE6F81754B2B21FE41C",
+									"pin": "Pose"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "7D03C8F24596EDE6F81754B2B21FE41C",
+					"class": "AnimGraphNode_SequencePlayer",
+					"title": "StrafeL_Loop_Laor\nSequence Player\nGraph sync group",
+					"posX": -400,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "PlayRate",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "1.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F9931FD446FC9FD1DB6B5390E155255A",
+									"pin": "LocomotionPlayRate"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "38A9BEEE48CA414899BB63B28D49530E",
+									"pin": "Result"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "F9931FD446FC9FD1DB6B5390E155255A",
+					"class": "K2Node_VariableGet",
+					"title": "Get LocomotionPlayRate",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "LocomotionPlayRate",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "7D03C8F24596EDE6F81754B2B21FE41C",
+									"pin": "PlayRate"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "StrafeR_Loop",
+			"selector": "StrafeR_Loop",
+			"kind": "subgraph",
+			"nested": true,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:AnimGraph.AnimGraphNode_StateMachine_0.New State Machine.AnimStateNode_0.Move.AnimGraphNode_BlendSpaceGraph_0.ABS_Move.StrafeR_Loop",
+			"nodeCount": 3,
+			"nodes": [
+				{
+					"id": "73FBDB634008BDEAEBFA8FB7D2A0DAF1",
+					"class": "AnimGraphNode_BlendSpaceSampleResult",
+					"title": "Output Animation Pose",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Result",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EE608AED431074A451E3C5A72355AD4D",
+									"pin": "Pose"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "EE608AED431074A451E3C5A72355AD4D",
+					"class": "AnimGraphNode_SequencePlayer",
+					"title": "StrafeR_Loop_Laor\nSequence Player\nGraph sync group",
+					"posX": -400,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "PlayRate",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "1.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2C898A41407476CABE5842A7ECCF28C3",
+									"pin": "LocomotionPlayRate"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "73FBDB634008BDEAEBFA8FB7D2A0DAF1",
+									"pin": "Result"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "2C898A41407476CABE5842A7ECCF28C3",
+					"class": "K2Node_VariableGet",
+					"title": "Get LocomotionPlayRate",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "LocomotionPlayRate",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EE608AED431074A451E3C5A72355AD4D",
+									"pin": "PlayRate"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Strafe_L135_Loop",
+			"selector": "Strafe_L135_Loop",
+			"kind": "subgraph",
+			"nested": true,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:AnimGraph.AnimGraphNode_StateMachine_0.New State Machine.AnimStateNode_0.Move.AnimGraphNode_BlendSpaceGraph_0.ABS_Move.Strafe_L135_Loop",
+			"nodeCount": 3,
+			"nodes": [
+				{
+					"id": "E7F1C92544867FA2923F499C1F5D9630",
+					"class": "AnimGraphNode_BlendSpaceSampleResult",
+					"title": "Output Animation Pose",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Result",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CB2794C8457AA7A5A74A5DA9083B84D1",
+									"pin": "Pose"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "CB2794C8457AA7A5A74A5DA9083B84D1",
+					"class": "AnimGraphNode_SequencePlayer",
+					"title": "Strafe_L135_Loop_Laor\nSequence Player\nGraph sync group",
+					"posX": -400,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "PlayRate",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "1.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "EFF2F0844029A16C43F62488FCA1AC6A",
+									"pin": "LocomotionPlayRate"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E7F1C92544867FA2923F499C1F5D9630",
+									"pin": "Result"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "EFF2F0844029A16C43F62488FCA1AC6A",
+					"class": "K2Node_VariableGet",
+					"title": "Get LocomotionPlayRate",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "LocomotionPlayRate",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CB2794C8457AA7A5A74A5DA9083B84D1",
+									"pin": "PlayRate"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Strafe_R135_Loop",
+			"selector": "Strafe_R135_Loop",
+			"kind": "subgraph",
+			"nested": true,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:AnimGraph.AnimGraphNode_StateMachine_0.New State Machine.AnimStateNode_0.Move.AnimGraphNode_BlendSpaceGraph_0.ABS_Move.Strafe_R135_Loop",
+			"nodeCount": 3,
+			"nodes": [
+				{
+					"id": "2C353A854F7C050314299E9E8DB4F48B",
+					"class": "AnimGraphNode_BlendSpaceSampleResult",
+					"title": "Output Animation Pose",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Result",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9F31BAB14D4BEAF3CF076796419788A5",
+									"pin": "Pose"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "9F31BAB14D4BEAF3CF076796419788A5",
+					"class": "AnimGraphNode_SequencePlayer",
+					"title": "Strafe_R135_Loop_Laor\nSequence Player\nGraph sync group",
+					"posX": -400,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "PlayRate",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "1.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "78364200433EB9EE10347BBA3D073BD0",
+									"pin": "LocomotionPlayRate"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2C353A854F7C050314299E9E8DB4F48B",
+									"pin": "Result"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "78364200433EB9EE10347BBA3D073BD0",
+					"class": "K2Node_VariableGet",
+					"title": "Get LocomotionPlayRate",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "LocomotionPlayRate",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9F31BAB14D4BEAF3CF076796419788A5",
+									"pin": "PlayRate"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Walk_Bwd_Loop",
+			"selector": "Walk_Bwd_Loop",
+			"kind": "subgraph",
+			"nested": true,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:AnimGraph.AnimGraphNode_StateMachine_0.New State Machine.AnimStateNode_0.Move.AnimGraphNode_BlendSpaceGraph_0.ABS_Move.Walk_Bwd_Loop",
+			"nodeCount": 3,
+			"nodes": [
+				{
+					"id": "2F20E19F4BD5C7316D53E2A18C7D24A0",
+					"class": "AnimGraphNode_BlendSpaceSampleResult",
+					"title": "Output Animation Pose",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Result",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "(LinkID=-1,SourceLinkID=-1)",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5208F7F940DABB5CBC5F3CBF0C954295",
+									"pin": "Pose"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "5208F7F940DABB5CBC5F3CBF0C954295",
+					"class": "AnimGraphNode_SequencePlayer",
+					"title": "Walk_Bwd_Loop_Laor\nSequence Player\nGraph sync group",
+					"posX": -400,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "PlayRate",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "1.000000",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F802CBA4477E4B0F83065E8E75AF39F9",
+									"pin": "LocomotionPlayRate"
+								}
+							]
+						},
+						{
+							"name": "Pose",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2F20E19F4BD5C7316D53E2A18C7D24A0",
+									"pin": "Result"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "F802CBA4477E4B0F83065E8E75AF39F9",
+					"class": "K2Node_VariableGet",
+					"title": "Get LocomotionPlayRate",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "LocomotionPlayRate",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5208F7F940DABB5CBC5F3CBF0C954295",
+									"pin": "PlayRate"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EventGraph",
+			"selector": "EventGraph",
+			"kind": "event_graph",
+			"nested": false,
+			"objectPath": "/Game/Project_File/Model/Character/Runtime/ABP_AI_Laor.ABP_AI_Laor:EventGraph",
+			"nodeCount": 17,
+			"nodes": [
+				{
+					"id": "ED9997454219B2DCFE9F658692FB5842",
+					"class": "K2Node_Event",
+					"title": "Event BlueprintUpdateAnimation",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "229CF61B43BAB4A800B9288286E945B0",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "DeltaTimeX",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "DDEBF6204D7EC0B3BDFD6B9F5F56E47B",
+					"class": "K2Node_CallFunction",
+					"title": "Try Get Pawn Owner\nTarget is Anim Instance",
+					"posX": 0,
+					"posY": 160,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ReturnValue",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3D54B8054BAE7B2723ED0C906D49E8A0",
+									"pin": "Object"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "3D54B8054BAE7B2723ED0C906D49E8A0",
+					"class": "K2Node_DynamicCast",
+					"title": "Cast To BP_AI",
+					"posX": 320,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D045F1E44C1DFB66EC04C7BB37B08FAB",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D7E737244CAD37679D9498A073B53A11",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "CastFailed",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Object",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "DDEBF6204D7EC0B3BDFD6B9F5F56E47B",
+									"pin": "ReturnValue"
+								}
+							]
+						},
+						{
+							"name": "AsBP AI",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D7E737244CAD37679D9498A073B53A11",
+									"pin": "As BP AI"
+								}
+							]
+						},
+						{
+							"name": "bSuccess",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "D045F1E44C1DFB66EC04C7BB37B08FAB",
+					"class": "K2Node_Event",
+					"title": "Event BlueprintInitializeAnimation",
+					"posX": 0,
+					"posY": 320,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3D54B8054BAE7B2723ED0C906D49E8A0",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "D7E737244CAD37679D9498A073B53A11",
+					"class": "K2Node_VariableSet",
+					"title": "Set As BP AI",
+					"posX": 640,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3D54B8054BAE7B2723ED0C906D49E8A0",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "As BP AI",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3D54B8054BAE7B2723ED0C906D49E8A0",
+									"pin": "AsBP AI"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "901F6D63459D5C3AEC70FAB6F5CFF5B4",
+					"class": "K2Node_CallFunction",
+					"title": "Get Velocity\nTarget is Actor",
+					"posX": 320,
+					"posY": 160,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E4CE50994A70F585BD9C378FFC831A4E",
+									"pin": "As BP AI"
+								}
+							]
+						},
+						{
+							"name": "ReturnValue",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "0, 0, 0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "13EEDED2470DFF460B17D9AB78F12ED3",
+									"pin": "Direction"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "E4CE50994A70F585BD9C378FFC831A4E",
+					"class": "K2Node_VariableGet",
+					"title": "Get As BP AI",
+					"posX": 0,
+					"posY": 480,
+					"comment": "",
+					"pins": [
+						{
+							"name": "As BP AI",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "901F6D63459D5C3AEC70FAB6F5CFF5B4",
+									"pin": "self"
+								},
+								{
+									"nodeId": "D183E1F245B7BE26ED0D3697C764EAB1",
+									"pin": "self"
+								},
+								{
+									"nodeId": "C13AFE75440A216A077FA7905A84D3FD",
+									"pin": "self"
+								},
+								{
+									"nodeId": "8639D8C34E3A2DBA0E13B98ADB9A6DB1",
+									"pin": "self"
+								},
+								{
+									"nodeId": "BF32FB39413AB27BB2937DAED503AEF7",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "13EEDED2470DFF460B17D9AB78F12ED3",
+					"class": "K2Node_CallFunction",
+					"title": "Inverse Transform Direction",
+					"posX": 640,
+					"posY": 160,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__KismetMathLibrary",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "T",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D183E1F245B7BE26ED0D3697C764EAB1",
+									"pin": "ReturnValue"
+								}
+							]
+						},
+						{
+							"name": "Direction",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "0, 0, 0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "901F6D63459D5C3AEC70FAB6F5CFF5B4",
+									"pin": "ReturnValue"
+								}
+							]
+						},
+						{
+							"name": "ReturnValue",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "0, 0, 0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ReturnValue_X",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "0D72829B461D3FFDC29BD7BEE62916D5",
+									"pin": "Local Forward Velocity"
+								}
+							]
+						},
+						{
+							"name": "ReturnValue_Y",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "229CF61B43BAB4A800B9288286E945B0",
+									"pin": "Local Right Velocity"
+								}
+							]
+						},
+						{
+							"name": "ReturnValue_Z",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "D183E1F245B7BE26ED0D3697C764EAB1",
+					"class": "K2Node_CallFunction",
+					"title": "Get Actor Transform\nTarget is Actor",
+					"posX": 320,
+					"posY": 320,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E4CE50994A70F585BD9C378FFC831A4E",
+									"pin": "As BP AI"
+								}
+							]
+						},
+						{
+							"name": "ReturnValue",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "13EEDED2470DFF460B17D9AB78F12ED3",
+									"pin": "T"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "0D72829B461D3FFDC29BD7BEE62916D5",
+					"class": "K2Node_VariableSet",
+					"title": "Set Local Forward Velocity",
+					"posX": 1280,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "229CF61B43BAB4A800B9288286E945B0",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A2384BF547E33B00BE71C09F8D63FB2C",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "Local Forward Velocity",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "13EEDED2470DFF460B17D9AB78F12ED3",
+									"pin": "ReturnValue_X"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "229CF61B43BAB4A800B9288286E945B0",
+					"class": "K2Node_VariableSet",
+					"title": "Set Local Right Velocity",
+					"posX": 960,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "ED9997454219B2DCFE9F658692FB5842",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "0D72829B461D3FFDC29BD7BEE62916D5",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "Local Right Velocity",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "13EEDED2470DFF460B17D9AB78F12ED3",
+									"pin": "ReturnValue_Y"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "A2384BF547E33B00BE71C09F8D63FB2C",
+					"class": "K2Node_VariableSet",
+					"title": "Set TurnActive",
+					"posX": 1600,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "0D72829B461D3FFDC29BD7BEE62916D5",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "FBB6FBDF4BDDCE522292129DAC018168",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "TurnActive",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C13AFE75440A216A077FA7905A84D3FD",
+									"pin": "ReturnValue"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "C13AFE75440A216A077FA7905A84D3FD",
+					"class": "K2Node_CallFunction",
+					"title": "Should Play Turn Animation\nTarget is Elderly AICharacter",
+					"posX": 320,
+					"posY": 480,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E4CE50994A70F585BD9C378FFC831A4E",
+									"pin": "As BP AI"
+								}
+							]
+						},
+						{
+							"name": "ReturnValue",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A2384BF547E33B00BE71C09F8D63FB2C",
+									"pin": "TurnActive"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "FBB6FBDF4BDDCE522292129DAC018168",
+					"class": "K2Node_VariableSet",
+					"title": "Set TurnCoordinate",
+					"posX": 1920,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A2384BF547E33B00BE71C09F8D63FB2C",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F09B3E234A6281808A158596576A2830",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "TurnCoordinate",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "8639D8C34E3A2DBA0E13B98ADB9A6DB1",
+									"pin": "TurnBlendPosition"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "8639D8C34E3A2DBA0E13B98ADB9A6DB1",
+					"class": "K2Node_VariableGet",
+					"title": "Get TurnBlendPosition",
+					"posX": 320,
+					"posY": 640,
+					"comment": "",
+					"pins": [
+						{
+							"name": "TurnBlendPosition",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "FBB6FBDF4BDDCE522292129DAC018168",
+									"pin": "TurnCoordinate"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E4CE50994A70F585BD9C378FFC831A4E",
+									"pin": "As BP AI"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "F09B3E234A6281808A158596576A2830",
+					"class": "K2Node_VariableSet",
+					"title": "Set TurnPhase",
+					"posX": 2240,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "FBB6FBDF4BDDCE522292129DAC018168",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "TurnPhase",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "BF32FB39413AB27BB2937DAED503AEF7",
+									"pin": "TurnAnimationPhase"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "BF32FB39413AB27BB2937DAED503AEF7",
+					"class": "K2Node_VariableGet",
+					"title": "Get TurnAnimationPhase",
+					"posX": 320,
+					"posY": 800,
+					"comment": "",
+					"pins": [
+						{
+							"name": "TurnAnimationPhase",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F09B3E234A6281808A158596576A2830",
+									"pin": "TurnPhase"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E4CE50994A70F585BD9C378FFC831A4E",
+									"pin": "As BP AI"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

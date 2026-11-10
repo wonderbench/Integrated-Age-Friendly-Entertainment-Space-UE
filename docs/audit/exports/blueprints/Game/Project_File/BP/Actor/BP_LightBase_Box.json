@@ -1,0 +1,1949 @@
+{
+	"assetPath": "/Game/Project_File/BP/Actor/BP_LightBase_Box",
+	"blueprintPath": "/Game/Project_File/BP/Actor/BP_LightBase_Box.BP_LightBase_Box",
+	"packageName": "/Game/Project_File/BP/Actor/BP_LightBase_Box",
+	"isLevelScript": false,
+	"blueprintClass": "Blueprint",
+	"parentClass": "/Game/Project_File/BP/Actor/BP_LightBase.BP_LightBase_C",
+	"variables": [
+		{
+			"name": "OpenLight?",
+			"typeSpec": "bool",
+			"pinCategory": "bool",
+			"guid": "2178DEA34B92312DA187899488059AD4",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		},
+		{
+			"name": "IsOpenLighting?",
+			"typeSpec": "bool",
+			"pinCategory": "bool",
+			"guid": "C28C1F1849EF65F36DF9A19009718DA0",
+			"category": "Default",
+			"instanceEditable": false,
+			"exposeOnSpawn": false,
+			"replicated": false
+		}
+	],
+	"functions": [
+		{
+			"name": "UserConstructionScript",
+			"kind": "override",
+			"graphSelector": "UserConstructionScript"
+		},
+		{
+			"name": "ReceiveBeginPlay",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "32B9C5D84B4FB86515144F989E7CAD28"
+		},
+		{
+			"name": "ReceiveActorBeginOverlap",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "2174A22F4F099B7ACF2255BD995E68F4"
+		},
+		{
+			"name": "ReceiveTick",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "69C49C62464DCF452A73DD951F644F62"
+		},
+		{
+			"name": "Light_Show1",
+			"kind": "custom_event",
+			"graphSelector": "EventGraph",
+			"nodeId": "AE04C48048E8E5D4DD833EA14FB649F8"
+		},
+		{
+			"name": "Light_Show",
+			"kind": "event",
+			"graphSelector": "EventGraph",
+			"nodeId": "1A3A5BA34D9386A91ECC878B5813F75A"
+		}
+	],
+	"components": [
+		{
+			"name": "SpotLight",
+			"class": "SpotLightComponent",
+			"parent": "DefaultSceneRoot"
+		}
+	],
+	"graphs": [
+		{
+			"name": "UserConstructionScript",
+			"selector": "UserConstructionScript",
+			"kind": "function",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/Actor/BP_LightBase_Box.BP_LightBase_Box:UserConstructionScript",
+			"nodeCount": 7,
+			"nodes": [
+				{
+					"id": "F1C4DA214048110D6AE5C1AA95F6ABCF",
+					"class": "K2Node_FunctionEntry",
+					"title": "Construction Script",
+					"posX": 0,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D31F4CCD47A650F313CE8D99A567C055",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "D31F4CCD47A650F313CE8D99A567C055",
+					"class": "K2Node_CallParentFunction",
+					"title": "Parent: Construction Script",
+					"posX": 224,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "F1C4DA214048110D6AE5C1AA95F6ABCF",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2869349942D00488E2BD33968493E1F8",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "804A25584D8CD3F8B9956F8102ED5F58",
+					"class": "K2Node_VariableGet",
+					"title": "Get Light_Open?",
+					"posX": 528,
+					"posY": 55,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Light_Open?",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2869349942D00488E2BD33968493E1F8",
+									"pin": "Condition"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "2869349942D00488E2BD33968493E1F8",
+					"class": "K2Node_IfThenElse",
+					"title": "Branch",
+					"posX": 736,
+					"posY": 0,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D31F4CCD47A650F313CE8D99A567C055",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "Condition",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "804A25584D8CD3F8B9956F8102ED5F58",
+									"pin": "Light_Open?"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E2709332457D99373F68F69BF1067B03",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "else",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "8D802F8C4E3BF20C1859689C8DF43A53",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "9065BDB6423015ACFBC2C9AAEE7038A0",
+					"class": "K2Node_VariableGet",
+					"title": "Get SpotLight",
+					"posX": 768,
+					"posY": 102,
+					"comment": "",
+					"pins": [
+						{
+							"name": "SpotLight",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "E2709332457D99373F68F69BF1067B03",
+									"pin": "self"
+								},
+								{
+									"nodeId": "8D802F8C4E3BF20C1859689C8DF43A53",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "E2709332457D99373F68F69BF1067B03",
+					"class": "K2Node_CallFunction",
+					"title": "Set Intensity\nTarget is Light Component",
+					"posX": 992,
+					"posY": -32,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2869349942D00488E2BD33968493E1F8",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9065BDB6423015ACFBC2C9AAEE7038A0",
+									"pin": "SpotLight"
+								}
+							]
+						},
+						{
+							"name": "NewIntensity",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "30.000000",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "8D802F8C4E3BF20C1859689C8DF43A53",
+					"class": "K2Node_CallFunction",
+					"title": "Set Intensity\nTarget is Light Component",
+					"posX": 992,
+					"posY": 112,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "2869349942D00488E2BD33968493E1F8",
+									"pin": "else"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "9065BDB6423015ACFBC2C9AAEE7038A0",
+									"pin": "SpotLight"
+								}
+							]
+						},
+						{
+							"name": "NewIntensity",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EventGraph",
+			"selector": "EventGraph",
+			"kind": "event_graph",
+			"nested": false,
+			"objectPath": "/Game/Project_File/BP/Actor/BP_LightBase_Box.BP_LightBase_Box:EventGraph",
+			"nodeCount": 33,
+			"nodes": [
+				{
+					"id": "32B9C5D84B4FB86515144F989E7CAD28",
+					"class": "K2Node_Event",
+					"title": "Event BeginPlay",
+					"posX": 1184,
+					"posY": 608,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CFD23ED04F014122EBF6DD9341552005",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "2174A22F4F099B7ACF2255BD995E68F4",
+					"class": "K2Node_Event",
+					"title": "Event ActorBeginOverlap",
+					"posX": -1424,
+					"posY": 736,
+					"comment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "OtherActor",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "69C49C62464DCF452A73DD951F644F62",
+					"class": "K2Node_Event",
+					"title": "Event Tick",
+					"posX": -1424,
+					"posY": 272,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "DeltaSeconds",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "A189219B4DAF883847BDEE888C5A9BEE",
+					"class": "K2Node_Timeline",
+					"title": "Timeline",
+					"posX": 640,
+					"posY": 704,
+					"comment": "",
+					"pins": [
+						{
+							"name": "Play",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "20D5E0DD4C1582B26040668C36DABBA5",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "PlayFromStart",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Stop",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Reverse",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "809927624C728AF7FB2B1190E9849FB3",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "ReverseFromEnd",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Update",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3FB8174F47157CE0491C61A3B0519FBA",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "Finished",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "SetNewTime",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NewTime",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Direction",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NewTrack_0",
+							"type": "real",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3FB8174F47157CE0491C61A3B0519FBA",
+									"pin": "NewIntensity"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "38FF42A1438FA3BE3C126D8D98E0DE04",
+					"class": "K2Node_IfThenElse",
+					"title": "Branch",
+					"posX": -880,
+					"posY": 976,
+					"comment": "是否打开灯光 ",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "FF25595F476F8BA40DA8C491C96CCDCF",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "Condition",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "5DA070F948D59A75F7F7B88D4BF9B3B1",
+									"pin": "OpenLight?"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "BBF62FEE49C239CA381BC08F43486A98",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "else",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "DACF5D4740DE7CD71E43C1ABD6CABDA1",
+									"pin": "InputPin"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "86CC06B24B7E01870ABC3596AC2F3C57",
+					"class": "K2Node_VariableGet",
+					"title": "Get SpotLight",
+					"posX": 766,
+					"posY": 662,
+					"comment": "",
+					"pins": [
+						{
+							"name": "SpotLight",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "3FB8174F47157CE0491C61A3B0519FBA",
+									"pin": "self"
+								},
+								{
+									"nodeId": "CFD23ED04F014122EBF6DD9341552005",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "3FB8174F47157CE0491C61A3B0519FBA",
+					"class": "K2Node_CallFunction",
+					"title": "Set Intensity\nTarget is Light Component",
+					"posX": 928,
+					"posY": 688,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A189219B4DAF883847BDEE888C5A9BEE",
+									"pin": "Update"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "86CC06B24B7E01870ABC3596AC2F3C57",
+									"pin": "SpotLight"
+								}
+							]
+						},
+						{
+							"name": "NewIntensity",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A189219B4DAF883847BDEE888C5A9BEE",
+									"pin": "NewTrack_0"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "F4A2CFE8414C45ABC8BAE19B5506E898",
+					"class": "EdGraphNode_Comment",
+					"title": "灯的开关动画",
+					"posX": 624,
+					"posY": 608,
+					"comment": "灯的开关动画",
+					"pins": []
+				},
+				{
+					"id": "AE04C48048E8E5D4DD833EA14FB649F8",
+					"class": "K2Node_CustomEvent",
+					"title": "Light_Show1\nCustom Event",
+					"posX": -1472,
+					"posY": 961,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "FF25595F476F8BA40DA8C491C96CCDCF",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "Open?",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "FF25595F476F8BA40DA8C491C96CCDCF",
+									"pin": "OpenLight?"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "5DA070F948D59A75F7F7B88D4BF9B3B1",
+					"class": "K2Node_VariableGet",
+					"title": "Get OpenLight?",
+					"posX": -1042,
+					"posY": 1031,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OpenLight?",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "38FF42A1438FA3BE3C126D8D98E0DE04",
+									"pin": "Condition"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "FF25595F476F8BA40DA8C491C96CCDCF",
+					"class": "K2Node_VariableSet",
+					"title": "Set OpenLight?",
+					"posX": -1264,
+					"posY": 992,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "AE04C48048E8E5D4DD833EA14FB649F8",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "38FF42A1438FA3BE3C126D8D98E0DE04",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "OpenLight?",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "AE04C48048E8E5D4DD833EA14FB649F8",
+									"pin": "Open?"
+								}
+							]
+						},
+						{
+							"name": "Output_Get",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "1A3A5BA34D9386A91ECC878B5813F75A",
+					"class": "K2Node_Event",
+					"title": "Event Light_Show\nFrom BPI Actor Call",
+					"posX": -1424,
+					"posY": 545,
+					"comment": "",
+					"pins": [
+						{
+							"name": "OutputDelegate",
+							"type": "delegate",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "B790C13E43B64EDFE8157E8006AD7F03",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "E_ Time",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "NewEnumerator3",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "B790C13E43B64EDFE8157E8006AD7F03",
+									"pin": "Selection"
+								}
+							]
+						},
+						{
+							"name": "E_Weather_Temp",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "NewEnumerator8",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "E_Weather",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "NewEnumerator8",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "31976CDF4477019F5F9210A47BF7FAF5",
+									"pin": "A"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "B790C13E43B64EDFE8157E8006AD7F03",
+					"class": "K2Node_SwitchEnum",
+					"title": "Switch on E_Time",
+					"posX": -571,
+					"posY": 560,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "1A3A5BA34D9386A91ECC878B5813F75A",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "Selection",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NewEnumerator3",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "1A3A5BA34D9386A91ECC878B5813F75A",
+									"pin": "E_ Time"
+								}
+							]
+						},
+						{
+							"name": "NotEqual_ByteByte",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__KismetMathLibrary",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NewEnumerator3",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "NewEnumerator0",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "BBF62FEE49C239CA381BC08F43486A98",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "NewEnumerator1",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D7321E9943406F473B7F93BD5E3BE940",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "NewEnumerator2",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "BBF62FEE49C239CA381BC08F43486A98",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "79F1890C43266BDE99D3528C5CD01C90",
+					"class": "K2Node_VariableGet",
+					"title": "Get IsOpenLighting?",
+					"posX": 32,
+					"posY": 784,
+					"comment": "",
+					"pins": [
+						{
+							"name": "IsOpenLighting?",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "BBF62FEE49C239CA381BC08F43486A98",
+									"pin": "Condition"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "BBF62FEE49C239CA381BC08F43486A98",
+					"class": "K2Node_IfThenElse",
+					"title": "Branch",
+					"posX": 32,
+					"posY": 672,
+					"comment": "灯是否开着，如果关着就让灯打开",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "38FF42A1438FA3BE3C126D8D98E0DE04",
+									"pin": "then"
+								},
+								{
+									"nodeId": "B790C13E43B64EDFE8157E8006AD7F03",
+									"pin": "NewEnumerator0"
+								},
+								{
+									"nodeId": "B790C13E43B64EDFE8157E8006AD7F03",
+									"pin": "NewEnumerator2"
+								},
+								{
+									"nodeId": "D7321E9943406F473B7F93BD5E3BE940",
+									"pin": "else"
+								}
+							]
+						},
+						{
+							"name": "Condition",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "79F1890C43266BDE99D3528C5CD01C90",
+									"pin": "IsOpenLighting?"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "else",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "20D5E0DD4C1582B26040668C36DABBA5",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "20D5E0DD4C1582B26040668C36DABBA5",
+					"class": "K2Node_VariableSet",
+					"title": "Set IsOpenLighting?",
+					"posX": 256,
+					"posY": 720,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "BBF62FEE49C239CA381BC08F43486A98",
+									"pin": "else"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A189219B4DAF883847BDEE888C5A9BEE",
+									"pin": "Play"
+								}
+							]
+						},
+						{
+							"name": "IsOpenLighting?",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Output_Get",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "BE0A5295454A3EFF7C82DCB14C924893",
+					"class": "K2Node_VariableGet",
+					"title": "Get IsOpenLighting?",
+					"posX": 32,
+					"posY": 1024,
+					"comment": "",
+					"pins": [
+						{
+							"name": "IsOpenLighting?",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C5433FA048F8BA3D37B809BA4E40CBC9",
+									"pin": "Condition"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "C5433FA048F8BA3D37B809BA4E40CBC9",
+					"class": "K2Node_IfThenElse",
+					"title": "Branch",
+					"posX": 32,
+					"posY": 880,
+					"comment": "灯是否开着，如果开着就让灯关闭",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D7321E9943406F473B7F93BD5E3BE940",
+									"pin": "then"
+								},
+								{
+									"nodeId": "DACF5D4740DE7CD71E43C1ABD6CABDA1",
+									"pin": "OutputPin"
+								}
+							]
+						},
+						{
+							"name": "Condition",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "BE0A5295454A3EFF7C82DCB14C924893",
+									"pin": "IsOpenLighting?"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "809927624C728AF7FB2B1190E9849FB3",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "else",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "809927624C728AF7FB2B1190E9849FB3",
+					"class": "K2Node_VariableSet",
+					"title": "Set IsOpenLighting?",
+					"posX": 256,
+					"posY": 896,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C5433FA048F8BA3D37B809BA4E40CBC9",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "A189219B4DAF883847BDEE888C5A9BEE",
+									"pin": "Reverse"
+								}
+							]
+						},
+						{
+							"name": "IsOpenLighting?",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Output_Get",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "false",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "3301EFC3483751631AE674AD9A9BECCA",
+					"class": "EdGraphNode_Comment",
+					"title": "初始状态",
+					"posX": -1504,
+					"posY": 896,
+					"comment": "初始状态",
+					"pins": []
+				},
+				{
+					"id": "398F02F5450F27DE39B4019863B4ADDF",
+					"class": "EdGraphNode_Comment",
+					"title": "事件执行的开关灯",
+					"posX": -1504,
+					"posY": 384,
+					"comment": "事件执行的开关灯",
+					"pins": []
+				},
+				{
+					"id": "F2F2EEF1475B648EE07A498812F43FF1",
+					"class": "EdGraphNode_Comment",
+					"title": "如果已经开灯就不再开灯，已经关灯就不关灯",
+					"posX": 0,
+					"posY": 512,
+					"comment": "如果已经开灯就不再开灯，已经关灯就不关灯",
+					"pins": []
+				},
+				{
+					"id": "31976CDF4477019F5F9210A47BF7FAF5",
+					"class": "K2Node_EnumInequality",
+					"title": "Not Equal (Enum)",
+					"posX": -736,
+					"posY": 736,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ReturnValue",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D7321E9943406F473B7F93BD5E3BE940",
+									"pin": "Condition"
+								}
+							]
+						},
+						{
+							"name": "A",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "1A3A5BA34D9386A91ECC878B5813F75A",
+									"pin": "E_Weather"
+								}
+							]
+						},
+						{
+							"name": "B",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NewEnumerator7",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "D7321E9943406F473B7F93BD5E3BE940",
+					"class": "K2Node_IfThenElse",
+					"title": "Branch",
+					"posX": -301,
+					"posY": 624,
+					"comment": "如果是正午，并且不是雨天，那么关灯",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "B790C13E43B64EDFE8157E8006AD7F03",
+									"pin": "NewEnumerator1"
+								}
+							]
+						},
+						{
+							"name": "Condition",
+							"type": "bool",
+							"direction": "Input",
+							"defaultValue": "true",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "31976CDF4477019F5F9210A47BF7FAF5",
+									"pin": "ReturnValue"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C5433FA048F8BA3D37B809BA4E40CBC9",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "else",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "BBF62FEE49C239CA381BC08F43486A98",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "DACF5D4740DE7CD71E43C1ABD6CABDA1",
+					"class": "K2Node_Knot",
+					"title": "Reroute Node",
+					"posX": -163,
+					"posY": 1041,
+					"comment": "",
+					"pins": [
+						{
+							"name": "InputPin",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "38FF42A1438FA3BE3C126D8D98E0DE04",
+									"pin": "else"
+								}
+							]
+						},
+						{
+							"name": "OutputPin",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C5433FA048F8BA3D37B809BA4E40CBC9",
+									"pin": "execute"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "63635C2F4AC1AE7777E5F1910F2ED54B",
+					"class": "K2Node_CallFunction",
+					"title": "Get Game State",
+					"posX": 1360,
+					"posY": 768,
+					"comment": "",
+					"pins": [
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"defaultObject": "/Script/Engine.Default__GameplayStatics",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "WorldContextObject",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "ReturnValue",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D59DEC624DC8E3075C463D82F203F8A7",
+									"pin": "Object"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "D59DEC624DC8E3075C463D82F203F8A7",
+					"class": "K2Node_DynamicCast",
+					"title": "Cast To BGS_State",
+					"posX": 1616,
+					"posY": 608,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "CFD23ED04F014122EBF6DD9341552005",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24242C27461C4507309781AF6C219944",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "CastFailed",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "Object",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "63635C2F4AC1AE7777E5F1910F2ED54B",
+									"pin": "ReturnValue"
+								}
+							]
+						},
+						{
+							"name": "AsBGS State",
+							"type": "object",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C2717DE747A5BCF22B4860B9D619E5C6",
+									"pin": "self"
+								},
+								{
+									"nodeId": "0D8712D044387288B328BA87B4D5411B",
+									"pin": "self"
+								}
+							]
+						},
+						{
+							"name": "bSuccess",
+							"type": "bool",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				},
+				{
+					"id": "24242C27461C4507309781AF6C219944",
+					"class": "K2Node_CallFunction",
+					"title": "Light Show\nTarget is BP Light Base Box",
+					"posX": 2368,
+					"posY": 592,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D59DEC624DC8E3075C463D82F203F8A7",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "E_ Time",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NewEnumerator3",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "96A8D8C644F13E27C6583A851B91017E",
+									"pin": "Time_3_F376A17A448D5664DFAC93B864D92D3B"
+								}
+							]
+						},
+						{
+							"name": "E_Weather_Temp",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NewEnumerator3",
+							"connected": false,
+							"linkedTo": []
+						},
+						{
+							"name": "E_Weather",
+							"type": "byte",
+							"direction": "Input",
+							"defaultValue": "NewEnumerator8",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "15033F014F259AD8446BE7AC6FAC615E",
+									"pin": "E_Weatehr_2_2CC992464C32589006D58DB506EB2D72"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "C2717DE747A5BCF22B4860B9D619E5C6",
+					"class": "K2Node_VariableGet",
+					"title": "Get ST_Time",
+					"posX": 1840,
+					"posY": 693,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_Time",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "96A8D8C644F13E27C6583A851B91017E",
+									"pin": "ST_LightChange_State"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D59DEC624DC8E3075C463D82F203F8A7",
+									"pin": "AsBGS State"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "96A8D8C644F13E27C6583A851B91017E",
+					"class": "K2Node_BreakStruct",
+					"title": "Break ST Light Change State",
+					"posX": 2077,
+					"posY": 676,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_LightChange_State",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "C2717DE747A5BCF22B4860B9D619E5C6",
+									"pin": "ST_Time"
+								}
+							]
+						},
+						{
+							"name": "Time_3_F376A17A448D5664DFAC93B864D92D3B",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24242C27461C4507309781AF6C219944",
+									"pin": "E_ Time"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "0D8712D044387288B328BA87B4D5411B",
+					"class": "K2Node_VariableGet",
+					"title": "Get ST_Weather",
+					"posX": 1840,
+					"posY": 768,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_Weather",
+							"type": "struct",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "15033F014F259AD8446BE7AC6FAC615E",
+									"pin": "ST_Weather"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D59DEC624DC8E3075C463D82F203F8A7",
+									"pin": "AsBGS State"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "15033F014F259AD8446BE7AC6FAC615E",
+					"class": "K2Node_BreakStruct",
+					"title": "Break ST Weather",
+					"posX": 2077,
+					"posY": 751,
+					"comment": "",
+					"pins": [
+						{
+							"name": "ST_Weather",
+							"type": "struct",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "0D8712D044387288B328BA87B4D5411B",
+									"pin": "ST_Weather"
+								}
+							]
+						},
+						{
+							"name": "E_Weatehr_2_2CC992464C32589006D58DB506EB2D72",
+							"type": "byte",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "24242C27461C4507309781AF6C219944",
+									"pin": "E_Weather"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "CFD23ED04F014122EBF6DD9341552005",
+					"class": "K2Node_CallFunction",
+					"title": "Set Intensity\nTarget is Light Component",
+					"posX": 1370,
+					"posY": 592,
+					"comment": "",
+					"pins": [
+						{
+							"name": "execute",
+							"type": "exec",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "32B9C5D84B4FB86515144F989E7CAD28",
+									"pin": "then"
+								}
+							]
+						},
+						{
+							"name": "then",
+							"type": "exec",
+							"direction": "Output",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "D59DEC624DC8E3075C463D82F203F8A7",
+									"pin": "execute"
+								}
+							]
+						},
+						{
+							"name": "self",
+							"type": "object",
+							"direction": "Input",
+							"defaultValue": "",
+							"connected": true,
+							"linkedTo": [
+								{
+									"nodeId": "86CC06B24B7E01870ABC3596AC2F3C57",
+									"pin": "SpotLight"
+								}
+							]
+						},
+						{
+							"name": "NewIntensity",
+							"type": "real",
+							"direction": "Input",
+							"defaultValue": "0.0",
+							"connected": false,
+							"linkedTo": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

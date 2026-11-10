@@ -1,0 +1,32 @@
+{
+  "assets": 11587,
+  "packages": 11412,
+  "scope": {
+    "engine": 3962,
+    "engine_or_external": 5250,
+    "project": 2375
+  },
+  "edges": 26901,
+  "edge_kind": {
+    "hard_package": 24033,
+    "soft_package": 2868
+  },
+  "unresolved": 201,
+  "unresolved_project": 26,
+  "unresolved_by_kind": {
+    "soft_package": 48,
+    "hard_package": 153
+  },
+  "unresolved_by_disk_status": {
+    "package_file_absent_at_mount_path": 192,
+    "package_on_disk": 9
+  },
+  "plugin_descriptors": 899,
+  "mounted_plugins": 261,
+  "physical_game_packages": 2361,
+  "registry_game_packages": 2359,
+  "physical_not_indexed": [
+    "/Game/MedaFurniturePack/Levels/InteriorTest1",
+    "/Game/MedaFurniturePack/Levels/InteriorTest2"
+  ]
+}
