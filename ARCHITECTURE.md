@@ -28,7 +28,6 @@ flowchart TD
   UI -->|SOS逐实例 Light_Toggle| ALARM["BP_alarm：Light_Begin / Light_Stop"]
 ```
 
-没有画“监控 → 警报”“日志 → 存档”“老人 → 实时图表”，因为这些业务闭环尚未确认实现。
 
 ## 状态与边界
 
